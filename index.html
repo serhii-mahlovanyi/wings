@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f2f6ff">
-<title>Крилатий зошит</title>
+<meta name="theme-color" content="#111417">
+<title>Штаб героїв</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <style>:root{
   /* Світ: світла лука з метеликами; кожен предмет має колір свого розділу в зошиті. Одна тема за задумом. */
   --bg:#f2f6ff; --card:#ffffff; --ink:#1c2340; --mute:#5d668a; --line:#dbe2f5;
@@ -135,11 +137,111 @@ body.mob .solrow .se{flex:1 1 9em;width:auto}body.mob .keypad{grid-template-colu
 body.mob .sheet{padding:16px 12px;border-radius:18px}body.mob .modal{padding:6px;place-items:end center}body.mob .tnav .btn{min-height:42px;padding:8px 12px}
 body.mob .tbtns .btn{min-height:40px;padding:8px 12px;font-size:15px}
 body.mob .gaps{font-size:20px;gap:12px 16px}body.mob .inp.g{width:2.2em!important}
+
+/* ---- яскравіший вигляд, герої, анімації ---- */
+body{background:linear-gradient(160deg,#eaf1ff 0%,#f6edff 45%,#fff3e6 100%) fixed}
+#hd{background:linear-gradient(90deg,#2a66d9,#8a2be2 60%,#e23e68);border:0;color:#fff}#hd .logo,#hd .mi b{color:#fff}#hd .mi small{color:#e6e9ff}#hd .ib{filter:drop-shadow(0 1px 0 rgba(0,0,0,.25))}#hd .ib:hover{background:rgba(255,255,255,.18)}#hd .xpbar{background:rgba(255,255,255,.3)}
+.hero-av{display:block;width:100%;height:100%;overflow:visible}.av{display:inline-block;width:38px;height:38px;vertical-align:middle;font-size:26px}.av.big{width:84px;height:84px;font-size:48px}
+.hx-bob{animation:hxbob 2.6s ease-in-out infinite}.hx-eyes{transform-box:fill-box;transform-origin:center;animation:hxblink 4s infinite}.hx-cape{transform-box:fill-box;transform-origin:50% 0;animation:hxcape 1.8s ease-in-out infinite}.hx-aura{transform-box:fill-box;transform-origin:center;animation:hxaura 2.2s ease-in-out infinite}.hx-tw{animation:hxtw 1.2s ease-in-out infinite}
+@keyframes hxbob{50%{transform:translateY(-2.5px)}}@keyframes hxblink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}@keyframes hxcape{0%,100%{transform:skewX(-4deg)}50%{transform:skewX(5deg)}}@keyframes hxaura{0%,100%{transform:scale(.92);opacity:.22}50%{transform:scale(1.05);opacity:.42}}@keyframes hxtw{50%{opacity:.25}}
+.avb{display:grid;justify-items:center;gap:2px;width:96px;padding:8px 4px;font-size:12px}.avb .hero-av{width:64px;height:64px}.avb small{font-weight:800;line-height:1.15;color:var(--ink);font-size:11.5px}.avb:disabled .hero-av{filter:grayscale(1) brightness(.75)}.avb.on{box-shadow:0 0 0 3px var(--sun),0 6px 16px rgba(255,191,60,.45);transform:translateY(-2px)}
+.gme{width:86px;height:86px;left:calc(50% - 43px);bottom:6px}
+.homehero{display:flex;gap:14px;align-items:center;background:linear-gradient(120deg,#2a66d9,#8a2be2 55%,#e23e68);color:#fff;border-radius:24px;padding:16px;box-shadow:0 10px 26px rgba(90,60,200,.3);position:relative;overflow:hidden}
+.homehero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.35),transparent 40%);pointer-events:none}
+.hh-av{flex:none;width:108px;height:108px}.hh-t{min-width:0;flex:1}.hh-t small{font-weight:800;opacity:.9}.hh-t p{margin:8px 0 0;opacity:.95}.hh-t .xpbar{margin-top:8px;background:rgba(255,255,255,.3);height:10px}
+.card{box-shadow:0 4px 14px rgba(40,50,120,.08)}.sub{transition:transform .15s}.sub:active,.tchip:active{transform:scale(.97)}
+.cont{background:linear-gradient(120deg,#fff,color-mix(in srgb,var(--acc) 14%,#fff));border-left-width:10px}.cont .btn{animation:pulse 1.8s infinite}@keyframes pulse{50%{box-shadow:0 3px 0 rgba(0,0,0,.18),0 0 0 8px color-mix(in srgb,var(--acc) 22%,transparent)}}
+.btn{background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 82%,#fff),var(--acc))}.btn.ghost{background:#fff}
+.part{position:relative}.part.done{animation:pop .35s}@keyframes pop{40%{transform:scale(1.015)}}
+.burst{position:absolute;left:50%;top:40%;width:0;height:0;pointer-events:none;z-index:5}.burst i{position:absolute;width:10px;height:10px;border-radius:3px;animation:bst .85s ease-out forwards}@keyframes bst{to{transform:translate(var(--dx),var(--dy)) rotate(400deg);opacity:0}}
+.inp.flash{animation:fl .9s}@keyframes fl{0%{background:#fff3b0;box-shadow:0 0 0 4px #ffe066}100%{background:#fff}}
+#clip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(74px + env(safe-area-inset-bottom));z-index:40;background:var(--ink);color:#fff;border-radius:16px;padding:10px 14px;font-weight:700;font-size:15px;box-shadow:0 8px 22px rgba(0,0,0,.3);width:max-content;max-width:94vw}#clip b{color:var(--sun);font-size:17px}#clip button{border:0;background:rgba(255,255,255,.2);color:#fff;border-radius:50%;width:28px;height:28px;margin-left:6px}
+.padnext{display:grid;gap:8px;margin-top:12px}.padnext .btn{justify-content:center}.padnext p{margin:0}
+.planbar{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}.planbar span{font-size:13px;font-weight:800;border-radius:20px;padding:3px 12px;background:var(--line);color:var(--mute)}.planbar .on{background:var(--math);color:#fff}.planbar .dn{background:#bfe8d4;color:#0d5c40}
+.toast{background:linear-gradient(90deg,#1c2340,#4b2fb3)}
+body.mob .hh-av{width:86px;height:86px}body.mob .avb{width:calc(33.3% - 6px)}
+
+.hero-av{border-radius:16%;box-shadow:0 3px 10px rgba(10,12,30,.35)}img.hero-av{object-fit:cover}
+.hx-bob{animation:hxbob 3.4s ease-in-out infinite}@keyframes hxbob{50%{transform:translateY(-1.2px)}}
+.hx-glow{animation:hxglow 1.8s ease-in-out infinite}@keyframes hxglow{50%{opacity:.55}}
+.hx-aura{animation:hxray 4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}@keyframes hxray{0%,100%{opacity:.07;transform:rotate(-6deg)}50%{opacity:.2;transform:rotate(6deg)}}
+.avb{background:#12142a;border-color:#2a2f55}.avb small{color:#fff;letter-spacing:.04em;text-transform:uppercase}.avb .hero-av{width:76px;height:76px}.avb:disabled{opacity:1}.avb:disabled .hero-av{filter:grayscale(1) brightness(.45)}.avb:disabled small{color:#9aa0c0}
+.gme{border-radius:16%}.hh-av .hero-av{box-shadow:0 0 0 3px rgba(255,255,255,.55),0 10px 24px rgba(0,0,0,.4)}
+
+/* ===== професійна монохромна тема (за зразком «Звіт ДМОС») ===== */
+:root{--bg:#f4f5f7;--card:#fff;--ink:#111417;--mute:#8a919b;--line:#e2e5ea;--ukr:#111417;--math:#111417;--vs:#111417;--sun:#c99700;--good:#15803d;--bad:#c2410c;--acc:#111417;
+ --display:"Space Grotesk","Inter","Segoe UI",sans-serif;--body:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--ink2:#3d434b;--line1:#eceef1;--card2:#fbfbfc;--soft:#f1f2f4;
+ --shadow:0 12px 40px rgba(20,28,44,.10),0 2px 8px rgba(20,28,44,.05)}
+.s-ukr{--dot:#6b0f24}.s-math{--dot:#c99700}.s-vs{--dot:#3b6ea5}
+body,body.mob{background:var(--bg);font:15.5px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{letter-spacing:-.02em;font-weight:600}h1{font-size:clamp(20px,3.4vw,27px)}
+main h2{font:600 12px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px;margin:26px 0 12px}
+main h2::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink)}
+:focus-visible{outline:2px solid var(--ink)}
+#hd{background:var(--ink);color:#fff;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;padding:10px 16px}
+#hd .logo{font:600 12px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#cfd5de;display:flex;align-items:center;gap:8px}
+#hd .logo::before{content:"";width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+body.mob .logo span{display:none}
+#hd .ib{font:600 12.5px var(--display);color:#cfd5de;padding:7px 12px;border-radius:999px;filter:none;border:1px solid rgba(255,255,255,.18);background:none;text-decoration:none}#hd .ib:hover{background:rgba(255,255,255,.12)}
+#hd .xpbar{background:rgba(255,255,255,.2)}#hd .xpbar i,.homehero .xpbar i{background:#fff}.xpbar i,.bar i{background:var(--ink)}
+.hero p{color:var(--ink2)}
+.card{border:1px solid var(--line1);border-radius:24px;box-shadow:var(--shadow)}
+.btn{background:var(--ink);border-radius:999px;box-shadow:none;font:600 14px var(--body);padding:11px 18px;border:1px solid transparent;transition:transform .15s,box-shadow .15s}
+.btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 8px 20px rgba(20,28,44,.14)}.btn:active{transform:none;box-shadow:none}.btn.big{font-size:15px;padding:13px 22px}
+.btn.ghost{border:1px solid var(--line);background:#fff;color:var(--ink)}.btn.arm{border-color:var(--bad);color:var(--bad)}
+.back{color:var(--mute);font:600 13px var(--display)}
+.homehero{background:var(--ink);box-shadow:var(--shadow);border-radius:24px;padding:20px}
+.homehero::after{background:radial-gradient(circle at 90% 22%,rgba(255,255,255,.10) 0 2px,transparent 3px),radial-gradient(circle at 90% 22%,transparent 0 56px,rgba(255,255,255,.07) 57px 58px,transparent 59px),radial-gradient(circle at 90% 22%,transparent 0 106px,rgba(255,255,255,.05) 107px 108px,transparent 109px),radial-gradient(circle at 90% 22%,transparent 0 156px,rgba(255,255,255,.04) 157px 158px,transparent 159px)}
+.hh-t small{font:600 11.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#aab3c2;opacity:1}.hh-t p{color:#cfd5de}.hh-t h1{margin-top:4px}
+.cont{background:#fff;color:var(--ink);border:1px solid var(--line1);border-left:1px solid var(--line1);margin-top:14px}.cont small{font:600 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}.cont b{font:600 18px var(--display)}.cont span{color:var(--ink2)}.cont .btn{animation:none}
+.sub{border-top:1px solid var(--line1);transition:transform .15s,box-shadow .15s}.sub:hover{transform:translateY(-2px)}.sub b{font:600 15.5px var(--display)}
+.sub[class*="s-"] b::before,.pgh b::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--dot);margin-right:9px;vertical-align:middle}
+.pg{border-left:1px solid var(--line1)}.pgh b{font:600 15px var(--display)}.pgh span{font-size:13px}
+.tchip{border:1px solid var(--line);font-size:14px}.tchip em{color:var(--ink);font-family:var(--display)}.tchip.done{background:#ecfdf3;border-color:#bfe8d0}.tchip.part{background:var(--soft);border-color:var(--line)}.tchip.warn{background:#fff7e6;border-color:#f0d79a}
+.pill,.tag,.pill.rv,.tag.aud{background:var(--soft);color:var(--ink2);font:600 10.5px var(--display);letter-spacing:.1em;text-transform:uppercase;padding:4px 10px}
+.ttext b{color:var(--ink);font-weight:700}.task .th h1{font-size:clamp(19px,3vw,24px)}
+.book{border:1px solid var(--line);background:#fff;border-radius:14px;font-size:14px}.book.need{border-color:var(--ink);background:#fff;color:var(--ink2)}
+.helpbox{background:var(--soft);border:1px solid var(--line);border-radius:16px}
+.part{border:1px solid var(--line1);border-radius:20px;box-shadow:0 2px 8px rgba(20,28,44,.05)}.part.done{border-color:#bfe8d0;background:#fbfefc}.part.bonus{border-style:dashed;border-color:var(--line)}
+.pn{background:var(--ink);border-radius:9px;width:28px;height:28px;font:700 13px var(--display)}.pq{font-weight:600}
+.inp{border:1px solid var(--line);border-radius:12px;background:var(--card2);transition:border-color .15s,box-shadow .15s}.inp:focus{outline:none;border-color:var(--ink);background:#fff;box-shadow:0 0 0 4px rgba(17,20,23,.07)}
+.inp.bad,.cw input.bad{border-color:var(--bad);background:#fff7f3}.inp.good{border-color:var(--good);background:#ecfdf3}
+.opt{border:1px solid var(--line);border-radius:12px;font-weight:500;background:#fff}.opt.on{border-color:var(--ink);background:var(--soft);box-shadow:inset 0 0 0 1px var(--ink)}.opt.bad{border-color:var(--bad);background:#fff7f3}.opt.ok{border-color:var(--good);background:#ecfdf3}
+.mrow{border:1px dashed var(--line)}.mrow.set{border-style:solid}.mrow.act{border-color:var(--ink);background:var(--soft)}
+.crow.bad,.solrow.bad{border:1px solid var(--bad);background:#fff7f3}
+.fb{border-radius:14px;font-size:14.5px}.fb.good{background:#ecfdf3;color:var(--good)}.fb.bad{background:#fff4ed;color:#9a3412}.fb.tip{background:var(--soft);color:var(--ink2)}
+.scaf{background:var(--soft)}.cc input{border:1px solid #c9ced6}.cc sup{color:var(--ink)}
+.dots i.on{background:var(--ink)}.mis.ok b{color:var(--good)}.mis small{font:600 10.5px var(--display);letter-spacing:.1em;text-transform:uppercase}
+.sheet{border-radius:24px;box-shadow:0 26px 70px rgba(20,28,44,.16)}.x{background:var(--soft)}.fly{font-size:30px;color:var(--sun);letter-spacing:.2em}
+.toast{background:var(--ink);border-radius:999px;font:600 13.5px var(--body)}
+.padb{border:1px solid var(--line);color:var(--ink2)}.key{border:1px solid var(--line);font-family:var(--display)}
+.pgrid,.colg{background-image:linear-gradient(#e2e5ea 1px,transparent 1px),linear-gradient(90deg,#e2e5ea 1px,transparent 1px);border-color:#e2e5ea}.gridbg{background-image:linear-gradient(#dfe3e9 1px,transparent 1px),linear-gradient(90deg,#dfe3e9 1px,transparent 1px)}
+.pc.in,.pc.dn{color:#3b6ea5}.pc.act{background:#fff3c4;outline:2px solid var(--ink)}.freeg,.freeg input{border-color:#d5dae1}
+.planbar .on{background:var(--ink)}.planbar .dn{background:#ecfdf3;color:var(--good)}
+@keyframes fl{0%{background:#fff3c4;box-shadow:0 0 0 4px rgba(201,151,0,.35)}100%{background:var(--card2)}}
+#clip{border-radius:999px}
+#bn i{display:none}body.mob #bn:not([hidden]){gap:4px;padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px)}
+#bn a,#bn button{font:600 12.5px var(--display);padding:10px 0;color:var(--ink2);border-radius:999px}#bn .on{background:var(--ink);color:#fff}
+.avb{background:var(--ink);border:1px solid var(--ink);border-radius:16px}.avb.on{box-shadow:0 0 0 3px var(--sun);transform:none}.avb small{font:600 10.5px var(--display)}
+.who .pcard{border:1px solid var(--line1);border-radius:20px;box-shadow:var(--shadow)}
+.badge{border:1px solid var(--line1);border-radius:18px;opacity:.5}.badge.on{border-color:var(--ink);opacity:1}.badge span{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--mute);font-size:18px}.badge.on span{background:var(--ink);color:var(--sun)}.badge b{font:600 13.5px var(--display)}
+.tile{border:1px solid var(--line1);border-radius:20px;box-shadow:var(--shadow)}.tile:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}.tile:first-child span{color:#aab3c2}.tile span{font:600 10.5px var(--display);letter-spacing:.1em;text-transform:uppercase}
+.chart .bc,.lg.bc{fill:var(--ink);background:var(--ink)}.chart .bw,.lg.bw{fill:#e8a988;background:#e8a988}
+.tbl th{font:600 11px var(--display);text-transform:uppercase;letter-spacing:.1em;color:var(--mute)}.ans{color:var(--good)}.warnbox{background:#fff7e6;color:#8a5a00}
+.tabs .opt{border-radius:999px;font:600 13px var(--display)}.tabs .opt.on{background:var(--ink);color:#fff;box-shadow:none}
+.pw{display:grid;grid-template-columns:150px 1fr 34px;gap:12px;align-items:center;margin:9px 0}.pw span{font:600 14px var(--display)}.pw small{display:block;font:400 11.5px var(--body);color:var(--mute)}.pw .track{height:12px;border-radius:999px;background:var(--line1);overflow:hidden}.pw .track i{display:block;height:100%;border-radius:999px;background:var(--ink)}.pw b{text-align:right;font:700 15px var(--display);font-variant-numeric:tabular-nums}
+.city{border-radius:24px;padding:18px;color:#cfd5de;box-shadow:var(--shadow)}.city p{margin:12px 0 0;font-size:12.5px;color:#8a919b}
+.cityh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}.cityh span{font:600 11.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#aab3c2}.cityh b{font:700 24px var(--display);color:#fff;font-variant-numeric:tabular-nums}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:6px}
+.sec-cell{aspect-ratio:1;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:#737c88;display:grid;place-content:center;justify-items:center;text-decoration:none;transition:transform .15s}.sec-cell:hover{transform:translateY(-2px)}
+.sec-cell b{font:700 18px var(--display)}.sec-cell i{font:600 9px var(--display);font-style:normal;letter-spacing:.08em;text-transform:uppercase}
+.sec-cell.part{border-color:var(--sun);color:#e9d28a}.sec-cell.on{background:#fff;border-color:#fff;color:var(--ink)}.sec-cell.on i{color:var(--good)}
+body.mob .btn{min-height:46px}body.mob .cgrid{grid-template-columns:repeat(6,1fr);gap:5px}body.mob .sec-cell{border-radius:9px}body.mob .sec-cell b{font-size:15px}body.mob .sec-cell i{font-size:7.5px;letter-spacing:.02em}body.mob .pw{grid-template-columns:104px 1fr 30px}
 </style>
 </head>
 <body>
 <header id="hd"></header>
-<main id="app"><div class="hero"><h1>Крилатий зошит</h1><p>Завантаження…</p></div></main>
+<main id="app"><div class="hero"><h1>Штаб героїв</h1><p>Завантаження…</p></div></main>
 <nav id="bn" hidden aria-label="Головне меню"></nav>
 <div id="toasts" aria-live="polite"></div>
 <span id="cloud" class="chip"></span>
@@ -147,9 +249,9 @@ body.mob .gaps{font-size:20px;gap:12px 16px}body.mob .inp.g{width:2.2em!importan
 /* Каталог вправ зошита (с. 6–35; с. 10 у скані відсутня).
    Координати crop – у пікселях скану 992×1403. */
 const SUBJ = {
-  ukr: { name: 'Українська мова', short: 'Мова', pages: [6, 19], ico: '📖' },
-  math: { name: 'Математика', short: 'Математика', pages: [20, 29], ico: '🧮' },
-  vs: { name: 'Всесвіт', short: 'Всесвіт', pages: [30, 35], ico: '🌍' }
+  ukr: { name: 'Українська мова', short: 'Мова', pages: [6, 19], ico: '' },
+  math: { name: 'Математика', short: 'Математика', pages: [20, 29], ico: '' },
+  vs: { name: 'Всесвіт', short: 'Всесвіт', pages: [30, 35], ico: '' }
 };
 const MISSING_PAGES = [10];
 
@@ -183,7 +285,7 @@ const FR_H = (part, n, d, what) => [
   `Коли знайдеш ${what}, порівняй це число із загальною кількістю за всі три.`];
 const COL_H = ['Запиши числа стовпчиком: одиниці під одиницями, десятки під десятками.',
   'Обчислюй справа наліво, починаючи з одиниць. Не забудь про одиницю, яку запам’ятовуєш або позичаєш.',
-  'Відкрий зошит у клітинку 🧮 і перевір кожен розряд окремо.'];
+  'Відкрий зошит у клітинку і перевір кожен розряд окремо.'];
 function expandCheck(target) {
   return v => {
     const parts = String(v).replace(/\s/g, '').split('+').filter(Boolean).map(Number);
@@ -468,7 +570,7 @@ const TASKS = [
 { id: '20-2', p: 20, n: '2', s: 'math', topic: 'Нумерація', title: 'Всесвітній день…', crop: [105, 730, 895, 965],
   text: '<b>Змоделюй</b> числа на числаді й <b>запиши</b> їх у порядку зростання. <b>Прочитай</b> слово й <b>дізнайся</b>, який день святкують у світі 8 листопада. <b>Познач</b> числа за зразком. <b>Поясни</b> позначення.',
   parts: [F('Запиши числа цифрами.', [{ l: 'Два мільйони триста двадцять тисяч шістнадцять (ня)', a: 2320016 }, { l: 'Шістсот сорок дев’ять тисяч п’ять (тобу)', a: 649005 }, { l: 'Один мільйон двісті вісімнадцять (дуван)', a: 1000218 }, { l: 'Двісті п’ятдесят тисяч тридцять сім (міс)', a: 250037 }],
-      { hints: ['У кожному класі три цифри. Якщо якогось розряду немає – пиши 0.', 'Скористайся вкладкою «Розряди» в зошиті в клітинку 🧮.'] }),
+      { hints: ['У кожному класі три цифри. Якщо якогось розряду немає – пиши 0.', 'Скористайся вкладкою «Розряди» в зошиті в клітинку.'] }),
     OR('Розстав склади за числами в порядку зростання.', ['міс (250 037)', 'тобу (649 005)', 'дуван (1 000 218)', 'ня (2 320 016)'], { hints: ['Спочатку порівняй кількість цифр: шестицифрові числа менші за семицифрові.'] }),
     T('Всесвітній день…', ['містобудування'])] },
 { id: '20-3', p: 20, n: '3', s: 'math', topic: 'Додавання і віднімання', title: 'Міське населення України', crop: [105, 965, 895, 1275],
@@ -799,23 +901,23 @@ const TASKS = [
 const rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
 const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 const GENS = [
-  { id: 'add', name: 'Додавання і віднімання стовпчиком', topic: 'Додавання і віднімання', ico: '➕', make(l) {
+  { id: 'add', name: 'Додавання і віднімання стовпчиком', topic: 'Додавання і віднімання', ico: '', make(l) {
       const d = [4, 5, 6, 7][Math.min(l, 3)], hi = 10 ** d - 1, lo = 10 ** (d - 1);
       let a = rnd(lo, hi), b = rnd(lo / 10, hi); const add = Math.random() < .5; if (!add && b > a) [a, b] = [b, a];
       return N(`${fmt(a)} ${add ? '+' : '−'} ${fmt(b)} = ?`, add ? a + b : a - b, COL_H, { col: [a, add ? '+' : '-', b] }); } },
-  { id: 'cent', name: 'Роки і століття', topic: 'Століття', ico: '⏳', make(l) {
+  { id: 'cent', name: 'Роки і століття', topic: 'Століття', ico: '', make(l) {
       const y = l < 1 ? rnd(11, 20) * 100 + rnd(1, 99) : l < 2 ? rnd(2, 20) * 100 + rnd(0, 99) : rnd(1, 2100); const c = Math.floor((y - 1) / 100) + 1;
       return N(`До якого століття належить ${y} рік? Запиши арабськими цифрами.`, c, CENT_H); } },
-  { id: 'mul10', name: 'Множення й ділення на 10, 100, 1000', topic: 'Множення й ділення', ico: '✖️', make(l) {
+  { id: 'mul10', name: 'Множення й ділення на 10, 100, 1000', topic: 'Множення й ділення', ico: '', make(l) {
       const k = [10, 100, 1000][rnd(0, Math.min(2, l))], a = rnd(2, l < 2 ? 99 : 9999);
       return Math.random() < .5 ? N(`${fmt(a)} · ${k} = ?`, a * k, ['Допиши до числа стільки нулів, скільки їх у другому множнику.']) : N(`${fmt(a * k)} : ${k} = ?`, a, ['Закрий у діленому стільки нулів, скільки їх у дільнику.']); } },
-  { id: 'tens', name: 'Скільки всього десятків, сотень, тисяч', topic: 'Нумерація', ico: '🔢', make(l) {
+  { id: 'tens', name: 'Скільки всього десятків, сотень, тисяч', topic: 'Нумерація', ico: '', make(l) {
       const n = rnd(l < 1 ? 1000 : 100000, l < 2 ? 999999 : 9999999), u = [[10, 'десятків'], [100, 'сотень'], [1000, 'тисяч'], [10000, 'десятків тисяч']][rnd(0, Math.min(3, l + 1))];
       return N(`Скільки всього ${u[1]} у числі ${fmt(n)}?`, Math.floor(n / u[0]), ['Закрий у числі всі цифри менших розрядів – число, що залишилося, і є відповіддю.']); } },
-  { id: 'frac', name: 'Число за його дробом', topic: 'Задачі', ico: '🍰', make(l) {
+  { id: 'frac', name: 'Число за його дробом', topic: 'Задачі', ico: '', make(l) {
       const d = rnd(3, l < 1 ? 5 : 10), n = rnd(2, d - 1), one = rnd(2, l < 2 ? 20 : 90) * (l < 1 ? 1 : 10);
       return N(`${fmt(n * one)} становить ${n}/${d} числа. Знайди це число.`, d * one, [`${n}/${d}: ціле поділили на ${d} частин і взяли ${n}.`, 'Поділи на чисельник – знайдеш одну частину. Помнож на знаменник – знайдеш ціле.']); } },
-  { id: 'cmp', name: 'Порівняння багатоцифрових чисел', topic: 'Нумерація', ico: '⚖️', make(l) {
+  { id: 'cmp', name: 'Порівняння багатоцифрових чисел', topic: 'Нумерація', ico: '', make(l) {
       const a = rnd(10000, l < 2 ? 999999 : 9999999); let b = Math.random() < .3 ? a : Math.random() < .5 ? a + rnd(-900, 900) : Math.floor(a / 10) + rnd(0, 9); if (b < 1) b = a + 7;
       return C(`${fmt(a)}  ▢  ${fmt(b)}`, ['>', '<', '='], a > b ? 0 : a < b ? 1 : 2, { hints: ['Спочатку порівняй кількість цифр. Якщо вона однакова – порівнюй розряди зліва направо.'] }); } }
 ];
@@ -1078,7 +1180,7 @@ function buildPad(host, a, op, b, onDone) {
   const done = () => {
     draw(); msg.className = 'fb good'; msg.innerHTML = `🎉 Готово! <b>${resultText}</b>${mistakes ? '' : ' – без жодної помилки!'}`; host.querySelector('.keypad').remove();
     if (P()) { P().stat.panel++; checkBadges(); save(CUR); }
-    if (onDone) { const bn = el('<button type="button" class="btn">Вставити відповідь у завдання</button>'); bn.onclick = () => onDone(value); host.append(bn); }
+    if (onDone) onDone(value, host);
   };
   const press = k => {
     if (si >= steps.length) return; const st = steps[si];
@@ -1101,6 +1203,90 @@ function evalExpr(src) {
   try { const v = expr(); return i === s.length ? v : NaN; } catch (e) { return NaN; }
 }
 const parseSimple = l => { const m = /^(\d+)([+−\-·:])(\d+)$/.exec(String(l).replace(/\s/g, '')); return m ? [+m[1], { '+': '+', '−': '-', '-': '-', '·': '×', ':': ':' }[m[2]], +m[3]] : null; };
+
+/* ===== супергерої (оригінальні персонажі), буфер відповіді, план дій ===== */
+const HEROES = {
+  h0: { n: 'Шторм', skin: '#d9a57c', c1: '#16335f', c2: '#35c8ff', bg: '#1d4e8f', hair: '#1a1410', hs: 'short', gear: 'domino', stubble: 1 },
+  h1: { n: 'Нова', skin: '#e8bfa0', c1: '#4a1f7a', c2: '#c77dff', bg: '#5a2a9a', hair: '#e6e9f5', hs: 'long', glow: 1, fem: 1 },
+  h2: { n: 'Тінь', skin: '#c99670', c1: '#1b1d28', c2: '#ff2f4f', bg: '#3a1420', hair: '#111', gear: 'hood', mask: 1 },
+  h3: { n: 'Вектор', skin: '#7a4d33', c1: '#23301f', c2: '#7dff5a', bg: '#27452a', hair: '#0d0d0d', hs: 'buzz', gear: 'visor', stubble: 1 },
+  h4: { n: 'Титан', skin: '#888', c1: '#2f5560', c2: '#ff9a2e', bg: '#1f4650', gear: 'helm', vis: 'slit' },
+  h5: { n: 'Іскра', skin: '#6b4027', c1: '#2a2410', c2: '#ffd21f', bg: '#6a5200', hair: '#0f0b08', hs: 'bun', gear: 'domino', fem: 1 },
+  h6: { n: 'Кобальт', skin: '#cf9d78', c1: '#1c3fa8', c2: '#8fb4ff', bg: '#14246b', hair: '#15110e', hs: 'long', beard: 1, scar: 1 },
+  h7: { n: 'Фантом', skin: '#d6b294', c1: '#8b93a8', c2: '#4fe3ff', bg: '#2b3550', hair: '#333', gear: 'hood', visor: 1 },
+  h8: { n: 'Рубін', skin: '#efc7a8', c1: '#7a0f24', c2: '#ff4d6d', bg: '#5c0c1c', hair: '#0c0c12', hs: 'bob', mask: 1, fem: 1 },
+  h9: { n: 'Вартовий', skin: '#c8956c', c1: '#7a5a22', c2: '#58e0a0', bg: '#1e4a3a', hair: '#9a9a9a', gear: 'open', beard: 1 },
+  h10: { n: 'Комета', skin: '#b9825c', c1: '#0c5a63', c2: '#3dfff0', bg: '#0a4a5a', hair: '#19d3c5', hs: 'mohawk', glow: 1, fem: 1 },
+  h11: { n: 'Примара', skin: '#666', c1: '#15151c', c2: '#b06bff', bg: '#2a1a4a', gear: 'helm', vis: 'vee' }
+};
+let HID = 0;
+function heroSVG(h) {
+  const id = 'hg' + (HID++), { skin: sk, c1, c2, hair } = h, full = h.gear === 'helm', P = (d, f, x = '') => `<path d="${d}" fill="${f}" ${x}/>`, S = (d, c, w, x = '') => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${x}/>`;
+  const defs = `<defs><radialGradient id="${id}b" cx=".5" cy=".28" r=".95"><stop offset="0" stop-color="${h.bg}"/><stop offset="1" stop-color="#07080f"/></radialGradient><linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset=".45" stop-color="${c1}"/><stop offset="1" stop-color="#05060a"/></linearGradient><linearGradient id="${id}m" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient><clipPath id="${id}c"><rect width="100" height="100" rx="14"/></clipPath></defs>`;
+  const body = P('M4 100Q6 79 30 73L42 68L58 68L70 73Q94 79 96 100Z', `url(#${id}s)`) + P('M30 73L42 68L50 86L58 68L70 73L62 100L38 100Z', '#000', 'opacity=".32"') + S('M12 88Q22 80 34 78M88 88Q78 80 66 78', '#fff', 1, 'opacity=".18"') + S('M50 86L50 100', c2, 2, 'class="hx-glow"') + P('M40 66L50 74L60 66L60 70L50 79L40 70Z', '#000', 'opacity=".45"');
+  const neck = full ? P('M40 60L40 72Q50 78 60 72L60 60Z', '#0b0c12') : P('M41 56L41 72Q50 78 59 72L59 56Z', sk) + P('M41 60Q50 70 59 60L59 72Q50 78 41 72Z', '#000', 'opacity=".3"');
+  const HEAD = 'M31 38Q31 15 50 15Q69 15 69 38L67 54Q63 67 50 71Q37 67 33 54Z';
+  let face = '';
+  if (!full) {
+    face = `<ellipse cx="30.5" cy="44" rx="2.6" ry="5" fill="${sk}"/><ellipse cx="69.5" cy="44" rx="2.6" ry="5" fill="${sk}"/>` + P(HEAD, sk) + P('M50 15Q69 15 69 38L67 54Q63 67 50 71Z', '#000', 'opacity=".16"') + P('M33 54Q37 67 50 71Q63 67 67 54Q58 62 50 62Q42 62 33 54Z', '#000', 'opacity=".12"');
+    if (h.beard) face += P('M33 50Q36 56 42 55Q50 52 58 55Q64 56 67 50L66 57Q62 69 50 73Q38 69 34 57Z', hair, 'opacity=".92"');
+    else if (h.stubble) face += P('M34 52Q42 60 50 60Q58 60 66 52L65 57Q61 67 50 71Q39 67 35 57Z', '#000', 'opacity=".2"');
+    if (h.gear === 'domino') face += P('M32 37.5L47.5 38.5L50 41.5L52.5 38.5L68 37.5L67 47L55.5 49.5L50 46L44.5 49.5L33 47Z', c1) + S('M33 38.5L47 39.5M53 39.5L67 38.5', '#fff', .7, 'opacity=".35"');
+    if (!h.visor && h.gear !== 'visor') {
+      if (h.gear !== 'domino') face += S('M36 37.8L46 39.3M54 39.3L64 37.8', h.fem ? hair === '#e6e9f5' ? '#b9bdd0' : hair : '#1a1410', h.fem ? 1.6 : 2.5);
+      face += h.glow ? P('M36.5 43Q41 39.6 46 43Q41 45.6 36.5 43ZM54 43Q59 39.6 63.5 43Q59 45.6 54 43Z', c2, 'class="hx-glow"') + P('M36.5 43Q41 39.6 46 43Q41 45.6 36.5 43ZM54 43Q59 39.6 63.5 43Q59 45.6 54 43Z', '#fff', 'opacity=".45"')
+        : `<g class="hx-eyes">${P('M36.5 43Q41 39.8 46 43Q41 45.5 36.5 43ZM54 43Q59 39.8 63.5 43Q59 45.5 54 43Z', '#f4f4f4')}<circle cx="41.4" cy="42.7" r="1.9" fill="#2b2118"/><circle cx="59" cy="42.7" r="1.9" fill="#2b2118"/><circle cx="41.9" cy="42.2" r=".6" fill="#fff"/><circle cx="59.5" cy="42.2" r=".6" fill="#fff"/></g>` + S('M36.5 43Q41 39.8 46 43M54 43Q59 39.8 63.5 43', '#000', h.fem ? 1.1 : .7, 'opacity=".7"');
+    } else face += P('M31 37.5L69 37.5L68 47.5L32 47.5Z', '#0b0c12') + P('M34 40.5L66 40.5L65.4 44.8L34.6 44.8Z', c2, 'class="hx-glow"') + P('M36 41.2L52 41.2L51.6 42.4L36.2 42.4Z', '#fff', 'opacity=".6"');
+    if (h.mask) face += P('M33 49.5L50 46.5L67 49.5L66 56Q62 68 50 72Q38 68 34 56Z', h.gear === 'hood' ? '#15161f' : c1) + S('M40 57L60 57M42 61.5L58 61.5', c2, 1, 'opacity=".7"') + S('M50 47L50 53', '#000', 1, 'opacity=".4"');
+    else { face += S('M50.5 43L48.3 52.3L51.8 53.2', '#000', 1.2, 'opacity=".35"'); if (!h.beard) face += S('M44.5 59.3Q50 60.8 55.5 59.3', h.fem ? '#8a2c3a' : '#4a2620', h.fem ? 2.2 : 1.7); else face += S('M45.5 59.5Q50 60.5 54.5 59.5', '#2a1612', 1.5); }
+    if (h.scar) face += S('M60 34L64 50', '#7a3b30', 1.1, 'opacity=".8"');
+    const hs = h.hs;
+    if (hs === 'short') face += P('M30.5 37Q29 12 50 12Q71 12 69.5 37Q63 24 50 25.5Q37 24 30.5 37Z', hair) + P('M50 12Q71 12 69.5 37Q63 24 50 25.5Z', '#000', 'opacity=".25"');
+    if (hs === 'buzz') face += P('M31 36Q30 14 50 14Q70 14 69 36Q62 26 50 27Q38 26 31 36Z', hair, 'opacity=".8"');
+    if (hs === 'bun') face += `<circle cx="50" cy="9" r="7" fill="${hair}"/>` + P('M30.5 37Q29 12 50 12Q71 12 69.5 37Q63 25 50 26Q37 25 30.5 37Z', hair);
+    if (hs === 'long') face += P('M28 40Q26 10 50 10Q74 10 72 40L76 78L63 71L64.5 40Q50 25 35.5 40L37 71L24 78Z', hair) + P('M50 10Q74 10 72 40L76 78L63 71L64.5 40Q58 30 50 28Z', '#000', 'opacity=".22"');
+    if (hs === 'bob') face += P('M28.5 40Q27 11 50 11Q73 11 71.5 40L72 60L64.5 57L64.5 38Q50 26 35.5 38L35.5 57L28 60Z', hair) + S('M40 14Q34 22 33 34', '#fff', 1, 'opacity=".25"');
+    if (hs === 'mohawk') face += P('M31 34Q31 16 50 15Q69 16 69 34Q60 27 50 27Q40 27 31 34Z', '#000', 'opacity=".35"') + P('M44 26Q41 3 50 0Q59 3 56 26Q50 21 44 26Z', hair) + P('M50 0Q59 3 56 26Q53 23 50 22Z', '#000', 'opacity=".25"');
+    if (h.gear === 'hood') face += P('M22 64Q17 6 50 6Q83 6 78 64L71 78L64 60Q70 19 50 18.5Q30 19 36 60L29 78Z', h.visor ? c1 : '#12131b') + P('M50 6Q83 6 78 64L71 78L64 60Q70 19 50 18.5Z', '#000', 'opacity=".3"') + P('M33 36Q33 18.5 50 18.5Q67 18.5 67 36Q50 27 33 36Z', '#000', 'opacity=".5"');
+    if (h.gear === 'open') face += P('M28.5 43Q27 11 50 11Q73 11 71.5 43L68.5 58L63.5 56L64.5 39Q50 31 35.5 39L36.5 56L31.5 58Z', `url(#${id}s)`) + P('M28.5 43Q27 11 50 11Q73 11 71.5 43L68.5 58L63.5 56L64.5 39Q50 31 35.5 39L36.5 56L31.5 58Z', `url(#${id}m)`) + P('M47.5 9L52.5 9L52 36L50 39L48 36Z', '#000', 'opacity=".35"') + S('M35.5 39Q50 31 64.5 39', c2, 1, 'class="hx-glow"');
+  } else {
+    const HL = 'M29 40Q29 11 50 11Q71 11 71 40L69 57Q64 70 50 74Q36 70 31 57Z';
+    face = P(HL, `url(#${id}s)`) + P(HL, `url(#${id}m)`) + P('M47.8 11L52.2 11L51.6 33L48.4 33Z', '#000', 'opacity=".35"') + S('M36 58Q43 66 50 67Q57 66 64 58M50 53L50 74', '#000', 1, 'opacity=".45"')
+      + (h.vis === 'slit' ? P('M33 38.5L67 38.5L65 48L55 48L53 60L47 60L45 48L35 48Z', '#07080c') + P('M35.5 41L64.5 41L63.4 45.5L36.6 45.5Z', c2, 'class="hx-glow"') : P('M32 35L50 45L68 35L68 42.5L50 54L32 42.5Z', '#07080c') + P('M34.5 38.6L50 47.4L65.5 38.6L65.5 41L50 50.2L34.5 41Z', c2, 'class="hx-glow"'));
+  }
+  return `<svg class="hero-av" viewBox="0 0 100 100" role="img" aria-label="${h.n}">${defs}<g clip-path="url(#${id}c)"><rect width="100" height="100" fill="url(#${id}b)"/>${P('M50 -20L84 110L16 110Z', c2, 'opacity=".1" class="hx-aura"')}<g class="hx-bob">${body}${neck}${face}</g>${P('M0 0H100V100H0Z', `url(#${id}m)`, 'opacity=".35"')}</g></svg>`;
+}
+const avHTML = av => HEROES[av] ? heroSVG(HEROES[av]) : /^img:data:image\/(jpeg|png);base64,[A-Za-z0-9+\/=]+$/.test(av || '') ? `<img class="hero-av" src="${av.slice(4)}" alt="Аватар">` : String(av || '🙂').replace(/[<>&"]/g, '');
+const avName = av => HEROES[av] ? HEROES[av].n : '';
+
+/* план дій для виразу: [[a, op, b], ...] у правильному порядку */
+const OPS = { '+': '+', '-': '−', '×': '·', ':': ':' };
+function planExpr(src) {
+  let s = String(src || '').replace(/\([^()]*[A-Za-zА-Яа-яІіЇїЄєҐґ][^()]*\)/g, '').split(/[;=]/)[0].replace(/\s/g, '').replace(/[−–—]/g, '-').replace(/[·×*]/g, '*').replace(/[:÷]/g, '/');
+  if (!/^[\d+\-*/()]+$/.test(s) || !/\d[+\-*/(]/.test(s)) return null; let i = 0; const steps = [];
+  const num = () => { if (s[i] === '(') { i++; const v = expr(); if (s[i] !== ')') throw 0; i++; return v; } const m = /^\d+/.exec(s.slice(i)); if (!m) throw 0; i += m[0].length; return +m[0]; };
+  const term = () => { let v = num(); while (s[i] === '*' || s[i] === '/') { const o = s[i++], r = num(); if (o === '/') { if (!r) throw 0; steps.push([v, ':', r]); v = Math.floor(v / r); } else { steps.push(v >= r ? [v, '×', r] : [r, '×', v]); v *= r; } } return v; };
+  const expr = () => { let v = term(); while (s[i] === '+' || s[i] === '-') { const o = s[i++], r = term(); if (o === '-' && r > v) throw 0; steps.push([v, o, r]); v = o === '+' ? v + r : v - r; } return v; };
+  try { expr(); if (i !== s.length || !steps.length || steps.some(x => x[0] > 99999999 || x[2] > 99999999 || (x[1] === '×' && x[2] > 9999))) return null; return steps; } catch (e) { return null; }
+}
+const planFromText = t => { const m = String(t || '').match(/\d[\d\s]*(?:\s*[+−·:]\s*\(?\s*\d[\d\s()]*)+/g); if (!m) return null; for (const x of m) { const p = planExpr(x); if (p) return p; } return null; };
+
+/* буфер відповіді: скопіював у стовпчику – торкнувся поля – вставилось */
+let clipVal = null, lastInp = null, combo = 0;
+function insertInto(inp, v) { inp.value = v; inp.classList.remove('bad'); inp.dispatchEvent(new Event('input', { bubbles: true })); inp.classList.add('flash'); setTimeout(() => inp.classList.remove('flash'), 900); }
+function setClip(v) {
+  clipVal = v == null ? null : String(v); let c = document.getElementById('clip');
+  if (!c) { c = document.createElement('div'); c.id = 'clip'; document.body.append(c); }
+  c.hidden = clipVal == null; if (clipVal == null) return;
+  c.innerHTML = `📋 <b>${fmt(+clipVal)}</b> – торкнися порожнього поля, щоб вставити <button type="button" aria-label="Скасувати">✕</button>`; c.querySelector('button').onclick = () => setClip(null);
+  try { navigator.clipboard.writeText(clipVal).catch(() => { }); } catch (e) { }
+}
+document.addEventListener('focusin', e => { const t = e.target; if (!t.matches || !t.matches('input.inp') || !t.closest('.part') || t.closest('.modal')) return; if (clipVal != null && !t.value && !t.disabled) { insertInto(t, clipVal); setClip(null); toast('📋 Відповідь вставлено'); } lastInp = t; });
+function burst(box) {
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return; const w = document.createElement('div'); w.className = 'burst';
+  const cols = ['#111417', '#c99700', '#8a919b', '#6b0f24', '#3d434b', '#e0b84d']; for (let i = 0; i < 18; i++) { const s = document.createElement('i'), a = Math.random() * Math.PI * 2, d = 50 + Math.random() * 90; s.style.cssText = `--dx:${Math.cos(a) * d}px;--dy:${Math.sin(a) * d - 30}px;background:${cols[i % 6]};animation-delay:${Math.random() * .08}s`; w.append(s); }
+  box.append(w); setTimeout(() => w.remove(), 1000);
+}
 
 /* ===== утиліти ===== */
 const $ = (s, e = document) => e.querySelector(s);
@@ -1166,10 +1352,11 @@ async function initCloud() {
 }
 
 /* ===== профіль ===== */
-const AVATARS = ['🐛', '🦋', '🐞', '🐝', '🦊', '🐼', '🦉', '🐬', '🦄', '🚀', '🐲', '🦁'];
+const AVATARS = ['h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'h10', 'h11'];
 const AV_LEVEL = [1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6, 7];
-const LEVELS = ['Гусінь-початківець', 'Допитлива гусінь', 'Лялечка', 'Метелик', 'Метелик-мандрівник', 'Метелик-знавець', 'Королівський метелик'];
-const PLACES = [{ n: 'Лука', lvl: 1, css: 'linear-gradient(#bfe6ff,#e6f7d0 55%,#9bd67a)' }, { n: 'Ліс', lvl: 3, css: 'linear-gradient(#cdeccf,#7fc48a 60%,#3f8f5a)' }, { n: 'Берег моря', lvl: 5, css: 'linear-gradient(#ffe2b8,#9fdcf0 50%,#3aa0d0)' }, { n: 'Зоряне небо', lvl: 7, css: 'linear-gradient(#1b2150,#3b2f7a 60%,#6a4ea0)' }];
+const LEVELS = ['Новобранець', 'Стажер', 'Агент', 'Оперативник', 'Спецагент', 'Командир', 'Легенда'];
+const POWER = { ukr: 'Слово', math: 'Розум', vs: 'Світ' };
+const PLACES = [{ n: 'Дах міста', lvl: 1, css: '#111417' }, { n: 'Ангар', lvl: 3, css: '#16222e' }, { n: 'Орбітальна станція', lvl: 5, css: '#1a1830' }, { n: 'Цитадель', lvl: 7, css: '#2a1217' }];
 const P = () => DB.profiles[CUR];
 const levelOf = xp => 1 + Math.floor(xp / 150);
 const levelName = l => LEVELS[Math.min(l, LEVELS.length) - 1];
@@ -1181,29 +1368,29 @@ function newProfile(name, av) {
 function day(p) { const d = today(); if (!p.days[d]) { p.days[d] = { t: 0, r: 0, g: 0, c: 0, w: 0, f: 0, s: '' }; const ks = Object.keys(p.days).sort(); while (ks.length > 150) delete p.days[ks.shift()]; } return p.days[d]; }
 function streak(p) { let n = 0, d = today(); if (!p.days[d]) d = addDays(d, -1); while (p.days[d] && (p.days[d].c + p.days[d].t + p.days[d].g) > 0) { n++; d = addDays(d, -1); } return n; }
 function taskState(p, id) { const t = TASK[id], s = p.tasks[id]; if (!s) return 'new'; return s.done ? 'done' : Object.keys(s.parts || {}).length ? 'part' : 'new'; }
-function addXP(n, why) { const p = P(), before = levelOf(p.xp); p.xp += n; const after = levelOf(p.xp); if (why) toast(`+${n} ⭐ ${why}`); if (after > before) setTimeout(() => celebrate(`Новий рівень ${after}: ${levelName(after)}!`, 'Подивись у «Мій сад» – можливо, відкрився новий аватар чи локація.'), 600); }
+function addXP(n, why) { const p = P(), before = levelOf(p.xp); p.xp += n; const after = levelOf(p.xp); if (why) toast(`+${n} XP ${why}`); if (after > before) setTimeout(() => celebrate(`Нове звання: ${levelName(after)} (рівень ${after})`, 'Зазирни у штаб – можливо, відкрився новий герой чи база.'), 600); }
 
 const BADGES = [
-  { id: 'first', ico: '🌱', n: 'Перший крок', d: 'Виконано перше завдання', ok: (p, s) => s.done >= 1 },
-  { id: 'ten', ico: '🎒', n: 'Десятка', d: 'Виконано 10 завдань', ok: (p, s) => s.done >= 10 },
-  { id: 'fifty', ico: '🏅', n: 'Пів сотні', d: 'Виконано 50 завдань', ok: (p, s) => s.done >= 50 },
-  { id: 'page', ico: '🦋', n: 'Сторінка-метелик', d: 'Повністю виконано сторінку зошита', ok: (p, s) => s.pages >= 1 },
-  { id: 'pages5', ico: '🌸', n: 'Квітучий сад', d: 'Повністю виконано 5 сторінок', ok: (p, s) => s.pages >= 5 },
-  { id: 'persist', ico: '💪', n: 'Наполегливість', d: '5 разів знайшов(ла) відповідь після кількох спроб', ok: p => p.stat.persist >= 5 },
-  { id: 'hard', ico: '🧗', n: 'Підкорювач вершин', d: 'Розв’язано 3 складні задачі', ok: p => p.stat.hard >= 3 },
-  { id: 'solid', ico: '🔁', n: 'Закріплено!', d: '5 завдань повторено без помилок', ok: p => p.stat.solid >= 5 },
-  { id: 'streak3', ico: '🔥', n: 'Три дні поспіль', d: 'Навчання 3 дні поспіль', ok: p => streak(p) >= 3 },
-  { id: 'streak7', ico: '🌟', n: 'Тиждень старанності', d: 'Навчання 7 днів поспіль', ok: p => streak(p) >= 7 },
-  { id: 'all3', ico: '🎨', n: 'Різнобічність', d: 'За один день – завдання з усіх трьох предметів', ok: p => Object.values(p.days).some(d => d.s.split(',').filter(Boolean).length >= 3) },
-  { id: 'panel', ico: '🧮', n: 'Майстер стовпчика', d: '10 перевірених обчислень у зошиті в клітинку', ok: p => p.stat.panel >= 10 },
-  { id: 'sharp', ico: '🎯', n: 'Влучність', d: '5 завдань поспіль без жодної помилки', ok: p => p.stat.streak1 >= 5 }
+  { id: 'first', ico: '', n: 'Перший крок', d: 'Виконано перше завдання', ok: (p, s) => s.done >= 1 },
+  { id: 'ten', ico: '', n: 'Десятка', d: 'Виконано 10 завдань', ok: (p, s) => s.done >= 10 },
+  { id: 'fifty', ico: '', n: 'Пів сотні', d: 'Виконано 50 завдань', ok: (p, s) => s.done >= 50 },
+  { id: 'page', ico: '', n: 'Сектор звільнено', d: 'Повністю виконано сторінку зошита', ok: (p, s) => s.pages >= 1 },
+  { id: 'pages5', ico: '', n: 'П’ять секторів', d: 'Повністю виконано 5 сторінок', ok: (p, s) => s.pages >= 5 },
+  { id: 'persist', ico: '', n: 'Наполегливість', d: '5 разів знайшов(ла) відповідь після кількох спроб', ok: p => p.stat.persist >= 5 },
+  { id: 'hard', ico: '', n: 'Підкорювач вершин', d: 'Розв’язано 3 складні задачі', ok: p => p.stat.hard >= 3 },
+  { id: 'solid', ico: '', n: 'Закріплено!', d: '5 завдань повторено без помилок', ok: p => p.stat.solid >= 5 },
+  { id: 'streak3', ico: '', n: 'Три дні поспіль', d: 'Навчання 3 дні поспіль', ok: p => streak(p) >= 3 },
+  { id: 'streak7', ico: '', n: 'Тиждень старанності', d: 'Навчання 7 днів поспіль', ok: p => streak(p) >= 7 },
+  { id: 'all3', ico: '', n: 'Різнобічність', d: 'За один день – завдання з усіх трьох предметів', ok: p => Object.values(p.days).some(d => d.s.split(',').filter(Boolean).length >= 3) },
+  { id: 'panel', ico: '', n: 'Майстер стовпчика', d: '10 перевірених обчислень у зошиті в клітинку', ok: p => p.stat.panel >= 10 },
+  { id: 'sharp', ico: '', n: 'Влучність', d: '5 завдань поспіль без жодної помилки', ok: p => p.stat.streak1 >= 5 }
 ];
 function summary(p) {
   let done = 0; const pg = {};
   TASKS.forEach(t => { pg[t.p] = pg[t.p] || [0, 0]; pg[t.p][1]++; if (p.tasks[t.id] && p.tasks[t.id].done) { done++; pg[t.p][0]++; } });
   return { done, pages: Object.values(pg).filter(a => a[0] === a[1]).length, pg };
 }
-function checkBadges() { const p = P(), s = summary(p); BADGES.forEach(b => { if (!p.badges[b.id] && b.ok(p, s)) { p.badges[b.id] = today(); p.xp += 20; setTimeout(() => celebrate(`${b.ico} Нагорода: ${b.n}`, b.d + ' (+20 ⭐)'), 900); } }); }
+function checkBadges() { const p = P(), s = summary(p); BADGES.forEach(b => { if (!p.badges[b.id] && b.ok(p, s)) { p.badges[b.id] = today(); p.xp += 20; setTimeout(() => celebrate(`${b.ico} Нагорода: ${b.n}`, b.d + ' (+20 XP)'), 900); } }); }
 function weekDays() { const d = new Date(); const wd = (d.getDay() + 6) % 7; const out = []; for (let i = 0; i <= wd; i++) out.push(addDays(today(), -i)); return out; }
 function missions(p) {
   const d = p.days[today()] || { t: 0, r: 0, g: 0, f: 0 }, wk = weekDays().map(x => p.days[x]).filter(Boolean);
@@ -1217,13 +1404,13 @@ function missions(p) {
     { k: 'w:' + wkey + ':2', n: 'Попрацюй з усіма трьома предметами', v: ws, m: 3, xp: 30, per: 'Цього тижня' },
     { k: 'w:' + wkey + ':3', n: 'Навчайся 4 дні цього тижня', v: wa, m: 4, xp: 30, per: 'Цього тижня' }];
 }
-function checkMissions() { const p = P(); missions(p).forEach(m => { if (m.v >= m.m && !p.claimed[m.k]) { p.claimed[m.k] = 1; p.xp += m.xp; toast(`🎯 Місію виконано: ${m.n} (+${m.xp} ⭐)`); } }); const ks = Object.keys(p.claimed); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete p.claimed[k]); }
+function checkMissions() { const p = P(); missions(p).forEach(m => { if (m.v >= m.m && !p.claimed[m.k]) { p.claimed[m.k] = 1; p.xp += m.xp; toast(` Місію виконано: ${m.n} (+${m.xp} XP)`); } }); const ks = Object.keys(p.claimed); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete p.claimed[k]); }
 function reviewList(p) { return TASKS.filter(t => { const s = p.tasks[t.id]; return s && s.done && s.wrong > 0 && !s.solid; }); }
 
 /* ===== повідомлення ===== */
 function toast(msg) { const t = el(`<div class="toast">${esc(msg)}</div>`); $('#toasts').append(t); setTimeout(() => t.remove(), 3600); }
 function celebrate(title, text) {
-  const m = el(`<div class="modal"><div class="sheet cele"><div class="fly">🦋 🦋 🦋</div><h2>${esc(title)}</h2><p>${esc(text || '')}</p><button class="btn big">Далі</button></div></div>`);
+  const m = el(`<div class="modal"><div class="sheet cele"><div class="fly">★</div><h2>${esc(title)}</h2><p>${esc(text || '')}</p><button class="btn big">Далі</button></div></div>`);
   m.querySelector('button').onclick = () => m.remove(); document.body.append(m);
 }
 function modal(html, wide) { const m = el(`<div class="modal"><div class="sheet ${wide ? 'wide' : ''}"><button class="x" aria-label="Закрити">✕</button><div class="mb"></div></div></div>`); m.querySelector('.mb').innerHTML = html; m.querySelector('.x').onclick = () => m.remove(); m.onclick = e => { if (e.target === m) m.remove(); }; document.body.append(m); return m; }
@@ -1231,7 +1418,7 @@ function cropHTML() { return ''; }
 
 /* ===== віджети частин завдання ===== */
 const GENERIC = {
-  num: 'Поки що не збігається. Перевір обчислення ще раз – можна скористатися зошитом у клітинку 🧮.',
+  num: 'Поки що не збігається. Перевір обчислення ще раз – можна скористатися зошитом у клітинку.',
   text: 'Поки що не так. Перечитай завдання й перевір кожне слово.',
   choice: 'Це не той варіант. Подумай, чим він відрізняється від інших.',
   fields: 'Червоним позначено відповіді, які варто перевірити. Решта – правильні.',
@@ -1267,7 +1454,8 @@ W.fields = (p, body, sv) => {
   const g = el(`<div class="fields ${p.grid ? 'grid' : ''}"></div>`);
   p.f.forEach((f, i) => { const num = typeof f.a === 'number' || typeof f.a === 'function'; g.append(el(`<label class="fld"><span>${esc(f.l)}</span><input class="inp" style="width:${f.w || (f.norm === 'roman' ? 6 : 9)}em" ${num ? 'inputmode="numeric"' : ''} autocomplete="off" value="${sv && sv.val ? esc(sv.val[i] || '') : ''}"></label>`)); });
   body.append(g); const ins = $$('input', g);
-  if (!(sv && sv.ok)) p.f.forEach((f, i) => { const ps = parseSimple(f.l); if (!ps) return; const bn = el('<button type="button" class="padb" title="Обчислити стовпчиком">🧮</button>'); bn.onclick = () => openPanel(ps, v => { ins[i].value = v; ins[i].classList.remove('bad'); }); ins[i].after(bn); });
+  const plans = p.f.map(f => planExpr(f.l)), openF = i => openPanel(plans[i], v => insertInto(ins[i], v), () => { const n = ins.length, j = [...Array(n - 1).keys()].map(d => (i + 1 + d) % n).find(j => plans[j] && !ins[j].value.trim()); return j == null ? null : { label: p.f[j].l.replace(/\s*\([^()]*\)\s*$/, ''), go: () => openF(j) }; });
+  if (!(sv && sv.ok)) p.f.forEach((f, i) => { if (!plans[i]) return; const bn = el('<button type="button" class="padb" title="Обчислити стовпчиком">▦</button>'); bn.onclick = () => openF(i); ins[i].after(bn); });
   return { get: () => { const v = ins.map(i => i.value.trim()); return v.some(x => !x) ? null : v; }, mark: bad => ins.forEach((x, i) => x.classList.toggle('bad', bad.includes(i))), clear: () => ins.forEach(x => x.classList.remove('bad')) };
 };
 W.set = (p, body, sv) => {
@@ -1347,15 +1535,15 @@ W.steps = (p, body, sv) => {
 };
 W.sol = (p, body, sv) => {
   const ord = shuffleIdx(p.steps.length), g = el('<div class="sol"></div>'); body.append(g);
-  for (let i = 0; i < p.rows; i++) { const o = sv && sv.val && sv.val[i] || {}; g.append(el(`<div class="solrow"><b>${i + 1})</b><input class="inp se" placeholder="вираз" autocomplete="off" value="${esc(o.e || '')}"><span>=</span><input class="inp sr" inputmode="numeric" autocomplete="off" value="${esc(o.r || '')}"><span>${p.u ? '(' + esc(p.u) + ')' : ''} –</span><select class="inp sk"><option value="">обери пояснення…</option>${ord.map(k => `<option value="${k}" ${String(o.k) === String(k) ? 'selected' : ''}>${esc(p.steps[k].l)}</option>`).join('')}<option value="x" ${o.k === 'x' ? 'selected' : ''}>інше проміжне обчислення</option></select><button type="button" class="padb" title="Обчислити стовпчиком">🧮</button></div>`)); }
-  const rows = $$('.solrow', g); rows.forEach(r => { $('.padb', r).onclick = () => { const ps = parseSimple($('.se', r).value.replace(/[*xх×]/g, '·').replace(/\//g, ':')); openPanel(ps, v => { $('.sr', r).value = v; }); }; });
+  for (let i = 0; i < p.rows; i++) { const o = sv && sv.val && sv.val[i] || {}; g.append(el(`<div class="solrow"><b>${i + 1})</b><input class="inp se" placeholder="вираз" autocomplete="off" value="${esc(o.e || '')}"><span>=</span><input class="inp sr" inputmode="numeric" autocomplete="off" value="${esc(o.r || '')}"><span>${p.u ? '(' + esc(p.u) + ')' : ''} –</span><select class="inp sk"><option value="">обери пояснення…</option>${ord.map(k => `<option value="${k}" ${String(o.k) === String(k) ? 'selected' : ''}>${esc(p.steps[k].l)}</option>`).join('')}<option value="x" ${o.k === 'x' ? 'selected' : ''}>інше проміжне обчислення</option></select><button type="button" class="padb" title="Обчислити стовпчиком">▦</button></div>`)); }
+  const rows = $$('.solrow', g); rows.forEach(r => { $('.padb', r).onclick = () => { openPanel(planExpr($('.se', r).value.replace(/[xх]/g, '·').replace(/\//g, ':')), v => insertInto($('.sr', r), v)); }; });
   return { get: () => { const v = rows.map(r => ({ e: $('.se', r).value.trim(), r: $('.sr', r).value.trim(), k: $('.sk', r).value })); return v.some(x => x.e || x.r) ? v : null; }, mark: bad => rows.forEach((r, i) => r.classList.toggle('bad', bad.includes(i))), clear: () => { } };
 };
 function checkSol(p, v) {
   const bad = []; let msg = '';
   v.forEach((x, i) => { if (!x.e && !x.r) return; const r = normNum(x.r), ev = evalExpr(x.e);
     if (isNaN(ev)) { bad.push(i); msg = msg || `Дія ${i + 1}: запиши вираз зі знаком дії, наприклад 300 : 6 · 7.`; }
-    else if (ev !== r) { bad.push(i); msg = msg || `Дія ${i + 1}: вираз і результат не збігаються. Перерахуй – можна стовпчиком 🧮.`; }
+    else if (ev !== r) { bad.push(i); msg = msg || `Дія ${i + 1}: вираз і результат не збігаються. Перерахуй – можна стовпчиком.`; }
     else if (x.k === '') { bad.push(i); msg = msg || `Дія ${i + 1}: обери пояснення – що саме ти знайшов(ла) цією дією?`; }
     else { const st = p.steps.find(s => s.a === r); if (st ? p.steps[x.k] !== st && !(x.k !== 'x' && p.steps[x.k].a === r) : x.k !== 'x') { bad.push(i); msg = msg || `Дія ${i + 1}: обчислено правильно, але пояснення не підходить до цього числа. Що воно означає в задачі?`; } } });
   if (!bad.length && !v.some(x => p.final.includes(normNum(x.r)))) return { ok: false, bad: [], msg: 'Усі записані дії правильні, але розв’язання ще не дійшло до відповіді на запитання задачі. Яка дія залишилась?' };
@@ -1410,18 +1598,18 @@ function buildPart(p, i, ctx) {
   const btn = el(`<button type="button" class="btn">${lab}</button>`); act.append(btn);
   const say = (cls, html) => { fb.hidden = false; fb.className = 'fb ' + cls; fb.innerHTML = html; };
   const hints = p.hints || [];
-  const showHint = () => { if (hintN < hints.length) { hintN++; hintsUsed++; } return hints.length ? `<div class="hint">💡 Підказка ${Math.min(hintN, hints.length)} з ${hints.length}: ${esc(hints[Math.min(hintN, hints.length) - 1])}</div>` : ''; };
-  if (hints.length && CHECKABLE(p)) { const hb = el('<button type="button" class="btn ghost">💡 Підказка</button>'); hb.onclick = () => say('tip', showHint()); act.append(hb); }
+  const showHint = () => { if (hintN < hints.length) { hintN++; hintsUsed++; } return hints.length ? `<div class="hint">Підказка ${Math.min(hintN, hints.length)} з ${hints.length}: ${esc(hints[Math.min(hintN, hints.length) - 1])}</div>` : ''; };
+  if (hints.length && CHECKABLE(p)) { const hb = el('<button type="button" class="btn ghost">Підказка</button>'); hb.onclick = () => say('tip', showHint()); act.append(hb); }
   if (p.t === 'sol') act.append(el('<span class="note">Знаки: + − · :  (множення можна *, ділення – двокрапкою)</span>'));
-  if (p.col) { const cb = el('<button type="button" class="btn ghost">🧮 Стовпчик</button>'); cb.onclick = () => openPanel(Array.isArray(p.col) ? p.col : null); act.append(cb); }
-  const finish = val => { box.classList.add('done'); $('.pn', box).textContent = '✓'; $$('input,textarea,button', body).forEach(x => x.disabled = true); btn.remove(); $$('.ghost', act).forEach(x => x.remove()); ctx.onOk(val, att, hintsUsed); };
+  if (p.col) { const cb = el('<button type="button" class="btn ghost">Стовпчик</button>'); cb.onclick = () => { const plan = Array.isArray(p.col) ? [p.col] : planFromText(String(p.q).replace(/<[^>]+>/g, '')) || (ctx.t ? planFromText(ctx.t.text.replace(/<[^>]+>/g, '')) : null), inp = ['num', 'text', 'steps'].includes(p.t) ? $('input.inp', body) : null; openPanel(plan, inp ? v => insertInto(inp, v) : null); }; act.append(cb); }
+  const finish = val => { box.classList.add('done'); $('.pn', box).textContent = '✓'; $$('input,textarea,button', body).forEach(x => x.disabled = true); btn.remove(); $$('.ghost', act).forEach(x => x.remove()); if (CHECKABLE(p)) { burst(box); if (att === 1) { combo++; if (combo >= 2) toast(`🔥 Серія: ${combo} поспіль без помилок!`); } } ctx.onOk(val, att, hintsUsed); };
   btn.onclick = () => {
     if (p.t === 'memory') { btn.disabled = true; w.run(() => { btn.disabled = false; btn.textContent = 'Показати знову'; if (!box.classList.contains('done')) { box.classList.add('done'); $('.pn', box).textContent = '✓'; ctx.onOk(true, 1, 0, true); } }); return; }
     if (p.t === 'draw' && !w.used()) { say('tip', 'Спершу намалюй тут або виконай побудову в паперовому зошиті, а тоді натисни «Готово» ще раз.'); w.used = () => true; return; }
     const v = w.get(); if (v == null) { say('tip', 'Спочатку заповни всі поля цієї частини.'); return; }
     att++; const r = checkPart(p, v, w);
     if (r.ok) { say('good', att === 1 ? '🎉 Правильно з першої спроби!' : att >= 3 ? '💪 Вийшло! Ти не здався(лась) – це найцінніше.' : '👍 Тепер правильно!'); if (p.t === 'open') say('good', '📨 Збережено. Дорослий зможе прочитати твою відповідь.'); if (['self', 'draw'].includes(p.t)) fb.hidden = true; finish(v); return; }
-    w.mark(r.bad || []); ctx.onWrong();
+    w.mark(r.bad || []); combo = 0; ctx.onWrong();
     if (p.t === 'open') { say('tip', esc(r.msg)); att--; return; }
     if (p.t === 'steps' && att >= 2) w.scaffold();
     const auto = att >= (ctx.support || 1) ? showHint() : '';
@@ -1466,11 +1654,11 @@ function route() {
 window.addEventListener('hashchange', route);
 function header(bare) {
   const hd = $('#hd'), p = P();
-  hd.innerHTML = `<a class="logo" href="#home">🦋 <span>Крилатий зошит</span></a>
-    ${!bare && p ? `<a class="me" href="#garden" title="Мій сад"><span class="av">${p.av}</span><span class="mi"><b>${esc(p.name)}</b><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><small>рівень ${levelOf(p.xp)} · ${p.xp} ⭐</small></span></a>` : '<span></span>'}
-    <nav>${!bare && p ? '<button class="ib" id="bsearch" title="Пошук вправи">🔎</button><button class="ib" id="bpanel" title="Зошит у клітинку">🧮</button><a class="ib" href="#who" title="Змінити учня">👥</a>' : ''}<button class="ib" id="bview" title="Перемкнути вигляд: телефон / компʼютер">${document.body.classList.contains('mob') ? '💻' : '📱'}</button><a class="ib" href="#adult" title="Кабінет дорослих">🔒</a></nav>`;
+  hd.innerHTML = `<a class="logo" href="#home"><span>Штаб героїв</span></a>
+    ${!bare && p ? `<a class="me" href="#garden" title="Штаб"><span class="av">${avHTML(p.av)}</span><span class="mi"><b>${esc(p.name)}</b><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><small>рівень ${levelOf(p.xp)} · ${p.xp} XP</small></span></a>` : '<span></span>'}
+    <nav>${!bare && p ? '<button class="ib" id="bsearch">Пошук</button><button class="ib" id="bpanel">Стовпчик</button><a class="ib" href="#who">Учні</a>' : ''}<button class="ib" id="bview" title="Перемкнути вигляд: телефон / компʼютер">${document.body.classList.contains('mob') ? 'ПК' : 'Телефон'}</button><a class="ib" href="#adult" >Дорослим</a></nav>`;
   $('#bview').onclick = () => { setView(document.body.classList.contains('mob') ? 'desk' : 'mob'); header(bare); };
-  const bn = $('#bn'); bn.hidden = !!bare || !p; if (!bn.hidden) { const h = location.hash || '#home'; bn.innerHTML = [['#home', '🏠', 'Головна'], ['', '🔎', 'Пошук'], ['', '🧮', 'Стовпчик'], ['#trainer', '⚡', 'Тренажер'], ['#garden', '🌼', 'Сад']].map(([u, i, n]) => u ? `<a href="${u}" class="${h === u ? 'on' : ''}"><i>${i}</i>${n}</a>` : `<button data-b="${n}"><i>${i}</i>${n}</button>`).join(''); $('[data-b="Пошук"]', bn).onclick = openSearch; $('[data-b="Стовпчик"]', bn).onclick = () => openPanel(); }
+  const bn = $('#bn'); bn.hidden = !!bare || !p; if (!bn.hidden) { const h = location.hash || '#home'; bn.innerHTML = [['#home', '', 'Головна'], ['', '', 'Пошук'], ['', '', 'Стовпчик'], ['#trainer', '', 'Зала'], ['#garden', '', 'Штаб']].map(([u, i, n]) => u ? `<a href="${u}" class="${h === u ? 'on' : ''}"><i>${i}</i>${n}</a>` : `<button data-b="${n}"><i>${i}</i>${n}</button>`).join(''); $('[data-b="Пошук"]', bn).onclick = openSearch; $('[data-b="Стовпчик"]', bn).onclick = () => openPanel(); }
   if ($('#bsearch')) $('#bsearch').onclick = openSearch; if ($('#bpanel')) $('#bpanel').onclick = () => openPanel();
   setCloud(cloudState);
 }
@@ -1479,8 +1667,8 @@ function header(bare) {
 function viewWho() {
   app().innerHTML = `<div class="hero"><h1>Хто сьогодні навчається?</h1><p>Обери свій профіль або створи новий.</p></div><div class="who"></div>
     <form class="card newp" id="newp"><h3>Новий учень</h3><label class="fld"><span>Ім’я</span><input class="inp" id="nname" maxlength="20" autocomplete="off" style="width:12em"></label><div class="avs"></div><button class="btn">Створити профіль</button></form>`;
-  DB.order.forEach(id => { const p = DB.profiles[id]; if (!p) return; const b = el(`<button class="pcard"><span class="av big">${p.av}</span><b>${esc(p.name)}</b><small>рівень ${levelOf(p.xp)} · ${summary(p).done} завдань</small></button>`); b.onclick = () => { CUR = id; saveLocal(); go('home'); }; $('.who').append(b); });
-  let av = AVATARS[0]; AVATARS.slice(0, 4).forEach((a, i) => { const b = el(`<button type="button" class="avb ${i ? '' : 'on'}">${a}</button>`); b.onclick = () => { av = a; $$('.avb').forEach(x => x.classList.toggle('on', x === b)); }; $('.avs').append(b); });
+  DB.order.forEach(id => { const p = DB.profiles[id]; if (!p) return; const b = el(`<button class="pcard"><span class="av big">${avHTML(p.av)}</span><b>${esc(p.name)}</b><small>рівень ${levelOf(p.xp)} · ${summary(p).done} завдань</small></button>`); b.onclick = () => { CUR = id; saveLocal(); go('home'); }; $('.who').append(b); });
+  let av = AVATARS[0]; AVATARS.slice(0, 4).forEach((a, i) => { const b = el(`<button type="button" class="avb ${i ? '' : 'on'}">${avHTML(a)}<small>${avName(a)}</small></button>`); b.onclick = () => { av = a; $$('.avb').forEach(x => x.classList.toggle('on', x === b)); }; $('.avs').append(b); });
   $('#newp').onsubmit = e => { e.preventDefault(); const n = $('#nname').value.trim(); if (!n) { $('#nname').focus(); return; } CUR = newProfile(n, av); saveLocal(); go('home'); };
 }
 
@@ -1489,21 +1677,21 @@ const nextTask = (p, from) => { const i = from ? TASKS.findIndex(t => t.id === f
 function subjProg(p, s) { const ts = TASKS.filter(t => t.s === s); return [ts.filter(t => taskState(p, t.id) === 'done').length, ts.length]; }
 function viewHome() {
   const p = P(), s = summary(p), cont = (p.last && taskState(p, p.last) !== 'done' && TASK[p.last]) || nextTask(p), rev = reviewList(p), st = streak(p);
-  app().innerHTML = `<div class="hero"><h1>Привіт, ${esc(p.name)}!</h1><p>${s.done ? `Ти вже виконав(ла) ${s.done} із ${TASKS.length} завдань. ${st > 1 ? `Навчаєшся ${st} дн. поспіль 🔥` : ''}` : 'Твій зошит ожив. Кожна виконана сторінка стає метеликом у твоєму саду.'}</p></div>
+  app().innerHTML = `<div class="homehero"><div class="hh-av">${avHTML(p.av)}</div><div class="hh-t"><small>${avName(p.av) ? avName(p.av) + ' · ' : ''}${levelName(levelOf(p.xp))} · рівень ${levelOf(p.xp)}</small><h1>Привіт, ${esc(p.name)}!</h1><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><p>${s.done ? `Ти вже виконав(ла) ${s.done} із ${TASKS.length} завдань. ${st > 1 ? `Навчаєшся ${st} дн. поспіль 🔥` : ''}` : 'Місто чекає на героя. Кожна виконана сторінка зошита – звільнений сектор на карті.'}</p></div></div>
   ${cont ? `<a class="card cont s-${cont.s}" href="#t-${cont.id}"><small>${p.last === cont.id ? 'Продовжити з того місця, де ти зупинився(лась)' : 'Наступне завдання'}</small><b>${SUBJ[cont.s].ico} ${esc(cont.title)}</b><span>${SUBJ[cont.s].name} · ${label(cont)}</span><i class="btn">Грати ▶</i></a>` : '<div class="card"><b>🎉 Усі завдання зошита виконано!</b> Можна повторювати й тренуватися.</div>'}
-  <h2>Предмети</h2><div class="subs">${Object.keys(SUBJ).map(k => { const [a, b] = subjProg(p, k); return `<a class="card sub s-${k}" href="#s-${k}"><span class="sico">${SUBJ[k].ico}</span><b>${SUBJ[k].name}</b><small>с. ${SUBJ[k].pages[0]}–${SUBJ[k].pages[1]}</small><span class="bar"><i style="width:${a / b * 100}%"></i></span><small>${a} з ${b}</small></a>`; }).join('')}</div>
-  <h2>Місії</h2><div class="card missions">${missions(p).map(m => `<div class="mis ${m.v >= m.m ? 'ok' : ''}"><span>${m.v >= m.m ? '✅' : '🎯'}</span><div><small>${m.per}</small><b>${m.n}</b><span class="bar"><i style="width:${Math.min(100, m.v / m.m * 100)}%"></i></span></div><em>${Math.min(m.v, m.m)}/${m.m}</em></div>`).join('')}</div>
-  <h2>Ще цікаве</h2><div class="subs">
-    <a class="card sub" href="#${rev.length ? 'r-' + rev[0].id : 'trainer'}"><span class="sico">🔁</span><b>Повторення</b><small>${rev.length ? `${rev.length} завдань, де були помилки, чекають на другу спробу` : 'Помилок для повторення немає – молодець!'}</small></a>
-    <a class="card sub" href="#trainer"><span class="sico">⚡</span><b>Тренажер</b><small>Схожі приклади – складність підлаштовується під тебе</small></a>
-    <a class="card sub" href="#garden"><span class="sico">🌼</span><b>Мій сад</b><small>${s.pages} метеликів · ${Object.keys(p.badges).length} нагород</small></a></div>`;
+  <h2>Предмети</h2><div class="subs">${Object.keys(SUBJ).map(k => { const [a, b] = subjProg(p, k); return `<a class="card sub s-${k}" href="#s-${k}"><b>${SUBJ[k].name}</b><small>с. ${SUBJ[k].pages[0]}–${SUBJ[k].pages[1]}</small><span class="bar"><i style="width:${a / b * 100}%"></i></span><small>${a} з ${b}</small></a>`; }).join('')}</div>
+  <h2>Місії</h2><div class="card missions">${missions(p).map(m => `<div class="mis ${m.v >= m.m ? 'ok' : ''}"><span>${m.v >= m.m ? '✅' : ''}</span><div><small>${m.per}</small><b>${m.n}</b><span class="bar"><i style="width:${Math.min(100, m.v / m.m * 100)}%"></i></span></div><em>${Math.min(m.v, m.m)}/${m.m}</em></div>`).join('')}</div>
+  <h2>База героя</h2><div class="subs">
+    <a class="card sub" href="#${rev.length ? 'r-' + rev[0].id : 'trainer'}"><b>Реванш</b><small>${rev.length ? `${rev.length} завдань, де були помилки, чекають на другу спробу` : 'Помилок для повторення немає – молодець!'}</small></a>
+    <a class="card sub" href="#trainer"><b>Тренувальна зала</b><small>Схожі приклади – складність підлаштовується під тебе</small></a>
+    <a class="card sub" href="#garden"><b>Штаб</b><small>${s.pages} секторів звільнено · ${Object.keys(p.badges).length} нагород</small></a></div>`;
 }
 
 /* ===== предмет: сторінки й завдання ===== */
 function viewSubject(k) {
   const p = P(), pages = [...new Set(TASKS.filter(t => t.s === k).map(t => t.p))];
   app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="hero s-${k}"><h1>${SUBJ[k].ico} ${SUBJ[k].name}</h1><p>Сторінки ${SUBJ[k].pages[0]}–${SUBJ[k].pages[1]} зошита. Обери завдання.</p></div>` +
-    pages.map(pg => { const ts = TASKS.filter(t => t.p === pg), dn = ts.filter(t => taskState(p, t.id) === 'done').length; return `<div class="card pg s-${k}"><div class="pgh"><b>Сторінка ${pg}</b><span>${dn === ts.length ? '🦋 готово' : `${dn} з ${ts.length}`}</span></div><div class="tl">${ts.map(t => `<a class="tchip ${taskState(p, t.id)}" href="#t-${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${t.hard ? ' 🧗' : ''}</a>`).join('')}</div></div>` + (MISSING_PAGES.includes(pg + 1) ? `<div class="card miss">Завдань сторінки ${pg + 1} у цій версії немає.</div>` : ''); }).join('');
+    pages.map(pg => { const ts = TASKS.filter(t => t.p === pg), dn = ts.filter(t => taskState(p, t.id) === 'done').length; return `<div class="card pg s-${k}"><div class="pgh"><b>Сторінка ${pg}</b><span>${dn === ts.length ? 'сектор звільнено' : `${dn} з ${ts.length}`}</span></div><div class="tl">${ts.map(t => `<a class="tchip ${taskState(p, t.id)}" href="#t-${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${t.hard ? ' ' : ''}</a>`).join('')}</div></div>` + (MISSING_PAGES.includes(pg + 1) ? `<div class="card miss">Завдань сторінки ${pg + 1} у цій версії немає.</div>` : ''); }).join('');
 }
 
 /* ===== завдання ===== */
@@ -1514,12 +1702,12 @@ function viewTask(id, review) {
   const st = review ? { parts: {}, wrong: 0 } : (p.tasks[id] = p.tasks[id] || { parts: {}, wrong: 0 }); if (!review) st.n = t.parts.length;
   const idx = TASKS.indexOf(t), prev = TASKS[idx - 1], next = TASKS[idx + 1];
   app().innerHTML = `<a class="back" href="#s-${t.s}">← ${SUBJ[t.s].name}</a>
-  <article class="task s-${t.s}"><header class="th"><div class="tmeta"><span class="pill">${SUBJ[t.s].ico} ${SUBJ[t.s].short}</span><span class="pill">${label(t)}</span>${t.hard ? '<span class="pill">🧗 складне</span>' : ''}${review ? '<span class="pill rv">🔁 повторення</span>' : ''}${t.paper ? '<span class="pill">✏️ потрібен паперовий зошит</span>' : ''}</div><h1>${esc(t.title)}</h1><p class="ttext">${t.text}</p>
-  <div class="tbtns">${HELP[t.id] ? '<button class="btn ghost" id="bsimple">🗣 Простими словами</button>' : ''}${HELP[t.id] && HELP[t.id][1] ? '<button class="btn ghost" id="bex">🧩 Схожий приклад</button>' : ''}${t.qr ? `<a class="btn ghost" href="${t.qr}" target="_blank" rel="noopener">🔗 Відкрити QR-посилання</a>` : ''}</div><div class="helpbox" id="helpbox" hidden></div></header>
-  <div class="book ${t.needBook || t.paper ? 'need' : ''}">📖 ${t.needBook || t.paper ? 'Відкрий паперовий зошит' : 'У зошиті'}: <b>с. ${t.p}, № ${t.n}</b>${t.needBook ? ' – текст або малюнок до завдання там' : ''}</div>${t.extra || ''}<div class="parts"></div>
+  <article class="task s-${t.s}"><header class="th"><div class="tmeta"><span class="pill">${SUBJ[t.s].ico} ${SUBJ[t.s].short}</span><span class="pill">${label(t)}</span>${t.hard ? '<span class="pill">складне</span>' : ''}${review ? '<span class="pill rv">реванш</span>' : ''}${t.paper ? '<span class="pill">потрібен паперовий зошит</span>' : ''}</div><h1>${esc(t.title)}</h1><p class="ttext">${t.text}</p>
+  <div class="tbtns">${HELP[t.id] ? '<button class="btn ghost" id="bsimple">Простими словами</button>' : ''}${HELP[t.id] && HELP[t.id][1] ? '<button class="btn ghost" id="bex">Схожий приклад</button>' : ''}${t.qr ? `<a class="btn ghost" href="${t.qr}" target="_blank" rel="noopener">🔗 Відкрити QR-посилання</a>` : ''}</div><div class="helpbox" id="helpbox" hidden></div></header>
+  <div class="book ${t.needBook || t.paper ? 'need' : ''}">${t.needBook || t.paper ? 'Відкрий паперовий зошит' : 'У зошиті'}: <b>с. ${t.p}, № ${t.n}</b>${t.needBook ? ' – текст або малюнок до завдання там' : ''}</div>${t.extra || ''}<div class="parts"></div>
   <footer class="tnav">${prev ? `<a class="btn ghost" href="#t-${prev.id}">← № ${prev.n}</a>` : '<span></span>'}<span class="dots"></span>${next ? `<a class="btn ghost" href="#t-${next.id}">№ ${next.n} →</a>` : '<span></span>'}</footer></article>`;
   const hb = (k, ttl) => { const b = $('#helpbox'); const same = b.dataset.k === String(k) && !b.hidden; b.hidden = same; b.dataset.k = k; b.innerHTML = `<b>${ttl}</b><p>${esc(HELP[t.id][k]).replace(/\n/g, '<br>')}</p>`; if (!same && !review) { st.help = (st.help || 0) + 1; save(CUR); } };
-  if ($('#bsimple')) $('#bsimple').onclick = () => hb(0, '🗣 Простими словами'); if ($('#bex')) $('#bex').onclick = () => hb(1, '🧩 Схожий приклад (не з цього завдання)');
+  if ($('#bsimple')) $('#bsimple').onclick = () => hb(0, 'Простими словами'); if ($('#bex')) $('#bex').onclick = () => hb(1, 'Схожий приклад (не з цього завдання)');
   if (!review && st.done && st.parts) { /* уже виконане – показуємо відповіді */ }
   const parts = $('.parts');
   const dots = () => $('.dots').innerHTML = t.parts.map((_, i) => `<i class="${st.parts[i] && st.parts[i].ok ? 'on' : ''}"></i>`).join('');
@@ -1549,7 +1737,7 @@ function finishTask(t, st, review) {
   }
   checkMissions(); checkBadges(); header();
   const pageDone = !review && TASKS.filter(x => x.p === t.p).every(x => taskState(p, x.id) === 'done'), nx = review ? reviewList(p)[0] : nextTask(p, t.id);
-  const m = el(`<div class="modal"><div class="sheet cele"><div class="fly">${pageDone ? '🦋 🦋 🦋' : '⭐'}</div><h2>${review ? (st.wrong ? 'Повторення завершено' : 'Закріплено без помилок!') : pageDone ? `Сторінку ${t.p} завершено!` : 'Завдання виконано!'}</h2><p>${review ? (st.wrong ? 'Ще трохи практики – і все вийде. Завдання залишилось у списку повторення.' : 'Тепер ти справді це вмієш.') : pageDone ? 'У твоєму саду з’явився новий метелик.' : st.wrong ? 'Ти знайшов(ла) правильні відповіді, хоч було непросто. Це і є навчання.' : 'Усе з першої спроби – чудова робота!'}</p><div class="row">${nx ? `<a class="btn big" href="#${review ? 'r' : 't'}-${nx.id}">Далі ▶</a>` : ''}<a class="btn ghost" href="#home">На головну</a></div></div></div>`);
+  const m = el(`<div class="modal"><div class="sheet cele"><div class="fly">${pageDone ? '★ ★ ★' : '★'}</div><h2>${review ? (st.wrong ? 'Повторення завершено' : 'Закріплено без помилок!') : pageDone ? `Сектор ${t.p} звільнено!` : 'Завдання виконано!'}</h2><p>${review ? (st.wrong ? 'Ще трохи практики – і все вийде. Завдання залишилось у списку повторення.' : 'Тепер ти справді це вмієш.') : pageDone ? 'Уся сторінка зошита виконана. Карта міста у штабі оновилась.' : st.wrong ? 'Ти знайшов(ла) правильні відповіді, хоч було непросто. Це і є навчання.' : 'Усе з першої спроби – чудова робота!'}</p><div class="row">${nx ? `<a class="btn big" href="#${review ? 'r' : 't'}-${nx.id}">Далі ▶</a>` : ''}<a class="btn ghost" href="#home">На головну</a></div></div></div>`);
   $$('a', m).forEach(a => a.addEventListener('click', () => m.remove())); m.onclick = e => { if (e.target === m) m.remove(); };
   setTimeout(() => document.body.append(m), 700);
 }
@@ -1558,7 +1746,7 @@ function finishTask(t, st, review) {
 function viewTrainer(gid) {
   const p = P();
   if (!gid) { const weak = topicStats(p).filter(x => x.n >= 2 && x.first / x.n < .6).map(x => x.topic);
-    app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="hero"><h1>⚡ Тренажер</h1><p>Приклади, схожі на завдання зошита. Це доповнення: складність зростає, коли в тебе виходить, і зменшується, коли стає важко.</p></div><div class="subs">${GENS.map(g => `<button class="card sub" data-g="${g.id}"><span class="sico">${g.ico}</span><b>${g.name}</b><small>рівень складності ${(p.gen[g.id] ? p.gen[g.id].l : 0) + 1} з 4${weak.includes(g.topic) ? ' · радимо потренуватися' : ''}</small></button>`).join('')}</div>`;
+    app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="hero"><h1>Тренажер</h1><p>Приклади, схожі на завдання зошита. Це доповнення: складність зростає, коли в тебе виходить, і зменшується, коли стає важко.</p></div><div class="subs">${GENS.map(g => `<button class="card sub" data-g="${g.id}"><b>${g.name}</b><small>рівень складності ${(p.gen[g.id] ? p.gen[g.id].l : 0) + 1} з 4${weak.includes(g.topic) ? ' · радимо потренуватися' : ''}</small></button>`).join('')}</div>`;
     $$('[data-g]').forEach(b => b.onclick = () => viewTrainer(b.dataset.g)); return; }
   const g = GENS.find(x => x.id === gid), gs = p.gen[gid] = p.gen[gid] || { l: 0, run: 0, miss: 0 };
   app().innerHTML = `<button class="back" id="tb">← Усі тренажери</button><div class="hero"><h1>${g.ico} ${g.name}</h1><p id="glvl"></p></div><div class="parts"></div>`;
@@ -1576,13 +1764,19 @@ function viewTrainer(gid) {
 /* ===== сад ===== */
 function viewGarden() {
   const p = P(), s = summary(p), lvl = levelOf(p.xp), pl = PLACES[p.place] || PLACES[0];
-  const flies = Object.keys(s.pg).filter(k => s.pg[k][0] === s.pg[k][1]).map(k => { const t = TASKS.find(x => x.p == k), h = { ukr: 300, math: 190, vs: 90 }[t.s]; return `<span class="bf" title="Сторінка ${k}" style="left:${(k * 37) % 88 + 3}%;top:${(k * 53) % 62 + 8}%;filter:hue-rotate(${h}deg);animation-delay:-${k % 5}s">🦋</span>`; }).join('');
-  app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="hero"><h1>🌼 Мій сад</h1><p>${esc(p.name)}, ти – ${levelName(lvl)} (рівень ${lvl}). До наступного рівня ${150 - p.xp % 150} ⭐.</p></div>
-  <div class="garden" style="background:${pl.css}">${flies || '<p class="gempty">Заверши всі завдання однієї сторінки – і тут оселиться перший метелик.</p>'}<span class="gme">${p.av}</span></div>
-  <h2>Локації саду</h2><div class="row wrap">${PLACES.map((x, i) => `<button class="opt ${p.place === i ? 'on' : ''}" data-pl="${i}" ${lvl < x.lvl ? 'disabled' : ''}>${x.n}${lvl < x.lvl ? ` 🔒 рівень ${x.lvl}` : ''}</button>`).join('')}</div>
-  <h2>Персонажі</h2><div class="row wrap">${AVATARS.map((a, i) => `<button class="avb ${p.av === a ? 'on' : ''}" data-av="${a}" ${lvl < AV_LEVEL[i] ? 'disabled title="Відкриється на рівні ' + AV_LEVEL[i] + '"' : ''}>${lvl < AV_LEVEL[i] ? '🔒' : a}</button>`).join('')}</div>
-  <h2>Нагороди</h2><div class="badges">${BADGES.map(b => `<div class="badge ${p.badges[b.id] ? 'on' : ''}"><span>${b.ico}</span><b>${b.n}</b><small>${b.d}</small></div>`).join('')}</div>`;
+  const pages = Object.keys(s.pg).map(Number).sort((x, y) => x - y);
+  const city = pages.map(k => { const [a, b] = s.pg[k], t = TASKS.find(x => x.p === k); return `<a class="sec-cell ${a === b ? 'on' : a ? 'part' : ''}" href="#s-${t.s}" title="Сторінка ${k}: виконано ${a} з ${b}"><b>${k}</b><i>${a === b ? 'вільний' : a + '/' + b}</i></a>`; }).join('');
+  const pow = Object.keys(SUBJ).map(k => { const [a, b] = subjProg(p, k), v = Math.round(a / b * 100); return `<div class="pw"><span>${POWER[k]}<small>${SUBJ[k].name}</small></span><div class="track"><i style="width:${v}%"></i></div><b>${v}</b></div>`; }).join('');
+  app().innerHTML = `<a class="back" href="#home">← На головну</a>
+  <div class="homehero"><div class="hh-av">${avHTML(p.av)}</div><div class="hh-t"><small>${avName(p.av) || 'Герой'} · рівень ${lvl}</small><h1>${levelName(lvl)} ${esc(p.name)}</h1><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><p>${p.xp} XP · до наступного звання ${150 - p.xp % 150} XP · серія ${streak(p)} дн.</p></div></div>
+  <h2>Сила героя</h2><div class="card">${pow}<p class="note">Сила росте, коли ти виконуєш завдання з предмета. 100 – предмет пройдено повністю.</p></div>
+  <h2>Карта міста</h2><div class="city" style="background:${pl.css}"><div class="cityh"><span>Звільнено секторів</span><b>${s.pages} / ${pages.length}</b></div><div class="cgrid">${city}</div><p>Кожен сектор – сторінка зошита. Виконай усі її завдання, щоб звільнити сектор.</p></div>
+  <h2>База</h2><div class="row wrap">${PLACES.map((x, i) => `<button class="opt ${p.place === i ? 'on' : ''}" data-pl="${i}" ${lvl < x.lvl ? 'disabled' : ''}>${x.n}${lvl < x.lvl ? ` · з рівня ${x.lvl}` : ''}</button>`).join('')}</div>
+  <h2>Герої</h2><div class="row wrap">${AVATARS.map((a, i) => `<button class="avb ${p.av === a ? 'on' : ''}" data-av="${a}" ${lvl < AV_LEVEL[i] ? 'disabled title="Відкриється на рівні ' + AV_LEVEL[i] + '"' : ''}>${avHTML(a)}<small>${lvl < AV_LEVEL[i] ? 'рівень ' + AV_LEVEL[i] : avName(a)}</small></button>`).join('')}</div>
+  <div class="row wrap" style="margin-top:10px"><label class="btn ghost">Своє фото або малюнок<input type="file" accept="image/*" id="avup" hidden></label></div>
+  <h2>Відзнаки</h2><div class="badges">${BADGES.map(b => `<div class="badge ${p.badges[b.id] ? 'on' : ''}"><span>★</span><b>${b.n}</b><small>${b.d}</small></div>`).join('')}</div>`;
   $$('[data-pl]').forEach(b => b.onclick = () => { p.place = +b.dataset.pl; save(CUR); viewGarden(); });
+  $('#avup').onchange = e => { const f = e.target.files[0]; if (!f) return; const im = new Image(), u = URL.createObjectURL(f); im.onload = () => { const c = document.createElement('canvas'), d = Math.min(im.width, im.height); c.width = c.height = 128; c.getContext('2d').drawImage(im, (im.width - d) / 2, (im.height - d) / 2, d, d, 0, 0, 128, 128); p.av = 'img:' + c.toDataURL('image/jpeg', .82); URL.revokeObjectURL(u); save(CUR); header(); viewGarden(); }; im.onerror = () => toast('Не вдалося прочитати картинку'); im.src = u; };
   $$('[data-av]').forEach(b => b.onclick = () => { p.av = b.dataset.av; save(CUR); header(); viewGarden(); });
 }
 
@@ -1610,22 +1804,33 @@ function colSteps(a, op, b) {
   if (op === ':') { let cur = 0, started = false; [...A].forEach((ch, i) => { cur = cur * 10 + +ch; if (cur < b && !started) { return; } const q = Math.floor(cur / b); st.push(`${started ? `Зносимо цифру ${ch}: маємо ${cur}. ` : `Перше неповне ділене – ${cur}. `}${cur} : ${b} = ${q}${q * b !== cur ? ` (бо ${q} · ${b} = ${q * b})` : ''}, остача ${cur - q * b}. У частку пишемо ${q}.`); cur -= q * b; started = true; }); if (!started) st.push(`${a} менше за ${b}, тому частка 0, остача ${a}.`); }
   return st;
 }
-function openPanel(pre, onDone) {
-  const m = modal(`<h3>🧮 Зошит у клітинку</h3><div class="tabs"><button class="opt sm on" data-t="col">Стовпчик</button><button class="opt sm" data-t="free">Чернетка</button><button class="opt sm" data-t="roz">Розряди</button></div><div id="pb"></div>`, true);
+function openPanel(pre, sink, nextFn) {
+  const m = modal(`<h3>Зошит у клітинку</h3><div class="tabs"><button class="opt sm on" data-t="col">Стовпчик</button><button class="opt sm" data-t="free">Чернетка</button><button class="opt sm" data-t="roz">Розряди</button></div><div id="pb"></div>`, true);
   const pb = $('#pb', m);
   const tabs = {
     col() {
-      pb.innerHTML = `<div class="row wrap"><input class="inp" id="ca" inputmode="numeric" placeholder="перше число" style="width:8em"><select class="inp" id="co"><option value="+">+</option><option value="-">−</option><option value="×">·</option><option value=":">:</option></select><input class="inp" id="cb" inputmode="numeric" placeholder="друге число" style="width:8em"><button class="btn" id="cgo">Записати стовпчиком</button></div><div id="cg"></div>`;
-      if (pre) { $('#ca', pb).value = pre[0]; $('#co', pb).value = pre[1]; $('#cb', pb).value = pre[2]; }
+      const plan = pre ? (Array.isArray(pre[0]) ? pre : [pre]) : null; let k = 0;
+      pb.innerHTML = `<div id="cplan"></div><div class="row wrap"><input class="inp" id="ca" inputmode="numeric" placeholder="перше число" style="width:8em"><select class="inp" id="co"><option value="+">+</option><option value="-">−</option><option value="×">·</option><option value=":">:</option></select><input class="inp" id="cb" inputmode="numeric" placeholder="друге число" style="width:8em"><button class="btn" id="cgo">Записати стовпчиком</button></div><div id="cg"></div>`;
+      const setIn = st => { $('#ca', pb).value = st[0]; $('#co', pb).value = st[1]; $('#cb', pb).value = st[2]; };
+      const after = (val, host) => {
+        const box = el('<div class="padnext"></div>'); host.append(box);
+        const add = (txt, cls, fn) => { const bt = el(`<button type="button" class="btn ${cls}">${txt}</button>`); bt.onclick = fn; box.append(bt); return bt; };
+        if (plan && k < plan.length - 1) { const nx = plan[k + 1]; box.append(el(`<p class="note">Результат дії ${k + 1} – <b>${fmt(val)}</b>. Він уже підставлений у наступну дію.</p>`)); add(`Дія ${k + 2} ▶ ${fmt(nx[0])} ${OPS[nx[1]]} ${fmt(nx[2])}`, 'big', () => { k++; setIn(nx); build(); }).focus(); return; }
+        if (sink) { sink(String(val)); box.append(el('<p class="fb good">✅ Відповідь уже вставлено в завдання.</p>')); const nx = nextFn && nextFn(); if (nx) add(`Наступний приклад ▶ ${esc(nx.label)}`, 'big', () => { m.remove(); nx.go(); }); add(nx ? 'Закрити' : 'Повернутися до завдання ▶', nx ? 'ghost' : 'big', () => m.remove()); return; }
+        const li = lastInp && lastInp.isConnected && !lastInp.disabled ? lastInp : null;
+        if (li) add('Вставити в поле, де я писав(ла)', 'big', () => { insertInto(li, String(val)); m.remove(); });
+        add('📋 Скопіювати й вставити самому', li ? 'ghost' : 'big', () => { setClip(val); m.remove(); });
+      };
       const build = () => {
         const a = normNum($('#ca', pb).value), b = normNum($('#cb', pb).value), op = $('#co', pb).value, cg = $('#cg', pb);
+        $('#cplan', pb).innerHTML = plan && plan.length > 1 ? `<div class="planbar">${plan.map((x, i) => `<span class="${i < k ? 'dn' : i === k ? 'on' : ''}">Дія ${i + 1}</span>`).join('')}</div>` : '';
         if (!(a >= 0) || !(b >= 0) || a > 99999999 || b > 99999999 || !Number.isInteger(a) || !Number.isInteger(b)) { cg.innerHTML = '<p class="note">Введи два цілих числа (до 8 цифр).</p>'; return; }
         if (op === '-' && b > a) { cg.innerHTML = '<p class="note">Від меншого числа більше не віднімаємо – поміняй числа місцями.</p>'; return; }
         if (op === ':' && b === 0) { cg.innerHTML = '<p class="note">На нуль ділити не можна.</p>'; return; }
         if (op === '×' && (b > 9999 || a < b && String(b).length > String(a).length)) { cg.innerHTML = '<p class="note">Запиши більше число першим, а другий множник – не більше чотирьох цифр.</p>'; return; }
-        buildPad(cg, a, op, b, onDone ? x => { onDone(x); m.remove(); } : null);
+        buildPad(cg, a, op, b, after);
       };
-      $('#cgo', pb).onclick = build; if (pre) build();
+      $('#cgo', pb).onclick = () => { if (plan) { const st = plan[k]; if (normNum($('#ca', pb).value) !== st[0] || normNum($('#cb', pb).value) !== st[2] || $('#co', pb).value !== st[1]) { k = plan.length - 1; } } build(); }; if (plan) { setIn(plan[0]); build(); }
     },
     free() { pb.innerHTML = '<p class="note">Вільна чернетка: торкнися клітинки й пиши цифри та знаки. Клавіша «пробіл» переходить далі.</p><div class="freeg">' + '<input maxlength="1" aria-label="клітинка">'.repeat(16 * 12) + '</div><button class="btn ghost" id="fclr">Очистити чернетку</button>';
       const ins = $$('.freeg input', pb); ins.forEach((inp, i) => { inp.oninput = () => { if (inp.value === ' ') inp.value = ''; if (ins[i + 1]) ins[i + 1].focus(); }; inp.onkeydown = e => { const mv = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -16, ArrowDown: 16 }[e.key] || (e.key === 'Backspace' && !inp.value ? -1 : 0); if (mv && ins[i + mv]) { ins[i + mv].focus(); e.preventDefault(); } }; });
@@ -1648,7 +1853,7 @@ function topicStats(p) {
 }
 function viewAdult() {
   if (!adultOpen) {
-    app().innerHTML = `<a class="back" href="#home">← До навчання</a><form class="card gate" id="gate"><h2>🔒 Кабінет батьків і вчителя</h2><p>${DB.pin ? 'Введіть PIN-код.' : 'Придумайте PIN-код із 4 цифр. Він відділяє кабінет від дитячих профілів.'}</p><input class="inp" id="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" style="width:8em"><button class="btn">${DB.pin ? 'Увійти' : 'Зберегти PIN і увійти'}</button><div class="fb bad" id="gfb" hidden></div><p class="note">PIN – це захист від випадкового входу дитини, а не криптографічний захист даних.</p></form>`;
+    app().innerHTML = `<a class="back" href="#home">← До навчання</a><form class="card gate" id="gate"><h2>Кабінет батьків і вчителя</h2><p>${DB.pin ? 'Введіть PIN-код.' : 'Придумайте PIN-код із 4 цифр. Він відділяє кабінет від дитячих профілів.'}</p><input class="inp" id="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" style="width:8em"><button class="btn">${DB.pin ? 'Увійти' : 'Зберегти PIN і увійти'}</button><div class="fb bad" id="gfb" hidden></div><p class="note">PIN – це захист від випадкового входу дитини, а не криптографічний захист даних.</p></form>`;
     $('#gate').onsubmit = e => { e.preventDefault(); const v = $('#pin').value.trim(); if (!/^\d{4,8}$/.test(v)) { $('#gfb').hidden = false; $('#gfb').textContent = 'PIN має складатися з 4–8 цифр.'; return; } if (!DB.pin) { DB.pin = pinHash(v); save(); } else if (DB.pin !== pinHash(v)) { $('#gfb').hidden = false; $('#gfb').textContent = 'Неправильний PIN.'; return; } adultOpen = true; viewAdult(); };
     return;
   }
@@ -1674,7 +1879,7 @@ function adOver(ab, p) {
   <div class="card"><h3>Як читати ці дані</h3><p class="note">«З першої спроби» показує реальне розуміння: відповідь без підказок і перебору. Завдання, виконане після кількох спроб, зараховується, але потрапляє в «Повторення». Творчі й усні завдання програма не оцінює – їх варто переглянути на вкладці «Відповіді дитини».</p></div>`;
 }
 function adPages(ab, p) {
-  ab.innerHTML = `<div class="card"><p class="note">Колір: зелений – виконано без помилок, жовтий – виконано з помилками (✗ – неправильні спроби), синій – розпочато; 🗣 – скільки разів дитина відкривала пояснення чи приклад. Натисніть, щоб відкрити завдання (воно відкриється в профілі вибраного учня).</p>${[...new Set(TASKS.map(t => t.p))].map(pg => { const ts = TASKS.filter(t => t.p === pg); return `<div class="pgrow"><b>с. ${pg}</b><div class="tl">${ts.map(t => { const s = p.tasks[t.id], st = taskState(p, t.id); return `<a class="tchip ${st} ${s && s.done && s.wrong ? 'warn' : ''}" href="#t-${t.id}" data-open="${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${s && s.wrong ? ` · ✗${s.wrong}` : ''}${s && s.solid ? ' · 🔁✓' : ''}${s && s.help ? ' · 🗣' + s.help : ''}</a>`; }).join('')}</div></div>`; }).join('')}</div>`;
+  ab.innerHTML = `<div class="card"><p class="note">Колір: зелений – виконано без помилок, жовтий – виконано з помилками (✗ – неправильні спроби), синій – розпочато; – скільки разів дитина відкривала пояснення чи приклад. Натисніть, щоб відкрити завдання (воно відкриється в профілі вибраного учня).</p>${[...new Set(TASKS.map(t => t.p))].map(pg => { const ts = TASKS.filter(t => t.p === pg); return `<div class="pgrow"><b>с. ${pg}</b><div class="tl">${ts.map(t => { const s = p.tasks[t.id], st = taskState(p, t.id); return `<a class="tchip ${st} ${s && s.done && s.wrong ? 'warn' : ''}" href="#t-${t.id}" data-open="${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${s && s.wrong ? ` · ✗${s.wrong}` : ''}${s && s.solid ? ' · 🔁✓' : ''}${s && s.help ? ' · 🗣' + s.help : ''}</a>`; }).join('')}</div></div>`; }).join('')}</div>`;
   $$('[data-open]', ab).forEach(a => a.onclick = () => { CUR = adultPid; saveLocal(); });
 }
 function adOpen(ab, p) {
@@ -1689,7 +1894,7 @@ function adKey(ab) {
   $('#kq').oninput = run; run();
 }
 function adClass(ab) {
-  ab.innerHTML = `<div class="card"><div class="tw"><table class="tbl"><tr><th>Учень</th><th>Виконано</th><th>Мова</th><th>Математика</th><th>Всесвіт</th><th>З першої спроби</th><th>Повторення</th><th>Остання активність</th></tr>${DB.order.map(id => { const p = DB.profiles[id], s = summary(p), pt = partTotals(p), ld = Object.keys(p.days).sort().pop() || '–'; return `<tr><td>${p.av} ${esc(p.name)}</td><td>${s.done}/${TASKS.length}</td>${Object.keys(SUBJ).map(k => `<td>${subjProg(p, k).join('/')}</td>`).join('')}<td>${pt.n ? Math.round(pt.first / pt.n * 100) : 0}%</td><td>${reviewList(p).length}</td><td>${ld}</td></tr>`; }).join('')}</table></div><p class="note">Щоб вести клас на одному пристрої, створіть профіль для кожного учня. Для перенесення результатів між пристроями скористайтеся експортом на вкладці «Налаштування й дані».</p></div>`;
+  ab.innerHTML = `<div class="card"><div class="tw"><table class="tbl"><tr><th>Учень</th><th>Виконано</th><th>Мова</th><th>Математика</th><th>Всесвіт</th><th>З першої спроби</th><th>Повторення</th><th>Остання активність</th></tr>${DB.order.map(id => { const p = DB.profiles[id], s = summary(p), pt = partTotals(p), ld = Object.keys(p.days).sort().pop() || '–'; return `<tr><td><span class="av">${avHTML(p.av)}</span> ${esc(p.name)}</td><td>${s.done}/${TASKS.length}</td>${Object.keys(SUBJ).map(k => `<td>${subjProg(p, k).join('/')}</td>`).join('')}<td>${pt.n ? Math.round(pt.first / pt.n * 100) : 0}%</td><td>${reviewList(p).length}</td><td>${ld}</td></tr>`; }).join('')}</table></div><p class="note">Щоб вести клас на одному пристрої, створіть профіль для кожного учня. Для перенесення результатів між пристроями скористайтеся експортом на вкладці «Налаштування й дані».</p></div>`;
 }
 function adData(ab, p) {
   ab.innerHTML = `<div class="card"><h3>Рівень підтримки для ${esc(p.name)}</h3><div class="row wrap"><button class="opt ${p.support === 1 ? 'on' : ''}" data-sup="1">Підказка після першої помилки</button><button class="opt ${p.support === 2 ? 'on' : ''}" data-sup="2">Після другої помилки</button><button class="opt ${p.support === 9 ? 'on' : ''}" data-sup="9">Лише на прохання дитини</button></div><p class="note">Правильну відповідь програма дитині не показує за жодного рівня.</p></div>
