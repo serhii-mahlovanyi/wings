@@ -237,6 +237,54 @@ body.mob .logo span{display:none}
 .sec-cell b{font:700 18px var(--display)}.sec-cell i{font:600 9px var(--display);font-style:normal;letter-spacing:.08em;text-transform:uppercase}
 .sec-cell.part{border-color:var(--sun);color:#e9d28a}.sec-cell.on{background:#fff;border-color:#fff;color:var(--ink)}.sec-cell.on i{color:var(--good)}
 body.mob .btn{min-height:46px}body.mob .cgrid{grid-template-columns:repeat(6,1fr);gap:5px}body.mob .sec-cell{border-radius:9px}body.mob .sec-cell b{font-size:15px}body.mob .sec-cell i{font-size:7.5px;letter-spacing:.02em}body.mob .pw{grid-template-columns:104px 1fr 30px}
+
+/* ===== кінематографічні герої, арсенал, наказ штабу, досьє ===== */
+.poster{display:flex;gap:18px;align-items:center;background:radial-gradient(circle at 22% 45%,rgba(255,255,255,.09),transparent 55%),linear-gradient(180deg,transparent 60%,rgba(0,0,0,.35)),var(--base,#111417);color:#fff;border-radius:24px;padding:18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.poster::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(90deg,#000 0 6%,transparent 6% 9%,#000 9% 14%,transparent 14% 70%,#000 70% 76%,transparent 76% 80%,#000 80% 88%,transparent 88% 92%,#000 92%);opacity:.18;-webkit-mask:linear-gradient(transparent,#000 40%);mask:linear-gradient(transparent,#000 40%);pointer-events:none}
+.poster .pav{flex:none;width:150px;height:150px;position:relative;z-index:1}.poster .pav .hero-av{width:100%;height:100%;border-radius:18px;box-shadow:0 0 0 1px rgba(255,255,255,.16),0 18px 44px rgba(0,0,0,.55)}
+.poster .pt{position:relative;z-index:1;min-width:0}.poster small{font:600 11.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#aab3c2}.poster h1{color:#fff;text-transform:uppercase;letter-spacing:.03em;margin:4px 0 0}.poster p{color:#cfd5de;margin:6px 0 10px}.poster .kitl{font:600 12px var(--display);letter-spacing:.06em;color:#f3d36b;margin:10px 0 0}
+.crd{display:inline-flex;gap:6px;align-items:center;background:rgba(201,151,0,.16);border:1px solid rgba(201,151,0,.55);color:#f3d36b;border-radius:999px;padding:6px 14px;font:600 13.5px var(--display)}.crd b{font-size:18px;color:#fff;font-variant-numeric:tabular-nums}
+.crd.lt{background:#fff8e1;border-color:#f0d79a;color:#8a6a00;margin:4px auto 0}.crd.lt b{color:var(--ink)}.crd.lt a{color:#8a6a00}
+.poster .btn{background:#fff;color:var(--ink)}
+body.mob .poster{flex-direction:column;text-align:center}body.mob .poster .pav{width:180px;height:180px}body.mob .poster .row{justify-content:center}
+.shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}body.mob .shop{grid-template-columns:1fr 1fr}
+.item{background:#fff;border:1px solid var(--line1);border-radius:20px;box-shadow:var(--shadow);padding:12px;display:grid;gap:6px;justify-items:center;text-align:center;align-content:start}
+.item .iv{width:118px;height:118px}.item .iv .hero-av{width:100%;height:100%}body.mob .item .iv{width:100%;height:auto;aspect-ratio:1}
+.item b{font:600 14px var(--display)}.item small{color:var(--mute);font-size:12.5px;line-height:1.35}.item .btn{width:100%;justify-content:center;margin-top:4px}
+.item.own{border-color:#bfe8d0;background:#fbfefc}.item.lock{opacity:.6}.item .price{font:700 13px var(--display);color:#8a6a00}
+.bsw{width:118px;height:118px;border-radius:16px;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}body.mob .bsw{width:100%;height:auto;aspect-ratio:1}
+.bsw::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(90deg,#000 0 12%,transparent 12% 18%,#000 18% 30%,transparent 30% 60%,#000 60% 72%,transparent 72% 78%,#000 78%);opacity:.45}
+.bsw i{position:absolute;left:50%;top:22%;width:30%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%)}
+.order{background:var(--ink);color:#fff;border-radius:24px;padding:18px;margin-top:14px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.order::before{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(255,255,255,.08);box-shadow:0 0 0 30px rgba(255,255,255,.03)}
+.order .oh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.order small{font:600 11px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#f3d36b}.order .oh em{font:700 18px var(--display);font-style:normal;font-variant-numeric:tabular-nums}
+.order .ot2{display:block;font:600 21px var(--display);margin-top:4px}.order>p{color:#cfd5de;margin:6px 0 12px;font-size:14.5px}
+.order .bar{background:rgba(255,255,255,.14);height:8px}.order .bar i{background:#22c55e}
+.olist{list-style:none;margin:14px 0;padding:0;display:grid;gap:8px}
+.olist li{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px 12px}
+.olist li.dn{opacity:.55}.olist .ck{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid rgba(255,255,255,.45);display:grid;place-items:center;font-weight:800;color:#fff}.olist li.dn .ck{background:#22c55e;border-color:#22c55e}
+.olist a,.olist .ot{flex:1;color:#fff;text-decoration:none;font-weight:600;display:grid;min-width:0}.olist small{font:400 12.5px var(--body);letter-spacing:0;text-transform:none;color:#aab3c2}.olist em{font-style:normal;font:600 11px var(--display);color:#f3d36b;white-space:nowrap}
+.olist .btn{background:#fff;color:var(--ink);padding:8px 14px;min-height:0}.order>.btn{background:#fff;color:var(--ink)}
+.ordok{margin-top:14px;display:grid;gap:2px;border-color:#bfe8d0;background:#f3fcf6}.ordok b{color:var(--good);font:600 15px var(--display)}.ordok span{color:var(--ink2);font-size:14px}
+.tchip.locked{opacity:.42}.tchip.must{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.tagm{display:inline-block;font:700 9.5px var(--display);letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:#f3d36b;border-radius:999px;padding:2px 7px;margin-left:4px}
+.lockv{background:var(--ink);color:#fff;border-radius:24px;padding:26px 20px;display:grid;justify-items:center;text-align:center;gap:8px;margin-top:10px;box-shadow:var(--shadow)}.lockv .hh-av{width:130px;height:130px}.lockv .hh-av .hero-av{width:100%;height:100%}.lockv small{font:600 11px var(--display);letter-spacing:.16em;text-transform:uppercase;color:#f3d36b}.lockv p{color:#cfd5de;max-width:46ch;margin:0 0 8px}.lockv .btn{background:#fff;color:var(--ink)}
+.asub summary{cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;font:600 16px var(--display);list-style:none}.asub summary::-webkit-details-marker{display:none}.asub summary::after{content:"＋";color:var(--mute)}.asub[open] summary::after{content:"－"}
+.asub summary b::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--dot);margin-right:10px;vertical-align:middle}
+.acount{font:600 12px var(--display);color:var(--good);margin-left:auto}
+.apage{padding:12px 0 4px;border-top:1px solid var(--line1);margin-top:12px}.aph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.aph b{font:600 14px var(--display)}
+.picks{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}body.mob .picks{grid-template-columns:1fr}
+.pick{display:flex;gap:12px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px;font:500 14px var(--body);transition:background .15s,border-color .15s}
+.pick .box{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid #c9ced6;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:16px;color:#fff;transition:.15s}
+.pick.on{border-color:#15803d;background:#ecfdf3}.pick.on .box{background:#15803d;border-color:#15803d;transform:scale(1.06)}
+.pick:disabled{opacity:.5;cursor:default}.pick:disabled .box{background:#c9ced6;border-color:#c9ced6}.pick small{margin-left:auto;color:var(--mute);font-size:11.5px;white-space:nowrap}
+.asgbar{position:sticky;bottom:calc(10px + env(safe-area-inset-bottom));z-index:25;display:flex;gap:8px;align-items:center;background:rgba(17,20,23,.96);color:#fff;border-radius:999px;padding:8px 8px 8px 18px;margin-top:14px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.asgbar span{margin-right:auto;font:600 14px var(--display)}.asgbar .btn{background:#fff;color:var(--ink)}.asgbar .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.clist{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}.clist li{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border:1px solid var(--line1);border-radius:12px;padding:8px 10px;font-size:14px}.clist .sp{flex:1}.clist .btn{padding:6px 12px;font-size:13px}
+.x2{border:0;background:var(--soft);border-radius:50%;width:28px;height:28px;margin-left:auto}
+.btn.dos{background:#111417;color:#f3d36b;border:1px solid #111417}
+.dossier{background:#111417;color:#e3e6eb;border-radius:18px;padding:16px 18px 6px;position:relative;margin-top:10px;border:1px solid #2a2f36}
+.dossier::after{content:"СЕКРЕТНО";position:absolute;right:14px;top:14px;font:700 10px var(--display);letter-spacing:.2em;color:#c99700;border:1.5px solid #c99700;border-radius:4px;padding:2px 6px;transform:rotate(5deg)}
+.dossier h4{margin:0 0 4px;font:600 15.5px var(--display);color:#fff;padding-right:96px}.dossier .dn{font-size:12.5px;color:#f3d36b;margin:0 0 12px}.dossier p{margin:0 0 12px;line-height:1.65;max-width:68ch}
 </style>
 </head>
 <body>
@@ -1220,15 +1268,31 @@ const HEROES = {
   h11: { n: 'Примара', skin: '#666', c1: '#15151c', c2: '#b06bff', bg: '#2a1a4a', gear: 'helm', vis: 'vee' }
 };
 let HID = 0;
-function heroSVG(h) {
+const mirX = d => d.replace(/(-?\d*\.?\d+) (-?\d*\.?\d+)/g, (m, x, y) => `${+(100 - x).toFixed(2)} ${y}`);
+function heroSVG(h, kit) {
+  kit = kit || {}; const tier = kit.s || 0, gear = kit.g || '';
   const id = 'hg' + (HID++), { skin: sk, c1, c2, hair } = h, full = h.gear === 'helm', P = (d, f, x = '') => `<path d="${d}" fill="${f}" ${x}/>`, S = (d, c, w, x = '') => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${x}/>`;
-  const defs = `<defs><radialGradient id="${id}b" cx=".5" cy=".28" r=".95"><stop offset="0" stop-color="${h.bg}"/><stop offset="1" stop-color="#07080f"/></radialGradient><linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset=".45" stop-color="${c1}"/><stop offset="1" stop-color="#05060a"/></linearGradient><linearGradient id="${id}m" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient><clipPath id="${id}c"><rect width="100" height="100" rx="14"/></clipPath></defs>`;
-  const body = P('M4 100Q6 79 30 73L42 68L58 68L70 73Q94 79 96 100Z', `url(#${id}s)`) + P('M30 73L42 68L50 86L58 68L70 73L62 100L38 100Z', '#000', 'opacity=".32"') + S('M12 88Q22 80 34 78M88 88Q78 80 66 78', '#fff', 1, 'opacity=".18"') + S('M50 86L50 100', c2, 2, 'class="hx-glow"') + P('M40 66L50 74L60 66L60 70L50 79L40 70Z', '#000', 'opacity=".45"');
+  const defs = `<defs><radialGradient id="${id}b" cx=".5" cy=".28" r=".95"><stop offset="0" stop-color="${h.bg}"/><stop offset="1" stop-color="#07080f"/></radialGradient><linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset=".45" stop-color="${c1}"/><stop offset="1" stop-color="#05060a"/></linearGradient><linearGradient id="${id}m" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient><linearGradient id="${id}r" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${c2}" stop-opacity="0"/><stop offset=".8" stop-color="${c2}" stop-opacity="0"/><stop offset="1" stop-color="${c2}" stop-opacity=".6"/></linearGradient><linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8e58a"/><stop offset="1" stop-color="#a87a10"/></linearGradient><radialGradient id="${id}v" cx=".5" cy=".42" r=".75"><stop offset=".62" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></radialGradient><clipPath id="${id}c"><rect width="100" height="100" rx="14"/></clipPath></defs>`;
+  const city = P('M0 100V80H6V71H11V83H15V65H22V79H26V74H31V100Z', '#000', 'opacity=".42"') + P('M69 100V73H74V63H80V78H84V69H90V75H94V70H100V100Z', '#000', 'opacity=".42"')
+    + [[17, 69], [19, 73], [8, 75], [76, 67], [78, 71], [86, 73], [96, 74], [17, 77]].map(([x, y]) => `<rect x="${x}" y="${y}" width="1.4" height="1.4" fill="${c2}" opacity=".6"/>`).join('')
+    + [[12, 28], [86, 20], [21, 50], [82, 46], [91, 60], [8, 58]].map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="${i % 2 ? .6 : .9}" fill="${c2}" class="hx-tw" style="animation-delay:${i * .3}s"/>`).join('');
+  const rays = P('M50 -20L84 110L16 110Z', c2, 'opacity=".1" class="hx-aura"') + (tier >= 3 ? P('M50 -20L100 40L100 70Z', c2, 'opacity=".09" class="hx-aura"') + P(mirX('M50 -20L100 40L100 70Z'), c2, 'opacity=".09" class="hx-aura"') : '');
+  let back = '';
+  if (gear === 'cape') { const CP = 'M0 100L1 62Q12 52 29 60L50 70L71 60Q88 52 99 62L100 100Z', CL = 'M33 71L25 50L42 63Z'; back = `<g class="hx-cape">${P(CP, c2, 'opacity=".9"')}${P(CP, '#000', 'opacity=".38"')}${S('M1 62Q12 52 29 60M99 62Q88 52 71 60', '#fff', .8, 'opacity=".45"')}</g>${P(CL, c2)}${P(CL, '#000', 'opacity=".3"')}${P(mirX(CL), c2)}${P(mirX(CL), '#000', 'opacity=".5"')}`; }
+  if (gear === 'wings') { const WG = 'M28 76L3 37L10 53L1 55L12 67L4 70L24 86Z', WE = 'M28 76L3 37L10 53L1 55L12 67L4 70L24 86'; back = P(WG, `url(#${id}s)`) + P(mirX(WG), `url(#${id}s)`) + S(WE, c2, .9, 'class="hx-glow"') + S(mirX(WE), c2, .9, 'class="hx-glow"'); }
+  const BODY = 'M4 100Q6 79 30 73L42 68L58 68L70 73Q94 79 96 100Z';
+  const body = P(BODY, `url(#${id}s)`) + P(BODY, `url(#${id}r)`) + P('M30 73L42 68L50 86L58 68L70 73L62 100L38 100Z', '#000', 'opacity=".32"') + S('M12 88Q22 80 34 78M88 88Q78 80 66 78', '#fff', 1, 'opacity=".18"') + S('M50 86L50 100', c2, 2, 'class="hx-glow"') + P('M40 66L50 74L60 66L60 70L50 79L40 70Z', '#000', 'opacity=".45"');
   const neck = full ? P('M40 60L40 72Q50 78 60 72L60 60Z', '#0b0c12') : P('M41 56L41 72Q50 78 59 72L59 56Z', sk) + P('M41 60Q50 70 59 60L59 72Q50 78 41 72Z', '#000', 'opacity=".3"');
+  let armor = '';
+  const PAD = 'M2 96Q2 75 27 70L36 81Q21 84 13 99Z', PADE = 'M4 90Q8 75 27 72', PADL = 'M9 92Q13 82 30 79';
+  if (tier >= 1) armor += [PAD, mirX(PAD)].map(d => P(d, '#2a2f3a') + P(d, `url(#${id}m)`) + P(d, c2, 'opacity=".16"')).join('') + S(PADE, c2, 1.4, 'opacity=".95"') + S(mirX(PADE), c2, 1.4, 'opacity=".95"') + S(PADL, '#fff', .7, 'opacity=".3"') + S(mirX(PADL), '#fff', .7, 'opacity=".3"') + `<circle cx="25" cy="76" r=".9" fill="#cfd5de"/><circle cx="75" cy="76" r=".9" fill="#cfd5de"/>`;
+  if (tier >= 2) armor += S('M37 81L45 93L55 93L63 81', c2, 1, 'opacity=".55"') + `<circle cx="50" cy="91" r="5.4" fill="#05060a"/><circle cx="50" cy="91" r="3.7" fill="${c2}" class="hx-glow"/><circle cx="50" cy="91" r="1.5" fill="#fff"/>`;
+  if (tier >= 3) armor += S('M30 73L42 68L58 68L70 73', `url(#${id}g)`, 1.7) + S(PADE, `url(#${id}g)`, 1.2) + S(mirX(PADE), `url(#${id}g)`, 1.2) + `<circle cx="50" cy="91" r="7" fill="none" stroke="url(#${id}g)" stroke-width="1.2"/>`;
   const HEAD = 'M31 38Q31 15 50 15Q69 15 69 38L67 54Q63 67 50 71Q37 67 33 54Z';
   let face = '';
   if (!full) {
-    face = `<ellipse cx="30.5" cy="44" rx="2.6" ry="5" fill="${sk}"/><ellipse cx="69.5" cy="44" rx="2.6" ry="5" fill="${sk}"/>` + P(HEAD, sk) + P('M50 15Q69 15 69 38L67 54Q63 67 50 71Z', '#000', 'opacity=".16"') + P('M33 54Q37 67 50 71Q63 67 67 54Q58 62 50 62Q42 62 33 54Z', '#000', 'opacity=".12"');
+    face = `<ellipse cx="30.5" cy="44" rx="2.6" ry="5" fill="${sk}"/><ellipse cx="69.5" cy="44" rx="2.6" ry="5" fill="${sk}"/>` + P(HEAD, sk) + P('M50 15Q69 15 69 38L67 54Q63 67 50 71Z', '#000', 'opacity=".16"') + P('M33 54Q37 67 50 71Q63 67 67 54Q58 62 50 62Q42 62 33 54Z', '#000', 'opacity=".12"')
+      + P(HEAD, `url(#${id}r)`) + `<ellipse cx="42" cy="27" rx="7" ry="4" fill="#fff" opacity=".09"/><ellipse cx="40" cy="51" rx="4" ry="2" fill="#fff" opacity=".07"/>` + P('M35 41Q41 37 47 41L47 45Q41 47 35 45ZM53 41Q59 37 65 41L65 45Q59 47 53 45Z', '#000', 'opacity=".1"');
     if (h.beard) face += P('M33 50Q36 56 42 55Q50 52 58 55Q64 56 67 50L66 57Q62 69 50 73Q38 69 34 57Z', hair, 'opacity=".92"');
     else if (h.stubble) face += P('M34 52Q42 60 50 60Q58 60 66 52L65 57Q61 67 50 71Q39 67 35 57Z', '#000', 'opacity=".2"');
     if (h.gear === 'domino') face += P('M32 37.5L47.5 38.5L50 41.5L52.5 38.5L68 37.5L67 47L55.5 49.5L50 46L44.5 49.5L33 47Z', c1) + S('M33 38.5L47 39.5M53 39.5L67 38.5', '#fff', .7, 'opacity=".35"');
@@ -1241,22 +1305,25 @@ function heroSVG(h) {
     else { face += S('M50.5 43L48.3 52.3L51.8 53.2', '#000', 1.2, 'opacity=".35"'); if (!h.beard) face += S('M44.5 59.3Q50 60.8 55.5 59.3', h.fem ? '#8a2c3a' : '#4a2620', h.fem ? 2.2 : 1.7); else face += S('M45.5 59.5Q50 60.5 54.5 59.5', '#2a1612', 1.5); }
     if (h.scar) face += S('M60 34L64 50', '#7a3b30', 1.1, 'opacity=".8"');
     const hs = h.hs;
-    if (hs === 'short') face += P('M30.5 37Q29 12 50 12Q71 12 69.5 37Q63 24 50 25.5Q37 24 30.5 37Z', hair) + P('M50 12Q71 12 69.5 37Q63 24 50 25.5Z', '#000', 'opacity=".25"');
+    if (hs === 'short') face += P('M30.5 37Q29 12 50 12Q71 12 69.5 37Q63 24 50 25.5Q37 24 30.5 37Z', hair) + P('M50 12Q71 12 69.5 37Q63 24 50 25.5Z', '#000', 'opacity=".25"') + S('M38 16Q34 21 33 28', '#fff', .8, 'opacity=".18"');
     if (hs === 'buzz') face += P('M31 36Q30 14 50 14Q70 14 69 36Q62 26 50 27Q38 26 31 36Z', hair, 'opacity=".8"');
     if (hs === 'bun') face += `<circle cx="50" cy="9" r="7" fill="${hair}"/>` + P('M30.5 37Q29 12 50 12Q71 12 69.5 37Q63 25 50 26Q37 25 30.5 37Z', hair);
-    if (hs === 'long') face += P('M28 40Q26 10 50 10Q74 10 72 40L76 78L63 71L64.5 40Q50 25 35.5 40L37 71L24 78Z', hair) + P('M50 10Q74 10 72 40L76 78L63 71L64.5 40Q58 30 50 28Z', '#000', 'opacity=".22"');
+    if (hs === 'long') face += P('M28 40Q26 10 50 10Q74 10 72 40L76 78L63 71L64.5 40Q50 25 35.5 40L37 71L24 78Z', hair) + P('M50 10Q74 10 72 40L76 78L63 71L64.5 40Q58 30 50 28Z', '#000', 'opacity=".22"') + S('M36 14Q30 24 30 38', '#fff', .8, 'opacity=".18"');
     if (hs === 'bob') face += P('M28.5 40Q27 11 50 11Q73 11 71.5 40L72 60L64.5 57L64.5 38Q50 26 35.5 38L35.5 57L28 60Z', hair) + S('M40 14Q34 22 33 34', '#fff', 1, 'opacity=".25"');
     if (hs === 'mohawk') face += P('M31 34Q31 16 50 15Q69 16 69 34Q60 27 50 27Q40 27 31 34Z', '#000', 'opacity=".35"') + P('M44 26Q41 3 50 0Q59 3 56 26Q50 21 44 26Z', hair) + P('M50 0Q59 3 56 26Q53 23 50 22Z', '#000', 'opacity=".25"');
     if (h.gear === 'hood') face += P('M22 64Q17 6 50 6Q83 6 78 64L71 78L64 60Q70 19 50 18.5Q30 19 36 60L29 78Z', h.visor ? c1 : '#12131b') + P('M50 6Q83 6 78 64L71 78L64 60Q70 19 50 18.5Z', '#000', 'opacity=".3"') + P('M33 36Q33 18.5 50 18.5Q67 18.5 67 36Q50 27 33 36Z', '#000', 'opacity=".5"');
     if (h.gear === 'open') face += P('M28.5 43Q27 11 50 11Q73 11 71.5 43L68.5 58L63.5 56L64.5 39Q50 31 35.5 39L36.5 56L31.5 58Z', `url(#${id}s)`) + P('M28.5 43Q27 11 50 11Q73 11 71.5 43L68.5 58L63.5 56L64.5 39Q50 31 35.5 39L36.5 56L31.5 58Z', `url(#${id}m)`) + P('M47.5 9L52.5 9L52 36L50 39L48 36Z', '#000', 'opacity=".35"') + S('M35.5 39Q50 31 64.5 39', c2, 1, 'class="hx-glow"');
+    if (gear === 'visor' && !h.visor && h.gear !== 'visor') face += P('M31.5 38.5L68.5 38.5L67.6 47L32.4 47Z', '#07080c', 'opacity=".94"') + P('M34 41.4L66 41.4L65.5 44.4L34.5 44.4Z', c2, 'class="hx-glow"') + P('M36 41.8L50 41.8L49.8 42.6L36.2 42.6Z', '#fff', 'opacity=".6"');
   } else {
     const HL = 'M29 40Q29 11 50 11Q71 11 71 40L69 57Q64 70 50 74Q36 70 31 57Z';
-    face = P(HL, `url(#${id}s)`) + P(HL, `url(#${id}m)`) + P('M47.8 11L52.2 11L51.6 33L48.4 33Z', '#000', 'opacity=".35"') + S('M36 58Q43 66 50 67Q57 66 64 58M50 53L50 74', '#000', 1, 'opacity=".45"')
+    face = P(HL, `url(#${id}s)`) + P(HL, `url(#${id}m)`) + P(HL, `url(#${id}r)`) + P('M47.8 11L52.2 11L51.6 33L48.4 33Z', '#000', 'opacity=".35"') + S('M36 58Q43 66 50 67Q57 66 64 58M50 53L50 74', '#000', 1, 'opacity=".45"')
       + (h.vis === 'slit' ? P('M33 38.5L67 38.5L65 48L55 48L53 60L47 60L45 48L35 48Z', '#07080c') + P('M35.5 41L64.5 41L63.4 45.5L36.6 45.5Z', c2, 'class="hx-glow"') : P('M32 35L50 45L68 35L68 42.5L50 54L32 42.5Z', '#07080c') + P('M34.5 38.6L50 47.4L65.5 38.6L65.5 41L50 50.2L34.5 41Z', c2, 'class="hx-glow"'));
   }
-  return `<svg class="hero-av" viewBox="0 0 100 100" role="img" aria-label="${h.n}">${defs}<g clip-path="url(#${id}c)"><rect width="100" height="100" fill="url(#${id}b)"/>${P('M50 -20L84 110L16 110Z', c2, 'opacity=".1" class="hx-aura"')}<g class="hx-bob">${body}${neck}${face}</g>${P('M0 0H100V100H0Z', `url(#${id}m)`, 'opacity=".35"')}</g></svg>`;
+  const shield = gear === 'shield' ? `<g class="hx-glow">${P('M17 73L28 79L28 92L17 98L6 92L6 79Z', c2, 'opacity=".22"')}${S('M17 73L28 79L28 92L17 98L6 92L6 79Z', c2, 1.3)}${S('M17 78L24 82L24 90L17 94L10 90L10 82Z', c2, .7, 'opacity=".6"')}</g>` : '';
+  return `<svg class="hero-av" viewBox="0 0 100 100" role="img" aria-label="${h.n}">${defs}<g clip-path="url(#${id}c)"><rect width="100" height="100" fill="url(#${id}b)"/>${rays}${city}<g class="hx-bob">${back}${body}${neck}${armor}${face}${shield}</g>${P('M0 0H100V100H0Z', `url(#${id}m)`, 'opacity=".3"')}<rect width="100" height="100" fill="url(#${id}v)"/></g></svg>`;
 }
-const avHTML = av => HEROES[av] ? heroSVG(HEROES[av]) : /^img:data:image\/(jpeg|png);base64,[A-Za-z0-9+\/=]+$/.test(av || '') ? `<img class="hero-av" src="${av.slice(4)}" alt="Аватар">` : String(av || '🙂').replace(/[<>&"]/g, '');
+const avHTML = (av, kit) => HEROES[av] ? heroSVG(HEROES[av], kit) : /^img:data:image\/(jpeg|png);base64,[A-Za-z0-9+\/=]+$/.test(av || '') ? `<img class="hero-av" src="${av.slice(4)}" alt="Аватар">` : String(av || '🙂').replace(/[<>&"]/g, '');
+const kitOf = p => (p && p.kit && p.kit[p.av]) || {};
 const avName = av => HEROES[av] ? HEROES[av].n : '';
 
 /* план дій для виразу: [[a, op, b], ...] у правильному порядку */
@@ -1356,19 +1423,29 @@ const AVATARS = ['h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'h1
 const AV_LEVEL = [1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6, 7];
 const LEVELS = ['Новобранець', 'Стажер', 'Агент', 'Оперативник', 'Спецагент', 'Командир', 'Легенда'];
 const POWER = { ukr: 'Слово', math: 'Розум', vs: 'Світ' };
-const PLACES = [{ n: 'Дах міста', lvl: 1, css: '#111417' }, { n: 'Ангар', lvl: 3, css: '#16222e' }, { n: 'Орбітальна станція', lvl: 5, css: '#1a1830' }, { n: 'Цитадель', lvl: 7, css: '#2a1217' }];
-const P = () => DB.profiles[CUR];
+const PLACES = [{ n: 'Дах міста', lvl: 1, c: 0, css: '#111417', d: 'Стартова база над нічним містом' }, { n: 'Ангар', lvl: 3, c: 150, css: '#16222e', d: 'Підземний ангар із реактивним джетом' }, { n: 'Орбітальна станція', lvl: 5, c: 300, css: '#1a1830', d: 'База на орбіті, Земля в ілюмінаторі' }, { n: 'Цитадель', lvl: 7, c: 500, css: '#2a1217', d: 'Фортеця легенд у горах' }];
+const ARMOR = [{ n: 'Mk I · Базовий костюм', c: 0 }, { n: 'Mk II · Бронепластини', c: 60, d: 'Наплічники й посилений корпус' }, { n: 'Mk III · Енергоядро', c: 150, d: 'Світне ядро в грудях і силові лінії' }, { n: 'Mk IV · Легендарна броня', c: 300, d: 'Золоте оздоблення й посилене сяйво' }];
+const GEAR = { cape: { n: 'Бойовий плащ', c: 100, d: 'Майорить за спиною' }, visor: { n: 'Тактичний візор', c: 120, d: 'Сканер замість очей' }, shield: { n: 'Енергощит', c: 160, d: 'Світний щит у руці' }, wings: { n: 'Реактивні крила', c: 250, d: 'Леза-крила з плечей' } };
+const CSUBJ = { ukr: 'Мова', math: 'Математика', vs: 'Всесвіт', other: 'Інше' };
+const GEN_CAP = 30;
+let CURTASK = null, VT0 = 0;
+function mig(p) { if (!p) return p; if (p.cr == null) p.cr = p.xp || 0; p.kit = p.kit || {}; p.own = p.own || {}; p.own.g = p.own.g || {}; p.own.b = p.own.b || {}; p.own.b[0] = 1; if (p.place) p.own.b[p.place] = 1; if (p.asg === undefined) p.asg = null; return p; }
+const P = () => mig(DB.profiles[CUR]);
 const levelOf = xp => 1 + Math.floor(xp / 150);
 const levelName = l => LEVELS[Math.min(l, LEVELS.length) - 1];
 function newProfile(name, av) {
   const id = 'p' + Date.now().toString(36) + Math.floor(Math.random() * 1e3);
-  DB.profiles[id] = { id, name, av, created: today(), xp: 0, tasks: {}, days: {}, badges: {}, claimed: {}, gen: {}, last: null, support: 1, place: 0, stat: { persist: 0, hard: 0, panel: 0, solid: 0, streak1: 0 }, rev: Date.now() };
+  DB.profiles[id] = { id, name, av, created: today(), xp: 0, tasks: {}, days: {}, badges: {}, claimed: {}, gen: {}, last: null, support: 1, place: 0, cr: 0, kit: {}, own: { g: {}, b: { 0: 1 } }, asg: null, stat: { persist: 0, hard: 0, panel: 0, solid: 0, streak1: 0 }, rev: Date.now() };
   DB.order.push(id); save(id); save(); return id;
 }
 function day(p) { const d = today(); if (!p.days[d]) { p.days[d] = { t: 0, r: 0, g: 0, c: 0, w: 0, f: 0, s: '' }; const ks = Object.keys(p.days).sort(); while (ks.length > 150) delete p.days[ks.shift()]; } return p.days[d]; }
 function streak(p) { let n = 0, d = today(); if (!p.days[d]) d = addDays(d, -1); while (p.days[d] && (p.days[d].c + p.days[d].t + p.days[d].g) > 0) { n++; d = addDays(d, -1); } return n; }
 function taskState(p, id) { const t = TASK[id], s = p.tasks[id]; if (!s) return 'new'; return s.done ? 'done' : Object.keys(s.parts || {}).length ? 'part' : 'new'; }
-function addXP(n, why) { const p = P(), before = levelOf(p.xp); p.xp += n; const after = levelOf(p.xp); if (why) toast(`+${n} XP ${why}`); if (after > before) setTimeout(() => celebrate(`Нове звання: ${levelName(after)} (рівень ${after})`, 'Зазирни у штаб – можливо, відкрився новий герой чи база.'), 600); }
+function addXP(n, why, src) { const p = P(), before = levelOf(p.xp); p.xp += n; let c = n;
+  if (src === 'gen') { const d = day(p), left = Math.max(0, GEN_CAP - (d.gc || 0)); c = Math.min(c, left); d.gc = (d.gc || 0) + c; }
+  else if (src === 'rev') { const s = p.tasks[CURTASK]; if (s && s.rvDay === today()) c = 0; else if (s) s.rvDay = today(); }
+  else if (CURTASK && isMust(p, CURTASK)) c *= 2;
+  p.cr = (p.cr || 0) + c; const after = levelOf(p.xp); if (why) toast(`+${n} XP ${why}`); if (after > before) setTimeout(() => celebrate(`Нове звання: ${levelName(after)} (рівень ${after})`, 'Зазирни у штаб – можливо, відкрився новий герой чи база.'), 600); }
 
 const BADGES = [
   { id: 'first', ico: '', n: 'Перший крок', d: 'Виконано перше завдання', ok: (p, s) => s.done >= 1 },
@@ -1390,7 +1467,7 @@ function summary(p) {
   TASKS.forEach(t => { pg[t.p] = pg[t.p] || [0, 0]; pg[t.p][1]++; if (p.tasks[t.id] && p.tasks[t.id].done) { done++; pg[t.p][0]++; } });
   return { done, pages: Object.values(pg).filter(a => a[0] === a[1]).length, pg };
 }
-function checkBadges() { const p = P(), s = summary(p); BADGES.forEach(b => { if (!p.badges[b.id] && b.ok(p, s)) { p.badges[b.id] = today(); p.xp += 20; setTimeout(() => celebrate(`${b.ico} Нагорода: ${b.n}`, b.d + ' (+20 XP)'), 900); } }); }
+function checkBadges() { const p = P(), s = summary(p); BADGES.forEach(b => { if (!p.badges[b.id] && b.ok(p, s)) { p.badges[b.id] = today(); p.xp += 20; p.cr = (p.cr || 0) + 20; setTimeout(() => celebrate(`${b.ico} Нагорода: ${b.n}`, b.d + ' (+20 XP і ⬡ 20)'), 900); } }); }
 function weekDays() { const d = new Date(); const wd = (d.getDay() + 6) % 7; const out = []; for (let i = 0; i <= wd; i++) out.push(addDays(today(), -i)); return out; }
 function missions(p) {
   const d = p.days[today()] || { t: 0, r: 0, g: 0, f: 0 }, wk = weekDays().map(x => p.days[x]).filter(Boolean);
@@ -1404,7 +1481,7 @@ function missions(p) {
     { k: 'w:' + wkey + ':2', n: 'Попрацюй з усіма трьома предметами', v: ws, m: 3, xp: 30, per: 'Цього тижня' },
     { k: 'w:' + wkey + ':3', n: 'Навчайся 4 дні цього тижня', v: wa, m: 4, xp: 30, per: 'Цього тижня' }];
 }
-function checkMissions() { const p = P(); missions(p).forEach(m => { if (m.v >= m.m && !p.claimed[m.k]) { p.claimed[m.k] = 1; p.xp += m.xp; toast(` Місію виконано: ${m.n} (+${m.xp} XP)`); } }); const ks = Object.keys(p.claimed); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete p.claimed[k]); }
+function checkMissions() { const p = P(); missions(p).forEach(m => { if (m.v >= m.m && !p.claimed[m.k]) { p.claimed[m.k] = 1; p.xp += m.xp; p.cr = (p.cr || 0) + m.xp; toast(`Місію виконано: ${m.n} (+${m.xp} XP і ⬡ ${m.xp})`); } }); const ks = Object.keys(p.claimed); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete p.claimed[k]); }
 function reviewList(p) { return TASKS.filter(t => { const s = p.tasks[t.id]; return s && s.done && s.wrong > 0 && !s.solid; }); }
 
 /* ===== повідомлення ===== */
@@ -1636,14 +1713,125 @@ function keyOf(p) {
   }
 }
 
+/* ===== наказ штабу: обов'язкові завдання від дорослого ===== */
+const fmtDate = d => d ? d.slice(8) + '.' + d.slice(5, 7) : '';
+function missionDone(p) { const a = p && p.asg; if (!a) return true; return a.ids.every(id => !TASK[id] || taskState(p, id) === 'done') && a.custom.every(c => c.done); }
+function activeMission(p) { return p && p.asg && !p.asg.fin && !missionDone(p) ? p.asg : null; }
+function isMust(p, id) { const m = activeMission(p); return !!m && m.ids.includes(id); }
+function lockedFor(h) { const m = activeMission(P()); if (!m) return false; if (h.startsWith('t-')) return !!TASK[h.slice(2)] && !m.ids.includes(h.slice(2)); return h.startsWith('r-') || h === 'trainer'; }
+function lockTag(p, id) { const m = activeMission(p); return !m ? '' : m.ids.includes(id) ? '<span class="tagm">наказ</span>' : ' 🔒'; }
+function checkOrder(p) {
+  const a = p.asg; if (!a || a.fin || !missionDone(p)) return;
+  a.fin = today(); if (!a.paid) { a.paid = 1; p.cr = (p.cr || 0) + 50; p.xp += 20; setTimeout(() => celebrate('Наказ штабу виконано!', '+50 кредитів і +20 XP. Решта зошита, Тренувальна зала й Реванш знову відкриті.'), 1500); }
+}
+function orderCard(p) {
+  const a = p.asg; if (!a) return '';
+  if (a.fin) return a.fin === today() ? '<div class="card ordok"><b>✓ Наказ штабу виконано</b><span>Решта зошита відкрита. Так тримати!</span></div>' : '';
+  const ids = a.ids.filter(id => TASK[id]), total = ids.length + a.custom.length;
+  const done = ids.filter(id => taskState(p, id) === 'done').length + a.custom.filter(c => c.done).length, nx = nextTask(p);
+  const li = ids.map(id => { const t = TASK[id], dn = taskState(p, id) === 'done'; return `<li class="${dn ? 'dn' : ''}"><span class="ck">${dn ? '✓' : ''}</span><a href="#t-${id}">${SUBJ[t.s].short} · с. ${t.p}, № ${t.n}<small>${esc(t.title)}</small></a>${dn ? '' : '<em>⬡ ×2</em>'}</li>`; })
+    .concat(a.custom.map((c, i) => `<li class="${c.done ? 'dn' : ''}"><span class="ck">${c.done ? '✓' : ''}</span><span class="ot">${esc(CSUBJ[c.s] || '')} · ${esc(c.x)}<small>${c.done ? (c.ok ? 'дорослий підтвердив' : 'чекає підтвердження дорослого') : 'виконай у паперовому зошиті'}</small></span>${c.done ? '' : `<button type="button" class="btn" data-cdone="${i}">Готово</button>`}</li>`));
+  return `<div class="order"><div class="oh"><small>Наказ штабу · ${fmtDate(a.d)}</small><em>${done}/${total}</em></div><b class="ot2">Обов’язкова місія</b><p>Спершу виконай ці завдання – тоді відкриються решта зошита, Тренувальна зала й Реванш. За кожне завдання з наказу – подвійні кредити.</p><span class="bar"><i style="width:${total ? done / total * 100 : 0}%"></i></span><ul class="olist">${li.join('')}</ul>${nx ? `<a class="btn big" href="#t-${nx.id}">Почати місію ▶</a>` : ''}</div>`;
+}
+function viewLocked() {
+  const p = P(), nx = nextTask(p);
+  app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="lockv"><div class="hh-av">${avHTML(p.av, kitOf(p))}</div><small>Доступ закрито</small><h1>Спершу – наказ штабу</h1><p>Дорослий призначив обов’язкові завдання. Виконай їх – і решта зошита, Тренувальна зала й Реванш відкриються.</p>${nx ? `<a class="btn big" href="#t-${nx.id}">До наказу ▶</a>` : '<a class="btn big" href="#home">Переглянути наказ ▶</a>'}</div>`;
+}
+
+/* ===== арсенал: броня, спорядження, бази за кредити ===== */
+function posterHTML(p, small, title, sub, link) {
+  const pl = PLACES[p.place] || PLACES[0], k = kitOf(p);
+  return `<div class="poster" style="--base:${pl.css}"><div class="pav">${avHTML(p.av, k)}</div><div class="pt"><small>${small} · ${pl.n}</small><h1>${title}</h1><p>${sub}</p><div class="row wrap"><span class="crd">⬡ <b>${p.cr}</b> кредитів</span>${link ? '<a class="btn" href="#arsenal">Арсенал ▶</a>' : ''}</div><p class="kitl">${HEROES[p.av] ? ARMOR[k.s || 0].n + (k.g ? ' · ' + GEAR[k.g].n : '') : 'Власний аватар – броня лише для героїв штабу'}</p></div></div>`;
+}
+let ARTAB = 'armor';
+function viewArsenal() {
+  const p = P(), hid = p.av, hero = !!HEROES[hid], k = kitOf(p), lvl = levelOf(p.xp), tab = ARTAB;
+  const tabs = [['armor', 'Броня'], ['gear', 'Спорядження'], ['base', 'Бази']];
+  app().innerHTML = `<a class="back" href="#garden">← До штабу</a>${posterHTML(p, 'Арсенал', esc(avName(hid) || p.name), 'Кредити – за правильні відповіді. Завдання з наказу дорослого дають удвічі більше. Звання й нових героїв купити не можна – лише заслужити.', false)}
+  <div class="tabs">${tabs.map(([x, n]) => `<button class="opt sm ${tab === x ? 'on' : ''}" data-ar="${x}">${n}</button>`).join('')}</div><div class="shop"></div>`;
+  $$('[data-ar]').forEach(b => b.onclick = () => { ARTAB = b.dataset.ar; viewArsenal(); });
+  const shop = $('.shop'), cost = (c, can, label) => p.cr >= c ? `<button class="btn" ${can ? '' : 'disabled'} data-buy>${label || 'Купити'} · ⬡ ${c}</button>` : `<button class="btn" disabled>Бракує ⬡ ${c - p.cr}</button>`;
+  const buy = (c, fn, msg) => { if (p.cr < c) return; p.cr -= c; fn(); save(CUR); header(); viewArsenal(); const pv = $('.poster'); if (pv) burst(pv); toast(msg); };
+  if (tab !== 'base' && !hero) { shop.outerHTML = '<div class="card"><b>Броня й спорядження – лише для героїв штабу.</b><p class="note">Зараз у тебе власний аватар. Обери героя у штабі – і прокачуй його.</p><a class="btn" href="#garden">До штабу</a></div>'; return; }
+  if (tab === 'armor') {
+    const cur = k.s || 0;
+    shop.innerHTML = ARMOR.slice(1).map((a, j) => { const i = j + 1, own = cur >= i, next = cur === i - 1;
+      return `<div class="item ${own ? 'own' : next ? '' : 'lock'}" data-i="${i}"><div class="iv">${avHTML(hid, { s: i, g: k.g })}</div><b>${a.n}</b><small>${a.d}</small>${own ? '<button class="btn ghost" disabled>✓ Встановлено</button>' : next ? cost(a.c, true) : `<button class="btn ghost" disabled>Спершу ${ARMOR[i - 1].n.split(' ·')[0]}</button>`}</div>`; }).join('');
+    $$('[data-buy]', shop).forEach(b => { const i = +b.closest('.item').dataset.i; b.onclick = () => buy(ARMOR[i].c, () => { p.kit[hid] = Object.assign({}, k, { s: i }); }, `Броню ${ARMOR[i].n.split(' ·')[0]} встановлено!`); });
+  }
+  if (tab === 'gear') {
+    shop.innerHTML = Object.entries(GEAR).map(([g, x]) => { const own = p.own.g[g], on = k.g === g;
+      return `<div class="item ${own ? 'own' : ''}" data-g="${g}"><div class="iv">${avHTML(hid, { s: k.s, g })}</div><b>${x.n}</b><small>${x.d}</small>${on ? '<button class="btn ghost" data-off>Зняти</button>' : own ? '<button class="btn" data-eq>Обладнати</button>' : cost(x.c, true)}</div>`; }).join('');
+    $$('[data-buy]', shop).forEach(b => { const g = b.closest('.item').dataset.g; b.onclick = () => buy(GEAR[g].c, () => { p.own.g[g] = 1; p.kit[hid] = Object.assign({}, k, { g }); }, `${GEAR[g].n}: куплено й обладнано!`); });
+    $$('[data-eq]', shop).forEach(b => b.onclick = () => { p.kit[hid] = Object.assign({}, k, { g: b.closest('.item').dataset.g }); save(CUR); header(); viewArsenal(); });
+    $$('[data-off]', shop).forEach(b => b.onclick = () => { p.kit[hid] = Object.assign({}, k, { g: '' }); save(CUR); header(); viewArsenal(); });
+  }
+  if (tab === 'base') {
+    shop.innerHTML = PLACES.map((x, i) => { const own = p.own.b[i], on = p.place === i, lockd = lvl < x.lvl;
+      return `<div class="item ${own ? 'own' : lockd ? 'lock' : ''}" data-b="${i}"><div class="bsw" style="background:${x.css}"><i></i></div><b>${x.n}</b><small>${x.d}${lockd ? ` · відкривається з рівня ${x.lvl}` : ''}</small>${on ? '<button class="btn ghost" disabled>✓ Тут твій штаб</button>' : own ? '<button class="btn" data-sel>Перенести штаб</button>' : lockd ? `<button class="btn ghost" disabled>Рівень ${x.lvl}</button>` : cost(x.c, true)}</div>`; }).join('');
+    $$('[data-buy]', shop).forEach(b => { const i = +b.closest('.item').dataset.b; b.onclick = () => buy(PLACES[i].c, () => { p.own.b[i] = 1; p.place = i; }, `Нова база: ${PLACES[i].n}!`); });
+    $$('[data-sel]', shop).forEach(b => b.onclick = () => { p.place = +b.closest('.item').dataset.b; save(CUR); viewArsenal(); });
+  }
+}
+
+/* ===== розвідувальне досьє: текст, у якому захована відповідь ===== */
+const DOS_TEXT = {
+  space: ['Космос: що треба знати агентові', 'Науку, яка вивчає зорі, планети й увесь космос, називають астрономією. Астрономи роздивляються далекі небесні тіла через телескоп – прилад, що наближає й збільшує те, що дуже далеко.\nЦентр нашої Сонячної системи – Сонце. Це зоря, і вона така величезна, що важить більше, ніж усі планети разом. Після Сонця й Місяця найяскравіше на нічному небі світить планета Венера: її видно навіть без телескопа ввечері або перед світанком. Червонуватий Марс давні римляни назвали на честь свого бога війни.\n12 квітня 1961 року Юрій Гагарін став першою людиною, яка полетіла в космос. Перший космонавт незалежної України – Леонід Каденюк: 1997 року він полетів на американському кораблі «Колумбія». А поверхнею Місяця колись їздили самохідні апарати-місяцеходи, якими керували із Землі.'],
+  tech: ['Космічна техніка', 'Щоб дістатися космосу, потрібна ракета: її потужні двигуни долають земне тяжіння й виносять вантаж на орбіту. Найчастіше ракета везе штучний супутник – апарат, що кружляє навколо Землі. Супутники передають зв’язок і телевізійний сигнал, допомагають прогнозувати погоду й показують дорогу в навігаторі.\nТелескоп допомагає роздивлятися далекі зорі й планети; найпотужніші телескопи навіть запускають у космос. А місяцехід – самохідний апарат на колесах, який досліджував поверхню Місяця: фотографував її та вивчав ґрунт.'],
+  volc: ['Два вулкани', 'Вулкан – це гора, через яку з надр Землі назовні виходять розпечена лава, попіл і гази. Вулкани бувають діючими – вони вивергаються й сьогодні – і згаслими, які давно затихли.\nКарадаг – стародавній вулкан на Кримському півострові, біля Чорного моря. Він вивергався понад 150 мільйонів років тому, а тепер це згаслий вулкан: його скелі вкриті рослинами, а море й вітер вирізали з них химерні арки й бухти.\nЕтна височіє на острові Сицилія в Італії. Це діючий вулкан заввишки понад 3 тисячі метрів і один із найактивніших вулканів світу: він вивергається і в наш час, тому вчені постійно стежать за ним.'],
+  sand: ['Піщані горби', 'Вітер може переносити пісок і складати з нього цілі пагорби. Ті, що утворюються на берегах морів, океанів, великих озер і річок, називають дюнами. На дюнах часто ростуть трави й кущі, а іноді навіть сосни – вони скріплюють пісок корінням.\nБархани – піщані горби в пустелях. Вони мають форму півмісяця з «ріжками», спрямованими за вітром, і майже не вкриті рослинами. Під дією вітру бархани повільно мандрують пустелею.'],
+  bodies: ['Небесні тіла', 'Зоря – це велетенська розпечена куля газу, яка сама випромінює світло й тепло. Найближча до нас зоря – Сонце.\nПланета сама не світиться: вона рухається по орбіті навколо зорі й світить відбитим від неї світлом. Земля – одна з планет, що обертаються навколо Сонця.\nСупутник обертається навколо планети. Супутник Землі – Місяць: він сірий, укритий кратерами й теж світить відбитим сонячним світлом. Комета – брила з льоду й пилу; коли вона підлітає до Сонця, у неї виростає довгий світлий хвіст.'],
+  zonesA: ['Природні зони', 'Природна зона – це велика територія, де схожі клімат, ґрунти, рослини й тварини. У тайзі ростуть переважно хвойні дерева. У савані серед високих трав трапляються поодинокі дерева – баобаби й акації.\nСтеп – безліса зона з багатим трав’яним покривом: колись тут буяли ковила й різнотрав’я, а нині більшість степів розорано під поля. У пустелі рослин дуже мало, бо там бракує вологи.'],
+  planets: ['Планети Сонячної системи', 'У Сонячній системі вісім планет. Найближчий до Сонця Меркурій – і він найменший з усіх. Далі йдуть Венера, Земля й Марс. Земля трохи більша за Венеру, а Марс приблизно вдвічі менший за Землю.\nЗа Марсом кружляють чотири велетні. Юпітер – найбільша планета: у ньому вмістилося б понад тисячу таких планет, як Земля. Друга за розміром – Сатурн із яскравими кільцями. Уран і Нептун майже однакові, але Уран трохи більший.\nМісяць – не планета, а супутник Землі, а Сонце – зоря.'],
+  belts: ['Теплові пояси Землі', 'Сонце нагріває Землю неоднаково, тому на планеті виділяють теплові пояси. Жаркий пояс лежить обабіч екватора: тут Сонце піднімається високо над горизонтом, а його промені падають майже прямовисно, тобто мають найбільший кут падіння. Тому там спекотно цілий рік.\nПомірні пояси лежать між жарким і холодними: тут чітко змінюються чотири пори року. Холодні пояси розташовані навколо полюсів. Там узимку кілька місяців триває полярна ніч – сонце майже не з’являється на небі, а влітку настає полярний день, і сонце цілодобово не заходить за горизонт.'],
+  rain: ['Найбагатший ліс планети', 'Найбільше видів рослин і тварин на Землі живе у вологих тропічних (екваторіальних) лісах. Там цілий рік тепло й часто йдуть дощі, тому дерева ростуть у кілька ярусів, а на невеликій ділянці лісу можуть рости сотні різних видів дерев. Тут мешкають мавпи, ягуари, яскраві папуги й тисячі видів комах.\nУ хвойному лісі – тайзі – видів значно менше, а в савані панують трави з поодинокими деревами.'],
+  tundra: ['Тундра', 'Тундра лежить на крайній півночі, біля Північного Льодовитого океану. Лісу там немає: зима сувора, довга й холодна, а літо коротке й прохолодне. Земля під поверхнею не відтає навіть улітку – це вічна мерзлота.\nРостуть лише низенькі рослини: мохи, лишайники, карликові берези й верби. Живуть північні олені, песці, лемінги. Пустеля, навпаки, спекотна й суха, а серед льодовиків майже немає літа.'],
+  zones: ['Від полюса до екватора', 'Уяви, що ти мандруєш від полюса до екватора. Спочатку довкола – льодовики й полярні пустелі, де майже нічого не росте. Трохи тепліше – і починається тундра з мохами та лишайниками. Далі виростає тайга – густі хвойні ліси. За нею – мішані ліси, де ялини ростуть поруч із дубами й березами.\nЩе ближче до екватора ліс рідшає, і відкриваються степи та лісостепи з травами. Далі стає спекотно й сухо – це напівпустелі й пустелі. Потім починаються савани: трави й поодинокі дерева. А біля самого екватора – вологі тропічні ліси, де тепло й дощі цілий рік.'],
+  cont: ['Материки', 'Материк – величезна ділянка суходолу, оточена морями й океанами. На Землі шість материків. Найбільший – Євразія: на ньому розташовані і Європа, і Азія, а отже, й Україна. Спекотна Африка лежить по обидва боки від екватора.\nЗа Атлантичним океаном – дві Америки: Північна Америка й Південна Америка, з’єднані вузьким перешийком. Найменший материк – Австралія, а найхолодніший, укритий кригою, – Антарктида біля Південного полюса.'],
+  parts: ['Частини світу', 'Частини світу – це не те саме, що материки. Материків шість, і частин світу теж шість, але поділено їх інакше. Материк Євразію ділять на дві частини світу – Європу й Азію; межу між ними часто проводять Уральськими горами.\nАфрика й Антарктида – водночас і материки, і частини світу. А дві Америки – Північну й Південну – разом вважають однією частиною світу: Америкою. Ще одна частина світу – Австралія з Океанією: так називають материк Австралію разом із тисячами островів Тихого океану.'],
+  epi: ['Що таке епіграф', 'Епіграф – це короткий вислів, цитата або прислів’я, які автор ставить перед текстом, одразу після заголовка. Зазвичай епіграф пишуть праворуч, а під ним указують, хто це сказав.\nЕпіграф – не заголовок і не перше речення тексту: він стоїть окремо й підказує читачеві головну думку твору. Наприклад, перед казкою про лінивого ведмедика можна поставити прислів’я «Без труда нема плода».']
+};
+const DOSSIER = { '30-1': 'space', '30-2': 'tech', '31-4': 'volc', '31-5': 'sand', '32-A1': 'bodies', '34-1': 'bodies', '35-1': 'bodies', '33-4': 'planets', '32-2': 'planets', '32-A2': 'zonesA', '34-2': 'belts', '35-2': 'belts', '34-3': 'rain', '35-3': 'tundra', '34-5': 'zones', '35-5': 'zones', '34-6': 'cont', '35-6': 'parts', '16-1': 'epi', '16-2': 'epi', '17-3': 'epi', '17-4': 'epi' };
+
+/* ===== кабінет: призначення завдань ===== */
+const ASGD = {};
+function adAssign(ab, p) {
+  const a = p.asg, live = a && !a.fin;
+  const dr = ASGD[p.id] = ASGD[p.id] || { ids: new Set(live ? a.ids : []), custom: live ? a.custom.map(c => Object.assign({}, c)) : [] };
+  const status = a ? `<div class="card"><h3>${a.fin ? '✓ Попередній наказ виконано' : 'Поточний наказ'} · від ${fmtDate(a.d)}</h3><ul class="clist">${a.ids.filter(id => TASK[id]).map(id => { const t = TASK[id]; return `<li>${taskState(p, id) === 'done' ? '✅' : '⬜'} ${SUBJ[t.s].short} · с. ${t.p}, № ${t.n} · ${esc(t.title)}</li>`; }).join('')}${a.custom.map((c, i) => `<li>${c.done ? (c.ok ? '✅' : '🟡') : '⬜'} ${esc(CSUBJ[c.s] || '')} · ${esc(c.x)}${c.done && !c.ok ? `<span class="sp"></span><button class="btn" data-cok="${i}">Підтвердити</button><button class="btn ghost" data-cback="${i}">Повернути</button>` : ''}</li>`).join('')}</ul><p class="note">${a.fin ? `Виконано ${fmtDate(a.fin)}. Новий наказ замінить цей.` : '🟡 – дитина позначила завдання виконаним. Підтвердіть, щоб нарахувати їй 15 кредитів, або поверніть на доопрацювання.'}</p></div>` : '';
+  ab.innerHTML = `<div class="card"><h3>Наказ для ${esc(p.name)}</h3><p class="note">Позначте завдання, які задав учитель, і натисніть «Зберегти наказ». Після виходу з кабінету дитині будуть доступні лише вони; решта зошита, Тренувальна зала й Реванш відкриються, щойно наказ буде виконано. Сірим позначено вже виконані завдання.</p></div>${status}
+  ${Object.keys(SUBJ).map(k => { const pages = [...new Set(TASKS.filter(t => t.s === k).map(t => t.p))], n = TASKS.filter(t => t.s === k && dr.ids.has(t.id)).length;
+    return `<details class="card asub s-${k}" ${n ? 'open' : ''}><summary><b>${SUBJ[k].name}</b><span class="acount" data-acount="${k}"></span></summary>${pages.map(pg => `<div class="apage"><div class="aph"><b>Сторінка ${pg}</b><button type="button" class="opt sm" data-allpg="${pg}">Уся сторінка</button></div><div class="picks">${TASKS.filter(t => t.p === pg).map(t => { const dn = taskState(p, t.id) === 'done', on = dr.ids.has(t.id); return `<button type="button" class="pick ${on ? 'on' : ''}" data-pick="${t.id}" data-pg="${pg}" ${dn ? 'disabled' : ''}><i class="box">${on || dn ? '✓' : ''}</i><span><b>№ ${t.n}</b> ${esc(t.title)}</span>${dn ? '<small>виконано</small>' : ''}</button>`; }).join('')}</div></div>`).join('')}</details>`; }).join('')}
+  <div class="card"><h3>Завдання не з цього зошита</h3><p class="note">Наприклад: «Підручник, с. 45, № 3». Дитина виконає його на папері й натисне «Готово», а ви підтвердите тут.</p><div class="row wrap"><select class="inp" id="cs"><option value="math">Математика</option><option value="ukr">Мова</option><option value="vs">Всесвіт</option><option value="other">Інше</option></select><input class="inp" id="ct" placeholder="Підручник, с. 45, № 3" maxlength="120" autocomplete="off" style="flex:1 1 200px"><button type="button" class="btn" id="cadd">Додати</button></div><ul class="clist" id="clist"></ul></div>
+  <div class="asgbar"><span id="acnt"></span><button type="button" class="btn ghost" id="aclr">Очистити</button><button type="button" class="btn" id="asave">Зберегти наказ</button></div>`;
+  const upd = () => { const n = dr.ids.size + dr.custom.length; $('#acnt').textContent = n ? `Обрано: ${n}` : 'Нічого не обрано'; Object.keys(SUBJ).forEach(k => { const c = TASKS.filter(t => t.s === k && dr.ids.has(t.id)).length; $(`[data-acount="${k}"]`).textContent = c ? `обрано ${c}` : ''; }); };
+  const setPick = (b, on) => { b.classList.toggle('on', on); $('.box', b).textContent = on ? '✓' : ''; };
+  const drawC = () => { $('#clist').innerHTML = dr.custom.map((c, i) => `<li><b>${esc(CSUBJ[c.s] || '')}</b> ${esc(c.x)}<button type="button" class="x2" data-crm="${i}" aria-label="Прибрати">✕</button></li>`).join(''); $$('[data-crm]', ab).forEach(b => b.onclick = () => { dr.custom.splice(+b.dataset.crm, 1); drawC(); upd(); }); };
+  $$('[data-pick]', ab).forEach(b => b.onclick = () => { const id = b.dataset.pick; dr.ids.has(id) ? dr.ids.delete(id) : dr.ids.add(id); setPick(b, dr.ids.has(id)); upd(); });
+  $$('[data-allpg]', ab).forEach(b => b.onclick = () => { const bs = $$(`[data-pick][data-pg="${b.dataset.allpg}"]:not(:disabled)`, ab), all = bs.length && bs.every(x => dr.ids.has(x.dataset.pick)); bs.forEach(x => { all ? dr.ids.delete(x.dataset.pick) : dr.ids.add(x.dataset.pick); setPick(x, !all); }); upd(); });
+  $('#cadd').onclick = () => { const x = $('#ct').value.trim(); if (!x) return $('#ct').focus(); dr.custom.push({ id: 'c' + Date.now().toString(36), s: $('#cs').value, x, done: 0, ok: 0 }); $('#ct').value = ''; drawC(); upd(); };
+  $('#ct').onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); $('#cadd').click(); } };
+  $('#aclr').onclick = () => { dr.ids.clear(); dr.custom.length = 0; $$('[data-pick]:not(:disabled)', ab).forEach(x => setPick(x, false)); drawC(); upd(); };
+  $('#asave').onclick = () => {
+    if (!dr.ids.size && !dr.custom.length) { if (p.asg && !p.asg.fin) { p.asg = null; save(p.id); toast('Наказ скасовано – зошит відкритий повністю.'); } else toast('Спершу позначте хоча б одне завдання.'); delete ASGD[p.id]; return adAssign(ab, p); }
+    p.asg = { d: today(), ids: TASKS.filter(t => dr.ids.has(t.id)).map(t => t.id), custom: dr.custom.map(c => ({ id: c.id, s: c.s, x: c.x, done: c.done || 0, ok: c.ok || 0 })), fin: 0 };
+    save(p.id); delete ASGD[p.id]; toast(`Наказ збережено: ${p.asg.ids.length + p.asg.custom.length} завд. Вийдіть з кабінету – дитина побачить його на головній.`); adAssign(ab, p); window.scrollTo(0, 0);
+  };
+  $$('[data-cok]', ab).forEach(b => b.onclick = () => { p.asg.custom[+b.dataset.cok].ok = 1; p.cr = (p.cr || 0) + 15; save(p.id); adAssign(ab, p); });
+  $$('[data-cback]', ab).forEach(b => b.onclick = () => { const c = p.asg.custom[+b.dataset.cback]; c.done = 0; c.ok = 0; p.asg.fin = 0; save(p.id); delete ASGD[p.id]; adAssign(ab, p); });
+  drawC(); upd();
+}
+
 /* ===== маршрутизація ===== */
 const app = () => $('#app');
 function go(h) { if (location.hash === '#' + h) route(); else location.hash = h; }
 function route() {
-  const h = (location.hash || '#home').slice(1); window.scrollTo(0, 0);
+  const h = (location.hash || '#home').slice(1); window.scrollTo(0, 0); CURTASK = null;
   if (h === 'adult') return header(true), viewAdult();
   if (!CUR || !P() || h === 'who') return header(true), viewWho();
   header();
+  if (lockedFor(h)) return viewLocked();
+  if (h === 'arsenal') return viewArsenal();
   if (h.startsWith('t-') && TASK[h.slice(2)]) return viewTask(h.slice(2), false);
   if (h.startsWith('r-') && TASK[h.slice(2)]) return viewTask(h.slice(2), true);
   if (h.startsWith('s-') && SUBJ[h.slice(2)]) return viewSubject(h.slice(2));
@@ -1655,7 +1843,7 @@ window.addEventListener('hashchange', route);
 function header(bare) {
   const hd = $('#hd'), p = P();
   hd.innerHTML = `<a class="logo" href="#home"><span>Штаб героїв</span></a>
-    ${!bare && p ? `<a class="me" href="#garden" title="Штаб"><span class="av">${avHTML(p.av)}</span><span class="mi"><b>${esc(p.name)}</b><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><small>рівень ${levelOf(p.xp)} · ${p.xp} XP</small></span></a>` : '<span></span>'}
+    ${!bare && p ? `<a class="me" href="#garden" title="Штаб"><span class="av">${avHTML(p.av, kitOf(p))}</span><span class="mi"><b>${esc(p.name)}</b><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><small>рівень ${levelOf(p.xp)} · ⬡ ${p.cr}</small></span></a>` : '<span></span>'}
     <nav>${!bare && p ? '<button class="ib" id="bsearch">Пошук</button><button class="ib" id="bpanel">Стовпчик</button><a class="ib" href="#who">Учні</a>' : ''}<button class="ib" id="bview" title="Перемкнути вигляд: телефон / компʼютер">${document.body.classList.contains('mob') ? 'ПК' : 'Телефон'}</button><a class="ib" href="#adult" >Дорослим</a></nav>`;
   $('#bview').onclick = () => { setView(document.body.classList.contains('mob') ? 'desk' : 'mob'); header(bare); };
   const bn = $('#bn'); bn.hidden = !!bare || !p; if (!bn.hidden) { const h = location.hash || '#home'; bn.innerHTML = [['#home', '', 'Головна'], ['', '', 'Пошук'], ['', '', 'Стовпчик'], ['#trainer', '', 'Зала'], ['#garden', '', 'Штаб']].map(([u, i, n]) => u ? `<a href="${u}" class="${h === u ? 'on' : ''}"><i>${i}</i>${n}</a>` : `<button data-b="${n}"><i>${i}</i>${n}</button>`).join(''); $('[data-b="Пошук"]', bn).onclick = openSearch; $('[data-b="Стовпчик"]', bn).onclick = () => openPanel(); }
@@ -1667,47 +1855,50 @@ function header(bare) {
 function viewWho() {
   app().innerHTML = `<div class="hero"><h1>Хто сьогодні навчається?</h1><p>Обери свій профіль або створи новий.</p></div><div class="who"></div>
     <form class="card newp" id="newp"><h3>Новий учень</h3><label class="fld"><span>Ім’я</span><input class="inp" id="nname" maxlength="20" autocomplete="off" style="width:12em"></label><div class="avs"></div><button class="btn">Створити профіль</button></form>`;
-  DB.order.forEach(id => { const p = DB.profiles[id]; if (!p) return; const b = el(`<button class="pcard"><span class="av big">${avHTML(p.av)}</span><b>${esc(p.name)}</b><small>рівень ${levelOf(p.xp)} · ${summary(p).done} завдань</small></button>`); b.onclick = () => { CUR = id; saveLocal(); go('home'); }; $('.who').append(b); });
+  DB.order.forEach(id => { const p = DB.profiles[id]; if (!p) return; const b = el(`<button class="pcard"><span class="av big">${avHTML(p.av, kitOf(p))}</span><b>${esc(p.name)}</b><small>рівень ${levelOf(p.xp)} · ${summary(p).done} завдань</small></button>`); b.onclick = () => { CUR = id; saveLocal(); go('home'); }; $('.who').append(b); });
   let av = AVATARS[0]; AVATARS.slice(0, 4).forEach((a, i) => { const b = el(`<button type="button" class="avb ${i ? '' : 'on'}">${avHTML(a)}<small>${avName(a)}</small></button>`); b.onclick = () => { av = a; $$('.avb').forEach(x => x.classList.toggle('on', x === b)); }; $('.avs').append(b); });
   $('#newp').onsubmit = e => { e.preventDefault(); const n = $('#nname').value.trim(); if (!n) { $('#nname').focus(); return; } CUR = newProfile(n, av); saveLocal(); go('home'); };
 }
 
 /* ===== головна ===== */
-const nextTask = (p, from) => { const i = from ? TASKS.findIndex(t => t.id === from) : -1; return TASKS.slice(i + 1).concat(TASKS.slice(0, i + 1)).find(t => taskState(p, t.id) !== 'done'); };
+const nextTask = (p, from) => { const m = activeMission(p), pool = m ? TASKS.filter(t => m.ids.includes(t.id)) : TASKS, i = from ? pool.findIndex(t => t.id === from) : -1; return pool.slice(i + 1).concat(pool.slice(0, i + 1)).find(t => taskState(p, t.id) !== 'done'); };
 function subjProg(p, s) { const ts = TASKS.filter(t => t.s === s); return [ts.filter(t => taskState(p, t.id) === 'done').length, ts.length]; }
 function viewHome() {
-  const p = P(), s = summary(p), cont = (p.last && taskState(p, p.last) !== 'done' && TASK[p.last]) || nextTask(p), rev = reviewList(p), st = streak(p);
-  app().innerHTML = `<div class="homehero"><div class="hh-av">${avHTML(p.av)}</div><div class="hh-t"><small>${avName(p.av) ? avName(p.av) + ' · ' : ''}${levelName(levelOf(p.xp))} · рівень ${levelOf(p.xp)}</small><h1>Привіт, ${esc(p.name)}!</h1><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><p>${s.done ? `Ти вже виконав(ла) ${s.done} із ${TASKS.length} завдань. ${st > 1 ? `Навчаєшся ${st} дн. поспіль 🔥` : ''}` : 'Місто чекає на героя. Кожна виконана сторінка зошита – звільнений сектор на карті.'}</p></div></div>
-  ${cont ? `<a class="card cont s-${cont.s}" href="#t-${cont.id}"><small>${p.last === cont.id ? 'Продовжити з того місця, де ти зупинився(лась)' : 'Наступне завдання'}</small><b>${SUBJ[cont.s].ico} ${esc(cont.title)}</b><span>${SUBJ[cont.s].name} · ${label(cont)}</span><i class="btn">Грати ▶</i></a>` : '<div class="card"><b>🎉 Усі завдання зошита виконано!</b> Можна повторювати й тренуватися.</div>'}
+  const p = P(), s = summary(p), m = activeMission(p), cont = (!m && p.last && taskState(p, p.last) !== 'done' && TASK[p.last]) || nextTask(p), rev = reviewList(p), st = streak(p);
+  app().innerHTML = `<div class="homehero"><div class="hh-av">${avHTML(p.av, kitOf(p))}</div><div class="hh-t"><small>${avName(p.av) ? avName(p.av) + ' · ' : ''}${levelName(levelOf(p.xp))} · рівень ${levelOf(p.xp)}</small><h1>Привіт, ${esc(p.name)}!</h1><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><p>${s.done ? `Ти вже виконав(ла) ${s.done} із ${TASKS.length} завдань. ${st > 1 ? `Навчаєшся ${st} дн. поспіль 🔥` : ''}` : 'Місто чекає на героя. Кожна виконана сторінка зошита – звільнений сектор на карті.'}</p></div></div>
+  ${orderCard(p)}${m ? '' : cont ? `<a class="card cont s-${cont.s}" href="#t-${cont.id}"><small>${p.last === cont.id ? 'Продовжити з того місця, де ти зупинився(лась)' : 'Наступне завдання'}</small><b>${SUBJ[cont.s].ico} ${esc(cont.title)}</b><span>${SUBJ[cont.s].name} · ${label(cont)}</span><i class="btn">Грати ▶</i></a>` : '<div class="card"><b>🎉 Усі завдання зошита виконано!</b> Можна повторювати й тренуватися.</div>'}
   <h2>Предмети</h2><div class="subs">${Object.keys(SUBJ).map(k => { const [a, b] = subjProg(p, k); return `<a class="card sub s-${k}" href="#s-${k}"><b>${SUBJ[k].name}</b><small>с. ${SUBJ[k].pages[0]}–${SUBJ[k].pages[1]}</small><span class="bar"><i style="width:${a / b * 100}%"></i></span><small>${a} з ${b}</small></a>`; }).join('')}</div>
   <h2>Місії</h2><div class="card missions">${missions(p).map(m => `<div class="mis ${m.v >= m.m ? 'ok' : ''}"><span>${m.v >= m.m ? '✅' : ''}</span><div><small>${m.per}</small><b>${m.n}</b><span class="bar"><i style="width:${Math.min(100, m.v / m.m * 100)}%"></i></span></div><em>${Math.min(m.v, m.m)}/${m.m}</em></div>`).join('')}</div>
   <h2>База героя</h2><div class="subs">
     <a class="card sub" href="#${rev.length ? 'r-' + rev[0].id : 'trainer'}"><b>Реванш</b><small>${rev.length ? `${rev.length} завдань, де були помилки, чекають на другу спробу` : 'Помилок для повторення немає – молодець!'}</small></a>
     <a class="card sub" href="#trainer"><b>Тренувальна зала</b><small>Схожі приклади – складність підлаштовується під тебе</small></a>
-    <a class="card sub" href="#garden"><b>Штаб</b><small>${s.pages} секторів звільнено · ${Object.keys(p.badges).length} нагород</small></a></div>`;
+    <a class="card sub" href="#garden"><b>Штаб</b><small>${s.pages} секторів звільнено · ${Object.keys(p.badges).length} нагород</small></a>
+    <a class="card sub" href="#arsenal"><b>Арсенал</b><small>⬡ ${p.cr} кредитів · броня, спорядження, бази</small></a></div>`;
+  $$('[data-cdone]').forEach(b => b.onclick = () => { const c = p.asg.custom[+b.dataset.cdone]; c.done = today(); p.xp += 5; checkOrder(p); save(CUR); viewHome(); });
 }
 
 /* ===== предмет: сторінки й завдання ===== */
 function viewSubject(k) {
   const p = P(), pages = [...new Set(TASKS.filter(t => t.s === k).map(t => t.p))];
   app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="hero s-${k}"><h1>${SUBJ[k].ico} ${SUBJ[k].name}</h1><p>Сторінки ${SUBJ[k].pages[0]}–${SUBJ[k].pages[1]} зошита. Обери завдання.</p></div>` +
-    pages.map(pg => { const ts = TASKS.filter(t => t.p === pg), dn = ts.filter(t => taskState(p, t.id) === 'done').length; return `<div class="card pg s-${k}"><div class="pgh"><b>Сторінка ${pg}</b><span>${dn === ts.length ? 'сектор звільнено' : `${dn} з ${ts.length}`}</span></div><div class="tl">${ts.map(t => `<a class="tchip ${taskState(p, t.id)}" href="#t-${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${t.hard ? ' ' : ''}</a>`).join('')}</div></div>` + (MISSING_PAGES.includes(pg + 1) ? `<div class="card miss">Завдань сторінки ${pg + 1} у цій версії немає.</div>` : ''); }).join('');
+    pages.map(pg => { const ts = TASKS.filter(t => t.p === pg), dn = ts.filter(t => taskState(p, t.id) === 'done').length; return `<div class="card pg s-${k}"><div class="pgh"><b>Сторінка ${pg}</b><span>${dn === ts.length ? 'сектор звільнено' : `${dn} з ${ts.length}`}</span></div><div class="tl">${ts.map(t => `<a class="tchip ${taskState(p, t.id)} ${activeMission(p) ? (isMust(p, t.id) ? 'must' : 'locked') : ''}" href="#t-${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${lockTag(p, t.id)}</a>`).join('')}</div></div>` + (MISSING_PAGES.includes(pg + 1) ? `<div class="card miss">Завдань сторінки ${pg + 1} у цій версії немає.</div>` : ''); }).join('');
 }
 
 /* ===== завдання ===== */
 function storable(p, v) { return ['draw', 'self', 'memory'].includes(p.t) ? 1 : p.t === 'open' ? String(v).slice(0, 1500) : v; }
 function viewTask(id, review) {
-  const t = TASK[id], p = P(); if (!review) p.last = id;
+  const t = TASK[id], p = P(); if (!review) p.last = id; CURTASK = id; VT0 = p.cr;
   if (!review && p.tasks[id] && !p.tasks[id].done && p.tasks[id].n !== t.parts.length) p.tasks[id] = { parts: {}, wrong: p.tasks[id].wrong || 0 };
   const st = review ? { parts: {}, wrong: 0 } : (p.tasks[id] = p.tasks[id] || { parts: {}, wrong: 0 }); if (!review) st.n = t.parts.length;
   const idx = TASKS.indexOf(t), prev = TASKS[idx - 1], next = TASKS[idx + 1];
   app().innerHTML = `<a class="back" href="#s-${t.s}">← ${SUBJ[t.s].name}</a>
   <article class="task s-${t.s}"><header class="th"><div class="tmeta"><span class="pill">${SUBJ[t.s].ico} ${SUBJ[t.s].short}</span><span class="pill">${label(t)}</span>${t.hard ? '<span class="pill">складне</span>' : ''}${review ? '<span class="pill rv">реванш</span>' : ''}${t.paper ? '<span class="pill">потрібен паперовий зошит</span>' : ''}</div><h1>${esc(t.title)}</h1><p class="ttext">${t.text}</p>
-  <div class="tbtns">${HELP[t.id] ? '<button class="btn ghost" id="bsimple">Простими словами</button>' : ''}${HELP[t.id] && HELP[t.id][1] ? '<button class="btn ghost" id="bex">Схожий приклад</button>' : ''}${t.qr ? `<a class="btn ghost" href="${t.qr}" target="_blank" rel="noopener">🔗 Відкрити QR-посилання</a>` : ''}</div><div class="helpbox" id="helpbox" hidden></div></header>
+  <div class="tbtns">${HELP[t.id] ? '<button class="btn ghost" id="bsimple">Простими словами</button>' : ''}${HELP[t.id] && HELP[t.id][1] ? '<button class="btn ghost" id="bex">Схожий приклад</button>' : ''}${DOSSIER[t.id] ? '<button class="btn dos" id="bdos">Досьє</button>' : ''}${t.qr ? `<a class="btn ghost" href="${t.qr}" target="_blank" rel="noopener">🔗 Відкрити QR-посилання</a>` : ''}</div><div class="helpbox" id="helpbox" hidden></div><div id="dosbox" hidden></div></header>
   <div class="book ${t.needBook || t.paper ? 'need' : ''}">${t.needBook || t.paper ? 'Відкрий паперовий зошит' : 'У зошиті'}: <b>с. ${t.p}, № ${t.n}</b>${t.needBook ? ' – текст або малюнок до завдання там' : ''}</div>${t.extra || ''}<div class="parts"></div>
   <footer class="tnav">${prev ? `<a class="btn ghost" href="#t-${prev.id}">← № ${prev.n}</a>` : '<span></span>'}<span class="dots"></span>${next ? `<a class="btn ghost" href="#t-${next.id}">№ ${next.n} →</a>` : '<span></span>'}</footer></article>`;
   const hb = (k, ttl) => { const b = $('#helpbox'); const same = b.dataset.k === String(k) && !b.hidden; b.hidden = same; b.dataset.k = k; b.innerHTML = `<b>${ttl}</b><p>${esc(HELP[t.id][k]).replace(/\n/g, '<br>')}</p>`; if (!same && !review) { st.help = (st.help || 0) + 1; save(CUR); } };
   if ($('#bsimple')) $('#bsimple').onclick = () => hb(0, 'Простими словами'); if ($('#bex')) $('#bex').onclick = () => hb(1, 'Схожий приклад (не з цього завдання)');
+  if ($('#bdos')) $('#bdos').onclick = () => { const b = $('#dosbox'), D = DOS_TEXT[DOSSIER[t.id]]; b.hidden = !b.hidden; if (b.hidden) return; b.innerHTML = `<div class="dossier"><h4>${esc(D[0])}</h4><p class="dn">Відповідь захована в тексті. Прочитай уважно – і знайди її сам(а).</p>${D[1].split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div>`; if (!review) { st.dos = (st.dos || 0) + 1; save(CUR); } };
   if (!review && st.done && st.parts) { /* уже виконане – показуємо відповіді */ }
   const parts = $('.parts');
   const dots = () => $('.dots').innerHTML = t.parts.map((_, i) => `<i class="${st.parts[i] && st.parts[i].ok ? 'on' : ''}"></i>`).join('');
@@ -1728,16 +1919,17 @@ function viewTask(id, review) {
 }
 function finishTask(t, st, review) {
   const p = P(), d = day(p); st.fin = 1;
-  if (review) { d.r++; if (!st.wrong) { p.tasks[t.id].solid = 1; p.stat.solid++; } addXP(8); }
+  if (review) { d.r++; if (!st.wrong) { p.tasks[t.id].solid = 1; p.stat.solid++; } addXP(8, null, 'rev'); }
   else {
     st.done = Date.now(); d.t++; if (!d.s.split(',').includes(t.s)) d.s += (d.s ? ',' : '') + t.s;
     if (!st.wrong) { d.f++; p.stat.streak1++; } else p.stat.streak1 = 0;
     if (Object.values(st.parts).some(x => x.att >= 3)) p.stat.persist++;
     if (t.hard) p.stat.hard++;
   }
-  checkMissions(); checkBadges(); header();
+  checkMissions(); checkBadges(); if (!review) checkOrder(p); header();
+  const gain = p.cr - VT0;
   const pageDone = !review && TASKS.filter(x => x.p === t.p).every(x => taskState(p, x.id) === 'done'), nx = review ? reviewList(p)[0] : nextTask(p, t.id);
-  const m = el(`<div class="modal"><div class="sheet cele"><div class="fly">${pageDone ? '★ ★ ★' : '★'}</div><h2>${review ? (st.wrong ? 'Повторення завершено' : 'Закріплено без помилок!') : pageDone ? `Сектор ${t.p} звільнено!` : 'Завдання виконано!'}</h2><p>${review ? (st.wrong ? 'Ще трохи практики – і все вийде. Завдання залишилось у списку повторення.' : 'Тепер ти справді це вмієш.') : pageDone ? 'Уся сторінка зошита виконана. Карта міста у штабі оновилась.' : st.wrong ? 'Ти знайшов(ла) правильні відповіді, хоч було непросто. Це і є навчання.' : 'Усе з першої спроби – чудова робота!'}</p><div class="row">${nx ? `<a class="btn big" href="#${review ? 'r' : 't'}-${nx.id}">Далі ▶</a>` : ''}<a class="btn ghost" href="#home">На головну</a></div></div></div>`);
+  const m = el(`<div class="modal"><div class="sheet cele"><div class="fly">${pageDone ? '★ ★ ★' : '★'}</div><h2>${review ? (st.wrong ? 'Повторення завершено' : 'Закріплено без помилок!') : pageDone ? `Сектор ${t.p} звільнено!` : 'Завдання виконано!'}</h2><p>${review ? (st.wrong ? 'Ще трохи практики – і все вийде. Завдання залишилось у списку повторення.' : 'Тепер ти справді це вмієш.') : pageDone ? 'Уся сторінка зошита виконана. Карта міста у штабі оновилась.' : st.wrong ? 'Ти знайшов(ла) правильні відповіді, хоч було непросто. Це і є навчання.' : 'Усе з першої спроби – чудова робота!'}</p>${gain > 0 ? `<span class="crd lt">+ ⬡ <b>${gain}</b> кредитів · <a href="#arsenal">в Арсенал</a></span>` : ''}<div class="row">${nx ? `<a class="btn big" href="#${review ? 'r' : 't'}-${nx.id}">Далі ▶</a>` : ''}<a class="btn ghost" href="#home">На головну</a></div></div></div>`);
   $$('a', m).forEach(a => a.addEventListener('click', () => m.remove())); m.onclick = e => { if (e.target === m) m.remove(); };
   setTimeout(() => document.body.append(m), 700);
 }
@@ -1755,27 +1947,25 @@ function viewTrainer(gid) {
     $('#glvl').textContent = `Рівень складності ${gs.l + 1} з 4 · правильних поспіль: ${gs.run}`; const pt = g.make(gs.l); let wrong = false;
     $('.parts').innerHTML = ''; $('.parts').append(buildPart(pt, 0, { t: null, support: 1,
       onWrong() { if (!wrong) { wrong = true; gs.run = 0; gs.miss++; if (gs.miss >= 2 && gs.l > 0) { gs.l--; gs.miss = 0; toast('Зробимо трохи простіше – і поступово повернемося.'); } } day(p).w++; save(CUR); },
-      onOk() { const d = day(p); d.g++; d.c++; if (!wrong) { gs.run++; gs.miss = 0; if (gs.run >= 3 && gs.l < 3) { gs.l++; gs.run = 0; toast('Чудово! Наступні приклади будуть складніші.'); } } addXP(wrong ? 2 : 3); checkMissions(); checkBadges(); header(); save(CUR);
+      onOk() { const d = day(p); d.g++; d.c++; if (!wrong) { gs.run++; gs.miss = 0; if (gs.run >= 3 && gs.l < 3) { gs.l++; gs.run = 0; toast('Чудово! Наступні приклади будуть складніші.'); } } addXP(wrong ? 2 : 3, null, 'gen'); checkMissions(); checkBadges(); header(); save(CUR);
         const nb = el('<button class="btn big">Наступний приклад ▶</button>'); nb.onclick = nextQ; $('.parts').append(nb); nb.focus(); } }));
   };
   nextQ();
 }
 
-/* ===== сад ===== */
+/* ===== штаб ===== */
 function viewGarden() {
-  const p = P(), s = summary(p), lvl = levelOf(p.xp), pl = PLACES[p.place] || PLACES[0];
+  const p = P(), s = summary(p), lvl = levelOf(p.xp);
   const pages = Object.keys(s.pg).map(Number).sort((x, y) => x - y);
   const city = pages.map(k => { const [a, b] = s.pg[k], t = TASKS.find(x => x.p === k); return `<a class="sec-cell ${a === b ? 'on' : a ? 'part' : ''}" href="#s-${t.s}" title="Сторінка ${k}: виконано ${a} з ${b}"><b>${k}</b><i>${a === b ? 'вільний' : a + '/' + b}</i></a>`; }).join('');
   const pow = Object.keys(SUBJ).map(k => { const [a, b] = subjProg(p, k), v = Math.round(a / b * 100); return `<div class="pw"><span>${POWER[k]}<small>${SUBJ[k].name}</small></span><div class="track"><i style="width:${v}%"></i></div><b>${v}</b></div>`; }).join('');
   app().innerHTML = `<a class="back" href="#home">← На головну</a>
-  <div class="homehero"><div class="hh-av">${avHTML(p.av)}</div><div class="hh-t"><small>${avName(p.av) || 'Герой'} · рівень ${lvl}</small><h1>${levelName(lvl)} ${esc(p.name)}</h1><span class="xpbar"><i style="width:${p.xp % 150 / 1.5}%"></i></span><p>${p.xp} XP · до наступного звання ${150 - p.xp % 150} XP · серія ${streak(p)} дн.</p></div></div>
+  ${posterHTML(p, `Рівень ${lvl}`, `${levelName(lvl)} ${esc(p.name)}`, `${p.xp} XP · до наступного звання ${150 - p.xp % 150} XP · серія ${streak(p)} дн.`, true)}
   <h2>Сила героя</h2><div class="card">${pow}<p class="note">Сила росте, коли ти виконуєш завдання з предмета. 100 – предмет пройдено повністю.</p></div>
-  <h2>Карта міста</h2><div class="city" style="background:${pl.css}"><div class="cityh"><span>Звільнено секторів</span><b>${s.pages} / ${pages.length}</b></div><div class="cgrid">${city}</div><p>Кожен сектор – сторінка зошита. Виконай усі її завдання, щоб звільнити сектор.</p></div>
-  <h2>База</h2><div class="row wrap">${PLACES.map((x, i) => `<button class="opt ${p.place === i ? 'on' : ''}" data-pl="${i}" ${lvl < x.lvl ? 'disabled' : ''}>${x.n}${lvl < x.lvl ? ` · з рівня ${x.lvl}` : ''}</button>`).join('')}</div>
-  <h2>Герої</h2><div class="row wrap">${AVATARS.map((a, i) => `<button class="avb ${p.av === a ? 'on' : ''}" data-av="${a}" ${lvl < AV_LEVEL[i] ? 'disabled title="Відкриється на рівні ' + AV_LEVEL[i] + '"' : ''}>${avHTML(a)}<small>${lvl < AV_LEVEL[i] ? 'рівень ' + AV_LEVEL[i] : avName(a)}</small></button>`).join('')}</div>
+  <h2>Карта міста</h2><div class="city" style="background:${(PLACES[p.place] || PLACES[0]).css}"><div class="cityh"><span>Звільнено секторів</span><b>${s.pages} / ${pages.length}</b></div><div class="cgrid">${city}</div><p>Кожен сектор – сторінка зошита. Виконай усі її завдання, щоб звільнити сектор.</p></div>
+  <h2>Герої</h2><p class="note">Нові герої відкриваються зі званням. Броня й спорядження в кожного героя свої – прокачуй в Арсеналі.</p><div class="row wrap">${AVATARS.map((a, i) => `<button class="avb ${p.av === a ? 'on' : ''}" data-av="${a}" ${lvl < AV_LEVEL[i] ? 'disabled title="Відкриється на рівні ' + AV_LEVEL[i] + '"' : ''}>${avHTML(a, p.kit[a])}<small>${lvl < AV_LEVEL[i] ? 'рівень ' + AV_LEVEL[i] : avName(a)}</small></button>`).join('')}</div>
   <div class="row wrap" style="margin-top:10px"><label class="btn ghost">Своє фото або малюнок<input type="file" accept="image/*" id="avup" hidden></label></div>
   <h2>Відзнаки</h2><div class="badges">${BADGES.map(b => `<div class="badge ${p.badges[b.id] ? 'on' : ''}"><span>★</span><b>${b.n}</b><small>${b.d}</small></div>`).join('')}</div>`;
-  $$('[data-pl]').forEach(b => b.onclick = () => { p.place = +b.dataset.pl; save(CUR); viewGarden(); });
   $('#avup').onchange = e => { const f = e.target.files[0]; if (!f) return; const im = new Image(), u = URL.createObjectURL(f); im.onload = () => { const c = document.createElement('canvas'), d = Math.min(im.width, im.height); c.width = c.height = 128; c.getContext('2d').drawImage(im, (im.width - d) / 2, (im.height - d) / 2, d, d, 0, 0, 128, 128); p.av = 'img:' + c.toDataURL('image/jpeg', .82); URL.revokeObjectURL(u); save(CUR); header(); viewGarden(); }; im.onerror = () => toast('Не вдалося прочитати картинку'); im.src = u; };
   $$('[data-av]').forEach(b => b.onclick = () => { p.av = b.dataset.av; save(CUR); header(); viewGarden(); });
 }
@@ -1846,7 +2036,7 @@ function openPanel(pre, sink, nextFn) {
 
 /* ===== кабінет дорослих ===== */
 const pinHash = s => { let h = 7; for (const c of 'kz' + s) h = (h * 31 + c.charCodeAt(0)) % 1000000007; return String(h); };
-let adultOpen = false, adultTab = 'over', adultPid = null;
+let adultOpen = false, adultTab = 'asg', adultPid = null;
 function topicStats(p) {
   const m = {}; TASKS.forEach(t => { const s = p.tasks[t.id]; if (!s) return; t.parts.forEach((pt, i) => { const ps = s.parts[i]; if (!ps || !ps.ok || !CHECKABLE(pt)) return; const o = m[t.s + '|' + t.topic] = m[t.s + '|' + t.topic] || { s: t.s, topic: t.topic, n: 0, first: 0, att: 0 }; o.n++; o.att += ps.att; if (ps.att === 1) o.first++; }); });
   return Object.values(m);
@@ -1858,13 +2048,13 @@ function viewAdult() {
     return;
   }
   if (!DB.profiles[adultPid]) adultPid = CUR || DB.order[0] || null;
-  const p = DB.profiles[adultPid], T = [['over', 'Огляд'], ['pages', 'Сторінки й завдання'], ['open', 'Відповіді дитини'], ['key', 'Каталог і ключ'], ['class', 'Клас'], ['data', 'Налаштування й дані']];
+  const p = mig(DB.profiles[adultPid]), T = [['asg', 'Наказ на сьогодні'], ['over', 'Огляд'], ['pages', 'Сторінки й завдання'], ['open', 'Відповіді дитини'], ['key', 'Каталог і ключ'], ['class', 'Клас'], ['data', 'Налаштування й дані']];
   app().innerHTML = `<a class="back" href="#home">← До навчання</a><div class="hero adult"><h1>Кабінет батьків і вчителя</h1><div class="row wrap"><label class="fld"><span>Учень</span><select class="inp" id="apid">${DB.order.map(id => `<option value="${id}" ${id === adultPid ? 'selected' : ''}>${esc(DB.profiles[id].name)}</option>`).join('')}</select></label><button class="btn ghost" id="alock">Вийти з кабінету</button></div></div><div class="tabs">${T.map(([k, n]) => `<button class="opt sm ${adultTab === k ? 'on' : ''}" data-at="${k}">${n}</button>`).join('')}</div><div id="ab"></div>`;
   $('#apid').onchange = e => { adultPid = e.target.value; viewAdult(); }; $('#alock').onclick = () => { adultOpen = false; go('home'); };
   $$('[data-at]').forEach(b => b.onclick = () => { adultTab = b.dataset.at; viewAdult(); });
   const ab = $('#ab');
   if (!p && !['key', 'class'].includes(adultTab)) { ab.innerHTML = '<div class="card">Ще немає жодного профілю учня. Створіть його на екрані вибору учня.</div>'; return; }
-  ({ over: adOver, pages: adPages, open: adOpen, key: adKey, class: adClass, data: adData })[adultTab](ab, p);
+  ({ asg: adAssign, over: adOver, pages: adPages, open: adOpen, key: adKey, class: adClass, data: adData })[adultTab](ab, p);
 }
 function partTotals(p) { let n = 0, first = 0, wrong = 0; TASKS.forEach(t => { const s = p.tasks[t.id]; if (!s) return; wrong += s.wrong || 0; t.parts.forEach((pt, i) => { const ps = s.parts[i]; if (ps && ps.ok && CHECKABLE(pt)) { n++; if (ps.att === 1) first++; } }); }); return { n, first, wrong }; }
 function adOver(ab, p) {
@@ -1879,7 +2069,7 @@ function adOver(ab, p) {
   <div class="card"><h3>Як читати ці дані</h3><p class="note">«З першої спроби» показує реальне розуміння: відповідь без підказок і перебору. Завдання, виконане після кількох спроб, зараховується, але потрапляє в «Повторення». Творчі й усні завдання програма не оцінює – їх варто переглянути на вкладці «Відповіді дитини».</p></div>`;
 }
 function adPages(ab, p) {
-  ab.innerHTML = `<div class="card"><p class="note">Колір: зелений – виконано без помилок, жовтий – виконано з помилками (✗ – неправильні спроби), синій – розпочато; – скільки разів дитина відкривала пояснення чи приклад. Натисніть, щоб відкрити завдання (воно відкриється в профілі вибраного учня).</p>${[...new Set(TASKS.map(t => t.p))].map(pg => { const ts = TASKS.filter(t => t.p === pg); return `<div class="pgrow"><b>с. ${pg}</b><div class="tl">${ts.map(t => { const s = p.tasks[t.id], st = taskState(p, t.id); return `<a class="tchip ${st} ${s && s.done && s.wrong ? 'warn' : ''}" href="#t-${t.id}" data-open="${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${s && s.wrong ? ` · ✗${s.wrong}` : ''}${s && s.solid ? ' · 🔁✓' : ''}${s && s.help ? ' · 🗣' + s.help : ''}</a>`; }).join('')}</div></div>`; }).join('')}</div>`;
+  ab.innerHTML = `<div class="card"><p class="note">Колір: зелений – виконано без помилок, жовтий – виконано з помилками (✗ – неправильні спроби), синій – розпочато; 🗣 – скільки разів дитина відкривала пояснення чи приклад, 📄 – досьє. Натисніть, щоб відкрити завдання (воно відкриється в профілі вибраного учня).</p>${[...new Set(TASKS.map(t => t.p))].map(pg => { const ts = TASKS.filter(t => t.p === pg); return `<div class="pgrow"><b>с. ${pg}</b><div class="tl">${ts.map(t => { const s = p.tasks[t.id], st = taskState(p, t.id); return `<a class="tchip ${st} ${s && s.done && s.wrong ? 'warn' : ''}" href="#t-${t.id}" data-open="${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${s && s.wrong ? ` · ✗${s.wrong}` : ''}${s && s.solid ? ' · 🔁✓' : ''}${s && s.help ? ' · 🗣' + s.help : ''}${s && s.dos ? ' · 📄' + s.dos : ''}</a>`; }).join('')}</div></div>`; }).join('')}</div>`;
   $$('[data-open]', ab).forEach(a => a.onclick = () => { CUR = adultPid; saveLocal(); });
 }
 function adOpen(ab, p) {
@@ -1894,7 +2084,7 @@ function adKey(ab) {
   $('#kq').oninput = run; run();
 }
 function adClass(ab) {
-  ab.innerHTML = `<div class="card"><div class="tw"><table class="tbl"><tr><th>Учень</th><th>Виконано</th><th>Мова</th><th>Математика</th><th>Всесвіт</th><th>З першої спроби</th><th>Повторення</th><th>Остання активність</th></tr>${DB.order.map(id => { const p = DB.profiles[id], s = summary(p), pt = partTotals(p), ld = Object.keys(p.days).sort().pop() || '–'; return `<tr><td><span class="av">${avHTML(p.av)}</span> ${esc(p.name)}</td><td>${s.done}/${TASKS.length}</td>${Object.keys(SUBJ).map(k => `<td>${subjProg(p, k).join('/')}</td>`).join('')}<td>${pt.n ? Math.round(pt.first / pt.n * 100) : 0}%</td><td>${reviewList(p).length}</td><td>${ld}</td></tr>`; }).join('')}</table></div><p class="note">Щоб вести клас на одному пристрої, створіть профіль для кожного учня. Для перенесення результатів між пристроями скористайтеся експортом на вкладці «Налаштування й дані».</p></div>`;
+  ab.innerHTML = `<div class="card"><div class="tw"><table class="tbl"><tr><th>Учень</th><th>Виконано</th><th>Мова</th><th>Математика</th><th>Всесвіт</th><th>З першої спроби</th><th>Повторення</th><th>Остання активність</th></tr>${DB.order.map(id => { const p = DB.profiles[id], s = summary(p), pt = partTotals(p), ld = Object.keys(p.days).sort().pop() || '–'; return `<tr><td><span class="av">${avHTML(p.av, kitOf(p))}</span> ${esc(p.name)}</td><td>${s.done}/${TASKS.length}</td>${Object.keys(SUBJ).map(k => `<td>${subjProg(p, k).join('/')}</td>`).join('')}<td>${pt.n ? Math.round(pt.first / pt.n * 100) : 0}%</td><td>${reviewList(p).length}</td><td>${ld}</td></tr>`; }).join('')}</table></div><p class="note">Щоб вести клас на одному пристрої, створіть профіль для кожного учня. Для перенесення результатів між пристроями скористайтеся експортом на вкладці «Налаштування й дані».</p></div>`;
 }
 function adData(ab, p) {
   ab.innerHTML = `<div class="card"><h3>Рівень підтримки для ${esc(p.name)}</h3><div class="row wrap"><button class="opt ${p.support === 1 ? 'on' : ''}" data-sup="1">Підказка після першої помилки</button><button class="opt ${p.support === 2 ? 'on' : ''}" data-sup="2">Після другої помилки</button><button class="opt ${p.support === 9 ? 'on' : ''}" data-sup="9">Лише на прохання дитини</button></div><p class="note">Правильну відповідь програма дитині не показує за жодного рівня.</p></div>
