@@ -288,6 +288,61 @@ body.mob .poster{flex-direction:column;text-align:center}body.mob .poster .pav{w
 details.pg>summary{cursor:pointer;list-style:none;margin:0}details.pg>summary::-webkit-details-marker{display:none}details.pg[open]>summary{margin-bottom:6px}
 .sec-cell.en{border-style:dashed}.sec-cell.en.on{border-style:solid}
 .aunit{border-top:1px solid var(--line1);margin-top:10px;padding-top:10px}.aunit>summary{cursor:pointer;font:600 14px var(--display);color:var(--ink2)}
+
+/* ===== English Ops ===== */
+.wgame [hidden],.wbuild[hidden],.wread [hidden],.wcards [hidden],.wsay [hidden]{display:none!important}
+.ehero{background:linear-gradient(135deg,#0f2a1d,#111417 60%);color:#fff;border-radius:24px;padding:20px;margin-top:10px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.ehero::after{content:"ABC";position:absolute;right:-6px;bottom:-22px;font:800 84px var(--display);color:rgba(255,255,255,.05);letter-spacing:-.04em}
+.ehero small{font:600 11px var(--display);letter-spacing:.16em;text-transform:uppercase;color:#7ee2a8}.ehero h1{color:#fff;margin:6px 0}.ehero p{color:#cfd5de;margin:6px 0 0;max-width:60ch}
+.ebar{display:block;height:8px;border-radius:99px;background:rgba(127,127,127,.25);overflow:hidden;margin:8px 0 0}.ebar i{display:block;height:100%;background:#22c55e;border-radius:99px}
+.eops{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:14px}body.mob .eops{grid-template-columns:1fr 1fr}
+.eop{display:grid;gap:4px;background:#fff;border:1px solid var(--line1);border-radius:20px;padding:14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:transform .15s}.eop:active{transform:scale(.97)}
+.eop .eic{font-size:30px}.eop b{font:600 14px var(--display);line-height:1.25}.eop small{color:var(--mute);font-size:12px}.eop.done{border-color:#bfe8d0;background:#f3fcf6}
+.esets{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}body.mob .esets{grid-template-columns:1fr}
+.eset .esh{display:grid;gap:2px;margin-bottom:10px}.eset .esh span{font-size:26px;letter-spacing:4px}.eset .esh b{font:600 16px var(--display)}.eset .esh small{color:var(--mute)}
+.egs{display:flex;flex-wrap:wrap;gap:8px}.egs .opt{flex:1 1 auto;text-align:center}
+.eblz{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;background:linear-gradient(135deg,#fff8e1,#fff);border-color:#f0d79a}.eblz div{display:grid;gap:3px}.eblz b{font:600 17px var(--display)}.eblz small{color:var(--mute)}
+.ehf{display:flex;gap:14px;align-items:center;margin-top:14px;text-decoration:none;color:var(--ink);background:#111417;color:#fff;border:0}.ehf span{font-size:34px}.ehf b{font:600 16px var(--display);display:block}.ehf small{color:#aab3c2}
+.egstage{margin-top:14px;border:2px solid #22c55e}.egh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.egh b{font:600 15px var(--display)}.egb2{margin-top:14px}
+.wtop{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px}.wprog{font:600 13px var(--display);color:var(--mute)}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}body.mob .wgrid{grid-template-columns:1fr 1fr}
+.wcard{position:relative;min-height:150px;border-radius:18px;background:#fff;border:2px solid var(--line1);cursor:pointer;padding:12px 10px 10px;text-align:center;transition:transform .2s,border-color .2s;user-select:none}
+.wcard.seen{border-color:#bfe8d0}.wcard.cur{border-color:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2);transform:scale(1.03)}
+.wcard .wf,.wcard .wb{display:grid;gap:4px;justify-items:center}.wcard .wb{display:none}.wcard.flip .wf{display:none}.wcard.flip .wb{display:grid}.wcard.flip{background:#f3fcf6}
+.wcard .we{font-size:42px;line-height:1.1}.wcard .wf b{font:700 16px var(--display);color:var(--ink)}.wcard small{color:var(--mute);font-size:11.5px;line-height:1.3}
+.wcard .wb b{font:700 15px var(--display);color:var(--good);padding:0 30px 0 2px;overflow-wrap:anywhere}.wcard .wf b{overflow-wrap:anywhere}.wcard .wb p{margin:2px 0;font-size:13.5px;font-weight:600;color:var(--ink)}
+.wsp{border:0;background:var(--soft,#eef1f6);border-radius:50%;width:36px;height:36px;font-size:16px;cursor:pointer;flex:none}.wcard .wsp{position:absolute;top:6px;right:6px;width:32px;height:32px;font-size:14px}
+.warena{display:grid;gap:12px;justify-items:center}.wstars{display:flex;gap:6px}.wstars i{width:10px;height:10px;border-radius:50%;background:var(--line)}.wstars i.on{background:#22c55e}.wstars i.now{background:#f3d36b;transform:scale(1.3)}
+.wbig{width:84px;height:84px;border-radius:50%;border:0;background:#111417;color:#fff;font-size:34px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.25);animation:wpulse 1.6s infinite}
+@keyframes wpulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.45),0 8px 20px rgba(0,0,0,.25)}50%{box-shadow:0 0 0 14px rgba(34,197,94,0),0 8px 20px rgba(0,0,0,.25)}}
+.wopts{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:520px}
+.wopt{display:grid;gap:4px;justify-items:center;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 8px;cursor:pointer;transition:transform .12s}.wopt span{font-size:40px;line-height:1.1}.wopt b{font:600 14px var(--body);color:var(--ink)}.wopt em{font:700 13px var(--display);font-style:normal;color:var(--good)}
+.wopt:active{transform:scale(.96)}.wopt.ok{border-color:#22c55e;background:#ecfdf3;animation:wpop .4s}.wopt.no{border-color:#e5484d;background:#fff1f1;animation:wshake .4s}
+@keyframes wpop{50%{transform:scale(1.08)}}@keyframes wshake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.wclue{display:grid;justify-items:center;gap:2px}.wclue .we{font-size:52px}.wclue b{font:600 16px var(--display)}.wclue small{color:var(--mute)}
+.wslots,.wtiles{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}.wgap{width:14px}
+.wslot{width:38px;height:46px;border:0;border-bottom:3px solid var(--ink);background:#f6f7fa;border-radius:8px 8px 0 0;font:700 22px var(--display);color:var(--ink)}.wslot.ok{border-color:#22c55e;background:#ecfdf3;color:var(--good)}.wslot.no{border-color:#e5484d;background:#fff1f1;animation:wshake .4s}
+.wtile{width:42px;height:46px;border:0;border-radius:12px;background:#111417;color:#fff;font:700 21px var(--display);box-shadow:0 3px 0 #000;cursor:pointer}.wtile:active{transform:translateY(2px);box-shadow:0 1px 0 #000}
+.wbuild{display:grid;gap:12px}.wua{display:grid;gap:2px;background:#f6f7fa;border-radius:14px;padding:10px 12px}.wua small{color:var(--mute)}.wua b{font:600 16px var(--display)}
+.wans{min-height:56px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;border:2px dashed var(--line);border-radius:14px;padding:8px;transition:border-color .2s}.wans.ok{border-color:#22c55e;background:#ecfdf3}.wans.no{border-color:#e5484d;animation:wshake .4s}
+.wtoks{display:flex;flex-wrap:wrap;gap:8px}.wtok{border:2px solid var(--line);background:#fff;border-radius:12px;padding:9px 13px;font:600 16px var(--body);cursor:pointer}.wtok.in{background:#111417;color:#fff;border-color:#111417}
+.wlines{display:grid;gap:10px}.wline{display:flex;gap:10px;align-items:center}.wline.app{flex-direction:row}.wline.you{flex-direction:row}
+.wline .wav{font-size:26px}.wbub{flex:1;display:grid;gap:3px;background:#f6f7fa;border-radius:16px;padding:10px 12px;min-width:0;border:2px solid transparent}.wline.you .wbub{background:#fff;border-color:var(--line)}
+.wline.app .wbub{background:#111417;color:#fff}.wline.app .wbub b{color:#fff}.wbub b{font:600 16px var(--body)}.wbub small{color:var(--mute);font-size:12px}.wbub .we{font-size:28px}
+.wline.cur .wbub{border-color:#f3d36b;box-shadow:0 0 0 3px rgba(243,211,107,.35)}.wline.ok .wbub{border-color:#22c55e;background:#ecfdf3}.wres{font-size:13px}.wres i{color:var(--ink2)}
+.wbtns{display:flex;flex-direction:column;gap:6px}.wmic{border:0;background:#e5484d;color:#fff;border-radius:999px;min-width:48px;height:48px;padding:0 12px;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(229,72,77,.35)}.wmic.rec{animation:wpulse 1s infinite;background:#b91c1c;font-size:13px}
+.wok{border:0;background:#22c55e;color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;margin-top:4px;cursor:pointer}
+.wrule .rtab{width:100%;border-collapse:separate;border-spacing:0;border:2px solid #111417;border-radius:14px;overflow:hidden;font-size:15px}.wrule .rtab td,.wrule .rtab th{padding:9px 10px;border-bottom:1px solid var(--line1);text-align:left}.wrule .rtab th{background:#111417;color:#f3d36b;font:600 12px var(--display);letter-spacing:.06em;text-transform:uppercase}.wrule .rtab tr:last-child td{border-bottom:0}.wrule .rtab b{color:#15803d}
+.wrule p{margin:10px 0 0}.wex{display:grid;gap:8px;margin-top:12px}.wexr{display:flex;gap:10px;align-items:center;background:#f6f7fa;border-radius:14px;padding:8px 10px}.wexr div{display:grid}.wexr small{color:var(--mute)}
+.wread{display:grid;gap:10px}.wcomic{display:grid;gap:10px}.wpanel{display:flex;gap:10px;align-items:flex-start;cursor:pointer}.wpanel.nar .wpb{background:#fff8e1;border:2px solid #f0d79a;font-style:italic}
+.wpav{flex:none;width:58px;display:grid;justify-items:center;gap:2px}.wpav .hero-av{width:54px;height:54px;border-radius:14px}.wpav small{font:700 10.5px var(--display);text-transform:uppercase;letter-spacing:.06em}
+.wpb{flex:1;background:#fff;border:2px solid var(--line);border-radius:4px 18px 18px 18px;padding:10px 12px;min-width:0}.wpanel.seen .wpb{border-color:#bfe8d0}.wpanel.cur .wpb{border-color:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.wen{margin:0;font:600 17px/1.5 var(--body)}.ww{border-radius:6px;padding:0 1px}.ww:hover{background:#fff1b8}.wuat{margin:6px 0 0;color:var(--mute);font-size:13.5px}
+.wtip{position:sticky;bottom:calc(76px + env(safe-area-inset-bottom));background:#111417;color:#fff;border-radius:14px;padding:10px 14px;display:grid;gap:2px;box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:5}.wtip b{color:#f3d36b;font:600 16px var(--display)}.wtip small{color:#aab3c2}
+.btn.ghost.on{background:#111417;color:#fff}
+.wblitz{display:grid;gap:14px;justify-items:center}.wbh{display:flex;align-items:baseline;gap:6px;font:600 13px var(--display);color:var(--mute)}.wbh b{font:800 32px var(--display);color:var(--ink)}.wbh .wcb{color:#e5484d;font-size:20px;margin-left:6px}
+.wdone{display:grid;justify-items:center;gap:4px;padding:10px}.wdone b{font:800 56px var(--display)}.wdone p{font:600 16px var(--display)}
+@media (prefers-reduced-motion:reduce){.wbig,.wmic.rec{animation:none}}
 </style>
 </head>
 <body>
@@ -1476,9 +1531,501 @@ EA(105, 9, 'Writing', 'Paragraphs', '<b>Writing Focus: Read and count how many p
 EA(105, 10, 'Writing', 'Match the headings', '<b>Match the headings to the paragraphs in the report.</b>', [OR('Розстав заголовки в порядку абзаців (перший – Ancient Buildings).', ['Ancient Buildings', 'Everyday Things in Ancient Egypt', 'Ancient Houses', 'Towns and Cities'], { hints: ['Другий абзац – про миски, чашки, гребінці.', 'Третій – про будинки з глини.'] })], { needBook: true });
 EA(105, 11, 'Writing', 'Two more paragraphs', '<b>Write two more paragraphs about Ancient Egypt.</b> (Workbook p. 97)', [O('Напиши англійською два абзаци про Стародавній Єгипет, кожен зі своїм заголовком.', { min: 100 })]);
 
+/* ===== English: банк слів (слово, переклад, вимова українськими літерами, емодзі, приклад, переклад прикладу) ===== */
+const VOC = {
+  months: { u: 'S', n: 'Months', w: [
+    ['January', 'січень', 'ДЖЕ-ню-е-рі', '❄️', 'My birthday is in January.', 'Мій день народження в січні.'],
+    ['February', 'лютий', 'ФЕ-бру-е-рі', '⛄', 'It’s cold in February.', 'У лютому холодно.'],
+    ['March', 'березень', 'МАРЧ', '🌱', 'Spring starts in March.', 'Весна починається в березні.'],
+    ['April', 'квітень', 'ЕЙ-прел', '🌧️', 'It’s rainy in April.', 'У квітні дощово.'],
+    ['May', 'травень', 'МЕЙ', '🌷', 'Flowers grow in May.', 'У травні ростуть квіти.'],
+    ['June', 'червень', 'ДЖУН', '🍓', 'School ends in June.', 'Школа закінчується в червні.'],
+    ['July', 'липень', 'джу-ЛАЙ', '☀️', 'It’s hot in July.', 'У липні спекотно.'],
+    ['August', 'серпень', 'О-гаст', '🏖️', 'We go to the beach in August.', 'У серпні ми їдемо на пляж.'],
+    ['September', 'вересень', 'сеп-ТЕМ-бе', '🎒', 'School starts in September.', 'Школа починається у вересні.'],
+    ['October', 'жовтень', 'ок-ТОУ-бе', '🍂', 'The leaves are orange in October.', 'У жовтні листя помаранчеве.'],
+    ['November', 'листопад', 'ноу-ВЕМ-бе', '🌫️', 'It’s foggy in November.', 'У листопаді туманно.'],
+    ['December', 'грудень', 'ді-СЕМ-бе', '🎄', 'We have a party in December.', 'У грудні в нас свято.']] },
+  ordinals: { u: 'S', n: 'Ordinal numbers', w: [
+    ['first', 'перший (1st)', 'ФЕРСТ', '🥇', 'January is the first month.', 'Січень – перший місяць.'],
+    ['second', 'другий (2nd)', 'СЕ-кенд', '🥈', 'February is the second month.', 'Лютий – другий місяць.'],
+    ['third', 'третій (3rd)', 'СЕРД (язик між зубами)', '🥉', 'My birthday is March third.', 'Мій день народження третього березня.'],
+    ['fourth', 'четвертий (4th)', 'ФОС (язик між зубами)', '4️⃣', 'It’s the fourth of May.', 'Сьогодні четверте травня.'],
+    ['fifth', 'п’ятий (5th)', 'ФІФС', '5️⃣', 'Emma’s birthday is the fifth.', 'День народження Емми п’ятого.'],
+    ['sixth', 'шостий (6th)', 'СІКСС', '6️⃣', 'It’s my sixth birthday.', 'Це мій шостий день народження.'],
+    ['seventh', 'сьомий (7th)', 'СЕ-венс', '7️⃣', 'I’m seven. It’s my seventh birthday.', 'Мені сім. Це мій сьомий день народження.'],
+    ['tenth', 'десятий (10th)', 'ТЕНС', '🔟', 'October is the tenth month.', 'Жовтень – десятий місяць.'],
+    ['eleventh', 'одинадцятий (11th)', 'і-ЛЕ-венс', '⚽', 'It’s his eleventh birthday.', 'Це його одинадцятий день народження.'],
+    ['twelfth', 'дванадцятий (12th)', 'ТВЕЛФС', '🕛', 'December is the twelfth month.', 'Грудень – дванадцятий місяць.'],
+    ['twentieth', 'двадцятий (20th)', 'ТВЕН-ті-ес', '🎂', 'My party is on the twentieth.', 'Моє свято двадцятого.'],
+    ['thirty-first', 'тридцять перший (31st)', 'СЕР-ті ФЕРСТ', '🎆', 'December thirty-first is New Year’s Eve.', '31 грудня – переддень Нового року.']] },
+  hair: { u: '1', n: 'Hair and faces', w: [
+    ['dark hair', 'темне волосся', 'ДАРК ХЕА', '🖤', 'My dad has dark hair.', 'У мого тата темне волосся.'],
+    ['light hair', 'світле волосся', 'ЛАЙТ ХЕА', '💛', 'My sister has light hair.', 'У моєї сестри світле волосся.'],
+    ['short hair', 'коротке волосся', 'ШОРТ ХЕА', '✂️', 'He has short hair.', 'У нього коротке волосся.'],
+    ['long hair', 'довге волосся', 'ЛОНГ ХЕА', '👸', 'She has long hair.', 'У неї довге волосся.'],
+    ['curly hair', 'кучеряве волосся', 'КЕ-рлі ХЕА', '🌀', 'My friend has curly hair.', 'У мого друга кучеряве волосся.'],
+    ['straight hair', 'пряме волосся', 'СТРЕЙТ ХЕА', '📏', 'I have straight hair.', 'У мене пряме волосся.'],
+    ['freckles', 'ластовиння', 'ФРЕ-келз', '🟤', 'She has freckles on her nose.', 'У неї ластовиння на носі.'],
+    ['glasses', 'окуляри', 'ГЛА-сіз', '👓', 'My grandpa has glasses.', 'У мого дідуся окуляри.']] },
+  people: { u: '1', n: 'Describing people', w: [
+    ['brave', 'хоробрий', 'БРЕЙВ', '🦁', 'Superheroes are brave.', 'Супергерої хоробрі.'],
+    ['strong', 'сильний', 'СТРОНГ', '💪', 'My brother is strong.', 'Мій брат сильний.'],
+    ['young', 'молодий', 'ЯНГ', '👶', 'My cousin is young. He’s two.', 'Мій двоюрідний брат малий. Йому два.'],
+    ['tall', 'високий', 'ТОЛ', '🦒', 'Ben is the tallest in my class.', 'Бен – найвищий у моєму класі.'],
+    ['fast', 'швидкий', 'ФАСТ', '⚡', 'Cheetahs are fast.', 'Гепарди швидкі.'],
+    ['funny', 'смішний', 'ФА-ні', '😂', 'My friend is very funny.', 'Мій друг дуже смішний.']] },
+  clubs: { u: '1', n: 'Clubs and teams', w: [
+    ['gardening club', 'гурток садівництва', 'ГАР-де-нінг КЛАБ', '🌻', 'I’m in a gardening club.', 'Я ходжу на гурток садівництва.'],
+    ['cooking club', 'кулінарний гурток', 'КУ-кінг КЛАБ', '🍳', 'We make pizza in cooking club.', 'На кулінарному гуртку ми робимо піцу.'],
+    ['cricket team', 'команда з крикету', 'КРІ-кет ТІМ', '🏏', 'He’s on a cricket team.', 'Він у команді з крикету.'],
+    ['music club', 'музичний гурток', 'М’Ю-зік КЛАБ', '🎸', 'She plays the guitar in music club.', 'Вона грає на гітарі в музичному гуртку.'],
+    ['basketball team', 'баскетбольна команда', 'БАС-кет-бол ТІМ', '🏀', 'Diego is on a basketball team.', 'Дієго в баскетбольній команді.']] },
+  places: { u: '2', n: 'Places in the city', w: [
+    ['mall', 'торговий центр', 'МОЛ', '🛍️', 'Let’s go shopping at the mall.', 'Ходімо по покупки в торговий центр.'],
+    ['restaurant', 'ресторан', 'РЕС-трент', '🍽️', 'We eat out at a restaurant.', 'Ми їмо в ресторані.'],
+    ['library', 'бібліотека', 'ЛАЙ-бре-рі', '📚', 'I get books at the library.', 'Я беру книжки в бібліотеці.'],
+    ['station', 'вокзал, станція', 'СТЕЙ-шн', '🚉', 'The train is at the station.', 'Потяг на вокзалі.'],
+    ['college', 'коледж', 'КО-лідж', '🎓', 'My brother goes to college.', 'Мій брат навчається в коледжі.'],
+    ['recreation center', 'спортивно-розважальний центр', 'рек-рі-ЕЙ-шн СЕН-те', '🏊', 'I swim at the recreation center.', 'Я плаваю в спортцентрі.'],
+    ['museum', 'музей', 'м’ю-ЗІ-ем', '🏛️', 'There are old helmets in the museum.', 'У музеї є старі шоломи.'],
+    ['movie theater', 'кінотеатр', 'МУ-ві СІ-е-те', '🎬', 'We watch a movie at the movie theater.', 'Ми дивимося фільм у кінотеатрі.']] },
+  cityDo: { u: '2', n: 'Things to do in the city', w: [
+    ['go shopping', 'ходити по магазинах', 'ГОУ ШО-пінг', '🛒', 'Mom and I go shopping on Saturday.', 'Ми з мамою ходимо по магазинах у суботу.'],
+    ['catch a train', 'сісти на потяг', 'КЕЧ е ТРЕЙН', '🚆', 'We catch a train to Lviv.', 'Ми сідаємо на потяг до Львова.'],
+    ['watch a movie', 'дивитися фільм', 'ВОЧ е МУ-ві', '🍿', 'Let’s watch a movie tonight.', 'Подивімося фільм сьогодні ввечері.'],
+    ['meet friends', 'зустрічатися з друзями', 'МІТ ФРЕНДЗ', '🤝', 'I meet friends in the park.', 'Я зустрічаюся з друзями в парку.'],
+    ['take photos', 'фотографувати', 'ТЕЙК ФОУ-тоуз', '📸', 'Serena likes to take photos.', 'Серена любить фотографувати.'],
+    ['eat out', 'їсти поза домом (у кафе)', 'ІТ АУТ', '🍕', 'We eat out on Sundays.', 'Ми обідаємо в кафе по неділях.']] },
+  capital: { u: '2', n: 'Capital cities', w: [
+    ['capital city', 'столиця', 'КЕ-пі-тел СІ-ті', '🏙️', 'Kyiv is the capital city of Ukraine.', 'Київ – столиця України.'],
+    ['tower', 'вежа', 'ТА-уе', '🗼', 'There’s a tall tower in the city.', 'У місті є висока вежа.'],
+    ['statue', 'статуя, пам’ятник', 'СТЕ-чу', '🗽', 'The statue is very big.', 'Статуя дуже велика.'],
+    ['palace', 'палац', 'ПЕ-ліс', '🏰', 'The King lives in a palace.', 'Король живе в палаці.']] },
+  jobs: { u: '3', n: 'Jobs', w: [
+    ['pilot', 'пілот', 'ПАЙ-лет', '👨‍✈️', 'A pilot flies a plane.', 'Пілот керує літаком.'],
+    ['scientist', 'науковець', 'САЙ-ен-тіст', '🧪', 'A scientist works in a lab.', 'Науковець працює в лабораторії.'],
+    ['ambulance driver', 'водій швидкої', 'ЕМ-б’ю-ленс ДРАЙ-ве', '🚑', 'An ambulance driver helps people.', 'Водій швидкої допомагає людям.'],
+    ['doctor', 'лікар', 'ДОК-те', '🩺', 'The doctor works at the hospital.', 'Лікар працює в лікарні.'],
+    ['vet', 'ветеринар', 'ВЕТ', '🐶', 'A vet works with animals.', 'Ветеринар працює з тваринами.'],
+    ['chef', 'кухар (шеф-кухар)', 'ШЕФ', '👨‍🍳', 'The chef cooks food in a restaurant.', 'Кухар готує їжу в ресторані.'],
+    ['coach', 'тренер', 'КОУЧ', '📣', 'Our coach is strong and fast.', 'Наш тренер сильний і швидкий.'],
+    ['salesperson', 'продавець', 'СЕЙЛЗ-пер-сн', '🏷️', 'A salesperson sells things.', 'Продавець продає речі.']] },
+  workDo: { u: '3', n: 'Actions at work', w: [
+    ['help people', 'допомагати людям', 'ХЕЛП ПІ-пл', '🤲', 'Doctors help people.', 'Лікарі допомагають людям.'],
+    ['sell things', 'продавати речі', 'СЕЛ СІНГЗ', '💵', 'I want to sell things.', 'Я хочу продавати речі.'],
+    ['work outside', 'працювати на вулиці', 'ВЕРК аут-САЙД', '🌳', 'A farmer works outside.', 'Фермер працює надворі.'],
+    ['work with animals', 'працювати з тваринами', 'ВЕРК віз Е-ні-мелз', '🐴', 'Vets work with animals.', 'Ветеринари працюють із тваринами.'],
+    ['drive', 'керувати (авто)', 'ДРАЙВ', '🚗', 'My mom drives a bus.', 'Моя мама водить автобус.'],
+    ['cook food', 'готувати їжу', 'КУК ФУД', '🍲', 'Chefs cook food.', 'Кухарі готують їжу.']] },
+  jobAdj: { u: '3', n: 'Describing jobs', w: [
+    ['interesting', 'цікавий', 'ІН-тре-стінг', '🤔', 'Science is interesting.', 'Наука – цікава.'],
+    ['dangerous', 'небезпечний', 'ДЕЙН-дже-рес', '⚠️', 'A firefighter has a dangerous job.', 'У пожежника небезпечна робота.'],
+    ['exciting', 'захопливий', 'ік-САЙ-тінг', '🎢', 'Flying a plane is exciting.', 'Керувати літаком – захопливо.'],
+    ['safe', 'безпечний', 'СЕЙФ', '🛡️', 'His job is safe.', 'Його робота безпечна.']] },
+  country: { u: '4', n: 'Places in the country', w: [
+    ['rock', 'скеля, камінь', 'РОК', '🪨', 'There was a big rock.', 'Там була велика скеля.'],
+    ['forest', 'ліс', 'ФО-рест', '🌲', 'We walked in the forest.', 'Ми гуляли в лісі.'],
+    ['path', 'стежка', 'ПАС', '🥾', 'The path was muddy.', 'Стежка була брудна.'],
+    ['bridge', 'міст', 'БРІДЖ', '🌉', 'There was a narrow bridge.', 'Там був вузький міст.'],
+    ['river', 'річка', 'РІ-ве', '🏞️', 'The river was fast.', 'Річка була швидка.'],
+    ['parking lot', 'парковка', 'ПАР-кінг ЛОТ', '🅿️', 'Our car is in the parking lot.', 'Наша машина на парковці.'],
+    ['waterfall', 'водоспад', 'ВО-те-фол', '💦', 'The waterfall was big and noisy.', 'Водоспад був великий і шумний.'],
+    ['picnic area', 'місце для пікніка', 'ПІК-нік Е-рі-а', '🧺', 'We ate at the picnic area.', 'Ми їли на місці для пікніка.']] },
+  adj4: { u: '4', n: 'Adventure adjectives', w: [
+    ['wide', 'широкий', 'ВАЙД', '↔️', 'The river was wide.', 'Річка була широка.'],
+    ['narrow', 'вузький', 'НЕ-роу', '🚶', 'The bridge was narrow.', 'Міст був вузький.'],
+    ['steep', 'крутий (схил)', 'СТІП', '⛰️', 'The rocks were steep.', 'Скелі були круті.'],
+    ['flat', 'плаский, рівний', 'ФЛЕТ', '➖', 'The path was flat.', 'Стежка була рівна.'],
+    ['huge', 'величезний', 'Х’ЮДЖ', '🐘', 'There was a huge footprint!', 'Там був величезний слід!'],
+    ['muddy', 'брудний, багнистий', 'МА-ді', '🐷', 'My shoes were muddy.', 'Мої черевики були в багнюці.']] },
+  visit: { u: '4', n: 'Places to visit', w: [
+    ['island', 'острів', 'АЙ-ленд (s не читається)', '🏝️', 'We went to an island.', 'Ми поїхали на острів.'],
+    ['coast', 'узбережжя', 'КОУСТ', '🌊', 'There were dolphins near the coast.', 'Біля узбережжя були дельфіни.'],
+    ['cliff', 'стрімчак, урвище', 'КЛІФ', '🧗', 'The cliffs were huge.', 'Урвища були величезні.'],
+    ['cave', 'печера', 'КЕЙВ', '🦇', 'There was a big hole in the cave.', 'У печері була велика діра.']] },
+  healthy: { u: '5', n: 'Healthy habits', w: [
+    ['drink water', 'пити воду', 'ДРІНК ВО-те', '💧', 'I drink water every day.', 'Я п’ю воду щодня.'],
+    ['eat vegetables', 'їсти овочі', 'ІТ ВЕДЖ-те-белз', '🥕', 'Eat vegetables to stay healthy.', 'Їж овочі, щоб бути здоровим.'],
+    ['eat fruit', 'їсти фрукти', 'ІТ ФРУТ', '🍎', 'I eat fruit for breakfast.', 'Я їм фрукти на сніданок.'],
+    ['play outside', 'гратися надворі', 'ПЛЕЙ аут-САЙД', '🛴', 'We play outside after school.', 'Ми граємося надворі після школи.'],
+    ['exercise', 'робити вправи, тренуватися', 'ЕК-се-сайз', '🏋️', 'I exercise three times a week.', 'Я тренуюся тричі на тиждень.'],
+    ['go to bed early', 'рано лягати спати', 'ГОУ ту БЕД Е-рлі', '🛏️', 'I go to bed early every night.', 'Я лягаю рано щовечора.'],
+    ['go to the dentist', 'ходити до стоматолога', 'ГОУ ту зе ДЕН-тіст', '🦷', 'I go to the dentist every year.', 'Я ходжу до стоматолога щороку.'],
+    ['wash your hands', 'мити руки', 'ВОШ йо ХЕНДЗ', '🧼', 'Wash your hands before lunch.', 'Мий руки перед обідом.']] },
+  free: { u: '5', n: 'Free time activities', w: [
+    ['go swimming', 'плавати (ходити плавати)', 'ГОУ СВІ-мінг', '🏊', 'I go swimming on Mondays.', 'Я ходжу плавати по понеділках.'],
+    ['go fishing', 'рибалити', 'ГОУ ФІ-шінг', '🎣', 'I go fishing with my grandpa.', 'Я рибалю з дідусем.'],
+    ['play video games', 'грати у відеоігри', 'ПЛЕЙ ВІ-ді-оу ГЕЙМЗ', '🎮', 'We often play video games.', 'Ми часто граємо у відеоігри.'],
+    ['play volleyball', 'грати у волейбол', 'ПЛЕЙ ВО-лі-бол', '🏐', 'She sometimes plays volleyball.', 'Вона іноді грає у волейбол.'],
+    ['do karate', 'займатися карате', 'ДУ ке-РА-ті', '🥋', 'Ben does karate twice a week.', 'Бен займається карате двічі на тиждень.'],
+    ['do art', 'малювати, займатися мистецтвом', 'ДУ АРТ', '🎨', 'I do art at school.', 'Я малюю в школі.']] },
+  exAdj: { u: '5', n: 'Exercise adjectives', w: [
+    ['slow', 'повільний', 'СЛОУ', '🐢', 'T’ai chi moves are slow.', 'Рухи тайцзи повільні.'],
+    ['quick', 'швидкий', 'КВІК', '🐇', 'Capoeira moves are quick.', 'Рухи капоейри швидкі.'],
+    ['high', 'високий (вгору)', 'ХАЙ', '🦘', 'They jump high.', 'Вони високо стрибають.'],
+    ['careful', 'обережний', 'КЕА-фул', '🧐', 'Be careful with the scissors!', 'Обережно з ножицями!']] },
+  food: { u: '6', n: 'Food', w: [
+    ['mushrooms', 'гриби', 'МАШ-румз', '🍄', 'We can make soup with mushrooms.', 'З грибів можна зварити суп.'],
+    ['flour', 'борошно', 'ФЛА-уе', '🌾', 'You need flour for pancakes.', 'Для млинців потрібне борошно.'],
+    ['tomatoes', 'помідори', 'те-МА-тоуз', '🍅', 'There are some tomatoes.', 'Є кілька помідорів.'],
+    ['onions', 'цибуля', 'А-ньенз', '🧅', 'Chop the onions.', 'Наріж цибулю.'],
+    ['butter', 'вершкове масло', 'БА-те', '🧈', 'There’s some butter in the fridge.', 'У холодильнику є масло.'],
+    ['sugar', 'цукор', 'ШУ-ге', '🍬', 'Is there any sugar?', 'Є трохи цукру?'],
+    ['milk', 'молоко', 'МІЛК', '🥛', 'Pour the milk slowly.', 'Повільно налий молоко.'],
+    ['chili peppers', 'перець чилі', 'ЧІ-лі ПЕ-пез', '🌶️', 'Chili peppers are hot!', 'Перець чилі гострий!']] },
+  cook: { u: '6', n: 'Cooking (verbs)', w: [
+    ['mix', 'змішувати', 'МІКС', '🥣', 'Mix the eggs and the flour.', 'Змішай яйця й борошно.'],
+    ['pour', 'наливати', 'ПО', '🫗', 'Pour the milk into the bowl.', 'Налий молоко в миску.'],
+    ['measure', 'відміряти', 'МЕ-же', '⚖️', 'Measure the sugar.', 'Відміряй цукор.'],
+    ['add', 'додавати', 'ЕД', '➕', 'Add an egg.', 'Додай яйце.'],
+    ['chop', 'нарізати', 'ЧОП', '🔪', 'Chop the tomatoes carefully.', 'Обережно наріж помідори.'],
+    ['serve', 'подавати (страву)', 'СЕРВ', '🍽️', 'Serve the pancakes quickly.', 'Швидко подай млинці.']] },
+  trad: { u: '6', n: 'Traditional food', w: [
+    ['spices', 'спеції', 'СПАЙ-сіз', '🧂', 'Moroccan food has a lot of spices.', 'У марокканській їжі багато спецій.'],
+    ['shrimp', 'креветки', 'ШРІМП', '🦐', 'Some paella has shrimp in it.', 'У деяких паельях є креветки.'],
+    ['garlic', 'часник', 'ГАР-лік', '🧄', 'Add some garlic to the soup.', 'Додай трохи часнику в суп.'],
+    ['oil', 'олія', 'ОЙЛ', '🫒', 'Put some oil in the pan.', 'Налий трохи олії на сковорідку.']] },
+  chores: { u: '7', n: 'Chores', w: [
+    ['vacuum the floor', 'пилососити підлогу', 'ВЕ-к’юм зе ФЛО', '🧹', 'I vacuumed the floor yesterday.', 'Учора я пропилососив підлогу.'],
+    ['wash the dishes', 'мити посуд', 'ВОШ зе ДІ-шіз', '🍽️', 'Dad washed the dishes.', 'Тато помив посуд.'],
+    ['load the dishwasher', 'завантажувати посудомийку', 'ЛОУД зе ДІШ-во-ше', '🫧', 'I have to load the dishwasher.', 'Мені треба завантажити посудомийку.'],
+    ['water the plants', 'поливати рослини', 'ВО-те зе ПЛАНТС', '🪴', 'She watered the plants.', 'Вона полила рослини.'],
+    ['clean my room', 'прибирати в кімнаті', 'КЛІН май РУМ', '🛏️', 'I cleaned my room on Saturday.', 'У суботу я прибрав у кімнаті.'],
+    ['clear the table', 'прибирати зі столу', 'КЛІА зе ТЕЙ-бл', '🧽', 'Please clear the table.', 'Будь ласка, прибери зі столу.'],
+    ['cook the dinner', 'готувати вечерю', 'КУК зе ДІ-не', '🍝', 'Mom cooked the dinner.', 'Мама приготувала вечерю.'],
+    ['wash the car', 'мити машину', 'ВОШ зе КАР', '🚙', 'We washed the car together.', 'Ми разом помили машину.']] },
+  party: { u: '7', n: 'Party preparations', w: [
+    ['invite guests', 'запросити гостей', 'ін-ВАЙТ ГЕСТС', '💌', 'Mom had to invite guests.', 'Мамі треба було запросити гостей.'],
+    ['prepare food', 'приготувати їжу', 'прі-ПЕА ФУД', '🥗', 'Dad had to prepare food.', 'Татові треба було приготувати їжу.'],
+    ['clean up', 'прибрати', 'КЛІН АП', '🧺', 'We cleaned up after the party.', 'Ми прибрали після свята.'],
+    ['decorate', 'прикрашати', 'ДЕ-ке-рейт', '🎈', 'Layla decorated the room.', 'Лейла прикрасила кімнату.'],
+    ['dress up', 'святково вбратися', 'ДРЕС АП', '👗', 'Everyone had to dress up.', 'Усім треба було святково вбратися.'],
+    ['set the table', 'накрити на стіл', 'СЕТ зе ТЕЙ-бл', '🍴', 'Sam set the table.', 'Сем накрив на стіл.']] },
+  family: { u: '7', n: 'Family', w: [
+    ['parents', 'батьки', 'ПЕА-рентс', '👫', 'My parents prepare a lot of food.', 'Мої батьки готують багато їжі.'],
+    ['grandparents', 'бабуся й дідусь', 'ГРЕНД-пеа-рентс', '👵👴', 'I visit my grandparents on Sundays.', 'Я відвідую бабусю й дідуся по неділях.'],
+    ['son', 'син', 'САН', '👦', 'Their son is ten.', 'Їхньому синові десять.'],
+    ['daughter', 'донька', 'ДО-те', '👧', 'Their daughter likes art.', 'Їхня донька любить малювати.']] },
+  things: { u: '8', n: 'Everyday things', w: [
+    ['helmet', 'шолом', 'ХЕЛ-міт', '⛑️', 'The soldier wore a helmet.', 'Воїн носив шолом.'],
+    ['cup', 'чашка', 'КАП', '☕', 'I drank milk from a cup.', 'Я пив молоко з чашки.'],
+    ['bowl', 'миска', 'БОУЛ', '🥣', 'They made bowls out of clay.', 'Вони робили миски з глини.'],
+    ['fan', 'віяло', 'ФЕН', '🪭', 'It was hot, so she used a fan.', 'Було спекотно, тож вона обмахувалася віялом.'],
+    ['lamp', 'лампа, світильник', 'ЛЕМП', '🪔', 'This lamp is 300 years old.', 'Цій лампі 300 років.'],
+    ['phone', 'телефон', 'ФОУН', '☎️', 'This old phone was my grandpa’s.', 'Цей старий телефон був дідусевим.'],
+    ['comb', 'гребінець', 'КОУМ (b не читається)', '🪮', 'She had a long comb.', 'У неї був довгий гребінець.'],
+    ['coins', 'монети', 'КОЙНЗ', '🪙', 'People bought things with coins.', 'Люди купували речі за монети.']] },
+  roman: { u: '8', n: 'A Roman town', w: [
+    ['walls', 'стіни', 'ВОЛЗ', '🧱', 'The walls were wide and tall.', 'Стіни були широкі й високі.'],
+    ['gate', 'ворота', 'ГЕЙТ', '🚪', 'The town had big gates.', 'У місті були великі ворота.'],
+    ['street', 'вулиця', 'СТРІТ', '🛣️', 'Children played in the street.', 'Діти гралися на вулиці.'],
+    ['market', 'ринок', 'МАР-кіт', '🧺', 'People bought food at the market.', 'Люди купували їжу на ринку.'],
+    ['theater', 'театр', 'СІ-е-те', '🎭', 'People watched shows at the theater.', 'Люди дивилися вистави в театрі.'],
+    ['town hall', 'ратуша', 'ТАУН ХОЛ', '🏛️', 'The town hall was in the middle.', 'Ратуша була в центрі.']] },
+  materials: { u: '8', n: 'Materials', w: [
+    ['wood', 'дерево (матеріал)', 'ВУД', '🪵', 'Viking ships were made of wood.', 'Кораблі вікінгів робили з дерева.'],
+    ['clay', 'глина', 'КЛЕЙ', '🏺', 'Egyptian houses were made of clay.', 'Єгипетські будинки робили з глини.'],
+    ['stone', 'камінь', 'СТОУН', '🗿', 'The Pyramids are made of stone.', 'Піраміди збудовані з каменю.'],
+    ['wool', 'вовна', 'ВУЛ', '🐑', 'This sweater is made of wool.', 'Цей светр із вовни.']] }
+};
+
+/* ===== English: граматичні лабораторії (правило + приклади) і конструктор речень ===== */
+const RT = (rows, head) => `<table class="rtab">${head ? `<tr>${head.map(h => `<th>${h}</th>`).join('')}</tr>` : ''}${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table>`;
+const RULES = {
+  have: { t: 'have / has – описуємо зовнішність', h: RT([['I / You / We / They', '<b>have</b>', 'dark hair.'], ['He / She / It', '<b>has</b>', 'curly hair.'], ['I / You / We / They', '<b>don’t have</b>', 'glasses.'], ['He / She / It', '<b>doesn’t have</b>', 'freckles.']]) + '<p>Питання про зовнішність: <b>What does she look like?</b> – Як вона виглядає?</p>',
+    ex: [['What does she look like? She has long hair.', 'Як вона виглядає? У неї довге волосся.'], ['He doesn’t have glasses.', 'У нього немає окулярів.'], ['They have dark hair.', 'У них темне волосся.']] },
+  haveQ: { t: 'Do / Does … have? – питання й короткі відповіді', h: RT([['<b>Do</b> you / they <b>have</b> …?', 'Yes, I <b>do</b>. / No, they <b>don’t</b>.'], ['<b>Does</b> he / she <b>have</b> …?', 'Yes, she <b>does</b>. / No, he <b>doesn’t</b>.']]) + '<p>⚠️ Не кажи «No, he hasn’t» – на питання з <b>does</b> відповідаємо <b>does / doesn’t</b>.</p>',
+    ex: [['Does he have light hair? No, he doesn’t.', 'У нього світле волосся? Ні.'], ['Do they have glasses? Yes, they do.', 'У них є окуляри? Так.']] },
+  superl: { t: 'the tallest – найвищий ступінь', h: RT([['tall', 'the tall<b>est</b>', 'найвищий'], ['brave', 'the brav<b>est</b>', 'найхоробріший (на -e: лише -st)'], ['funny', 'the funn<b>iest</b>', 'y → i + est'], ['big', 'the big<b>gest</b>', 'подвоюємо g'], ['good', 'the <b>best</b>', 'запам’ятай!']], ['слово', 'найвищий ступінь', 'як']),
+    ex: [['Who’s the fastest? Ali is the fastest.', 'Хто найшвидший? Алі найшвидший.'], ['Liz is the youngest.', 'Ліз наймолодша.'], ['Tina is the funniest.', 'Тіна найсмішніша.']] },
+  sizeColor: { t: 'Порядок прикметників: розмір → колір', h: RT([['short', 'dark', 'hair'], ['long', 'light', 'hair'], ['big', 'brown', 'eyes'], ['small', 'blue', 'eyes']], ['РОЗМІР', 'КОЛІР', 'що']) + '<p>Спершу кажемо, <b>який розмір</b>, потім – <b>який колір</b>.</p>',
+    ex: [['She has long dark hair.', 'У неї довге темне волосся.'], ['He has big brown eyes.', 'У нього великі карі очі.']] },
+  presCont: { t: 'am / is / are + -ing – що відбувається зараз', h: RT([['I', '<b>’m going</b>', 'to the library.'], ['He / She', '<b>’s going</b>', 'to the museum.'], ['We / You / They', '<b>’re going</b>', 'to the station.']]) + '<p>Питання: <b>Where are you going?</b> – Куди ти йдеш? <b>Where’s he going?</b> – Куди він іде?</p>',
+    ex: [['Where are you going? I’m going to the library.', 'Куди ти йдеш? Я йду до бібліотеки.'], ['She’s going to the movie theater.', 'Вона йде до кінотеатру.']] },
+  presContNeg: { t: 'Заперечення: ’m not / isn’t / aren’t', h: RT([['I', '<b>’m not</b> going', 'to the museum.'], ['He / She', '<b>isn’t</b> going', 'to the park.'], ['We / You / They', '<b>aren’t</b> going', 'to the restaurant.']]),
+    ex: [['I’m not going to the museum.', 'Я не йду до музею.'], ['They aren’t going to the restaurant.', 'Вони не йдуть до ресторану.'], ['She isn’t going to college. She’s going to school.', 'Вона йде не до коледжу, а до школи.']] },
+  ing: { t: 'Як додати -ing і поставити питання', h: RT([['watch', 'watch<b>ing</b>', 'просто + ing'], ['ride', 'rid<b>ing</b>', 'e прибираємо'], ['swim', 'swim<b>ming</b>', 'подвоюємо m'], ['run', 'run<b>ning</b>', 'подвоюємо n']], ['слово', '+ ing', 'правило']) + '<p>Питання: <b>Are you</b> catching a train? – Yes, I <b>am</b>. / No, I’<b>m not</b>.</p>',
+    ex: [['Are you catching a train? No, I’m not.', 'Ти сідаєш на потяг? Ні.'], ['Is he taking photos? Yes, he is.', 'Він фотографує? Так.']] },
+  presSimpleQ: { t: 'What / Where / When does …? – про роботу', h: RT([['<b>What</b> does he wear?', 'He wear<b>s</b> a white hat.', 'що?'], ['<b>Where</b> does he work?', 'He work<b>s</b> at the hotel.', 'де?'], ['<b>When</b> does he work?', 'He work<b>s</b> in the afternoon.', 'коли?']], ['питання', 'відповідь', '']) + '<p>Для <b>he / she</b> додаємо до дієслова <b>-s</b>: work → work<b>s</b>.</p>',
+    ex: [['What does she do? She’s a doctor.', 'Ким вона працює? Вона лікарка.'], ['When does he work? He works at night.', 'Коли він працює? Вночі.']] },
+  presSimpleNeg: { t: 'don’t / doesn’t + дієслово', h: RT([['I / You / We / They', '<b>don’t</b> work', 'at the store.'], ['He / She', '<b>doesn’t</b> work', 'at the store.']]) + '<p>⚠️ Після <b>doesn’t</b> дієслово БЕЗ -s: she doesn’t work<s>s</s>.</p>',
+    ex: [['She doesn’t work at night.', 'Вона не працює вночі.'], ['They don’t bake bread.', 'Вони не печуть хліб.']] },
+  wantTo: { t: 'want to … / Why? – Because …', h: RT([['I <b>want to be</b> a vet.', 'Я хочу бути ветеринаром.'], ['<b>Why?</b>', 'Чому?'], ['<b>Because</b> I want to work with animals.', 'Тому що я хочу працювати з тваринами.']]),
+    ex: [['I want to be a chef. Why? Because I want to cook food.', 'Я хочу бути кухарем. Чому? Бо хочу готувати їжу.']] },
+  aAn: { t: 'a чи an?', h: RT([['<b>a</b> vet', '<b>a</b> pilot', 'перед приголосним звуком'], ['<b>an</b> ambulance driver', '<b>an</b> astronaut', 'перед голосним звуком (a, e, i, o, u)']]),
+    ex: [['He’s a pilot.', 'Він пілот.'], ['She’s an astronaut.', 'Вона астронавтка.']] },
+  thereWas: { t: 'There was / There were – що там було', h: RT([['There <b>was</b> a waterfall.', 'одне'], ['There <b>were</b> some rocks.', 'багато'], ['There <b>wasn’t</b> a bridge.', 'одного не було'], ['There <b>weren’t any</b> cars.', 'багатьох не було']]) + '<p>Питання: <b>Was there</b> a bridge? <b>Were there any</b> birds? – Yes, there <b>were</b>.</p>',
+    ex: [['There was a river, but there wasn’t a bridge.', 'Там була річка, але не було мосту.'], ['There were a lot of trees.', 'Там було багато дерев.']] },
+  wasWere: { t: 'was / were – «був / були»', h: RT([['I / He / She / It', '<b>was</b>', '<b>wasn’t</b>'], ['We / You / They', '<b>were</b>', '<b>weren’t</b>']], ['хто', 'так', 'ні']),
+    ex: [['It was sunny.', 'Було сонячно.'], ['We were tired, but we were happy.', 'Ми втомилися, але були щасливі.']] },
+  could: { t: 'could / couldn’t – міг / не міг', h: RT([['When I was five, I <b>could</b> swim.', 'Коли мені було п’ять, я вмів плавати.'], ['We <b>couldn’t</b> climb the steep rocks.', 'Ми не змогли залізти на круті скелі.'], ['<b>Could</b> you swim? – Yes, I <b>could</b>.', 'Ти міг плавати? – Так.']]),
+    ex: [['We could walk on a narrow bridge.', 'Ми могли пройти вузьким мостом.'], ['She couldn’t jump over the river.', 'Вона не змогла перестрибнути річку.']] },
+  timePhr: { t: 'Слова часу в розповіді', h: RT([['At first', 'спочатку'], ['After a while', 'згодом'], ['Later', 'пізніше'], ['In the evening', 'увечері']]),
+    ex: [['At first, we went to the beach. Later, we saw a cave.', 'Спочатку ми пішли на пляж. Пізніше побачили печеру.']] },
+  howOften: { t: 'How often…? – Як часто?', h: RT([['once', 'a day / a week', 'раз на …'], ['twice', 'a day / a week', 'двічі на …'], ['three times', 'a day / a week', 'тричі на …'], ['every', 'day / night / year', 'щодня / щоночі / щороку']]),
+    ex: [['How often do you brush your teeth? Twice a day.', 'Як часто ти чистиш зуби? Двічі на день.'], ['How often does she exercise? Four times a week.', 'Як часто вона тренується? Чотири рази на тиждень.']] },
+  freq: { t: 'always · often · sometimes · never', h: RT([['always', '✓✓✓', 'завжди'], ['often', '✓✓', 'часто'], ['sometimes', '✓', 'іноді'], ['never', '✗', 'ніколи']]) + '<p>Ставимо перед дієсловом: I <b>always</b> play…, She <b>never</b> does…</p>',
+    ex: [['I always go fishing with my grandpa.', 'Я завжди рибалю з дідусем.'], ['She sometimes plays volleyball.', 'Вона іноді грає у волейбол.']] },
+  too: { t: 'too – «теж», у кінці речення', h: RT([['I exercise. I drink water, <b>too</b>.', 'Я тренуюся. А ще п’ю воду.']]),
+    ex: [['Karate is fun. It’s good for you, too.', 'Карате – це весело. І корисно теж.']] },
+  count: { t: 'Можна порахувати чи ні?', h: RT([['a tomato · two tomatoes', 'There <b>are some</b> eggs.', 'лічильні'], ['flour · milk · cheese · sugar', 'There’<b>s some</b> milk.', 'незлічувані']]),
+    ex: [['There are some tomatoes.', 'Є кілька помідорів.'], ['There’s some cheese.', 'Є трохи сиру.']] },
+  any: { t: 'any – у питаннях і запереченнях', h: RT([['<b>Is there any</b> sugar?', 'Yes, there is. / No, there <b>isn’t</b>.'], ['<b>Are there any</b> eggs?', 'Yes, there are. / No, there <b>aren’t</b>.'], ['There <b>isn’t any</b> butter.', 'There <b>aren’t any</b> mangoes.']]),
+    ex: [['Is there any milk? No, there isn’t.', 'Є молоко? Ні.'], ['Are there any onions? Yes, there are.', 'Є цибуля? Так.']] },
+  adv: { t: 'Прислівники: ЯК робимо?', h: RT([['careful', 'careful<b>ly</b>'], ['slow', 'slow<b>ly</b>'], ['easy', 'eas<b>ily</b>'], ['good', '<b>well</b>'], ['high', '<b>high</b>']], ['прикметник', 'прислівник']),
+    ex: [['Pour the milk slowly.', 'Повільно налий молоко.'], ['Cook the pancake well.', 'Добре підсмаж млинець.']] },
+  order: { t: 'Слова порядку дій у рецепті', h: RT([['First', 'спершу'], ['Then', 'потім'], ['Next', 'далі'], ['Finally', 'нарешті']]),
+    ex: [['First, measure the flour. Then, add an egg.', 'Спершу відміряй борошно. Потім додай яйце.']] },
+  pastEd: { t: 'Минулий час: + ed', h: RT([['clean', 'clean<b>ed</b>', '/д/'], ['watch', 'watch<b>ed</b>', '/т/'], ['decorate', 'decorat<b>ed</b>', '/ід/'], ['dance', 'danc<b>ed</b>', 'на -e: лише -d']], ['зараз', 'учора', 'звучить']) + '<p>🔊 Закінчення <b>-ed</b> звучить по-різному: cleaned – «клінд», watched – «вочт», decorated – «декорейтід».</p>',
+    ex: [['Last weekend I cleaned my room.', 'Минулих вихідних я прибрав у кімнаті.'], ['We watched a movie.', 'Ми подивилися фільм.']] },
+  pastNeg: { t: 'didn’t + дієслово', h: RT([['I / He / She / We / They', '<b>didn’t</b> play', 'basketball.']]) + '<p>⚠️ Після <b>didn’t</b> дієслово без -ed: didn’t play<s>ed</s>.</p>',
+    ex: [['He didn’t play basketball.', 'Він не грав у баскетбол.'], ['They didn’t wash the car.', 'Вони не помили машину.']] },
+  hadTo: { t: 'had to – мусив, довелося', h: RT([['I / He / She / We / They', '<b>had to</b>', 'set the table.']]),
+    ex: [['Mom had to invite guests.', 'Мамі довелося запросити гостей.'], ['We all had to dress up.', 'Нам усім довелося святково вбратися.']] },
+  irr: { t: 'Неправильні дієслова – запам’ятай!', h: RT([['go', '<b>went</b>'], ['eat', '<b>ate</b>'], ['see', '<b>saw</b>'], ['write', '<b>wrote</b>'], ['fly', '<b>flew</b>'], ['make', '<b>made</b>'], ['buy', '<b>bought</b>'], ['wear', '<b>wore</b>']], ['зараз', 'у минулому']),
+    ex: [['He ate noodles.', 'Він їв локшину.'], ['Two brothers flew the first plane.', 'Двоє братів здійснили перший політ на літаку.']] },
+  pastQ: { t: 'Did …? – питання про минуле', h: RT([['<b>Did</b> they <b>have</b> streets?', 'Yes, they <b>did</b>.'], ['<b>Did</b> they <b>wear</b> pants?', 'No, they <b>didn’t</b>.']]) + '<p>Після <b>did</b> дієслово у звичайній формі: Did he <b>wear</b>… (не wore).</p>',
+    ex: [['Did he wear a helmet? Yes, he did.', 'Він носив шолом? Так.'], ['Did they play in the street? Yes, they did.', 'Вони гралися на вулиці? Так.']] },
+  caps: { t: 'Велика літера', h: RT([['Імена', 'Jenny, Lin, Serena'], ['Міста й країни', 'London, Kyiv, Singapore'], ['Назви місць', 'Buckingham Palace, Central Park']]),
+    ex: [['I’m writing to you from Kyiv.', 'Пишу тобі з Києва.']] },
+  pastForms: { t: 'Як утворити минулий час', h: RT([['help', 'help<b>ed</b>', '+ ed'], ['dance', 'danc<b>ed</b>', 'на -e: + d'], ['study', 'stud<b>ied</b>', 'y → ied'], ['stop', 'stop<b>ped</b>', 'подвоюємо']]),
+    ex: [['I baked a cake for Grandma.', 'Я спік торт для бабусі.']] }
+};
+/* конструктор речень: [англійською, переклад] */
+const BUILDS = {
+  have: [['She has curly hair.', 'У неї кучеряве волосся.'], ['They have dark hair.', 'У них темне волосся.'], ['He doesn’t have glasses.', 'У нього немає окулярів.'], ['What does she look like?', 'Як вона виглядає?']],
+  haveQ: [['Does he have freckles?', 'У нього є ластовиння?'], ['No, he doesn’t.', 'Ні.'], ['Do they have glasses?', 'У них є окуляри?'], ['Yes, they do.', 'Так.']],
+  superl: [['Ben is the tallest.', 'Бен – найвищий.'], ['Who’s the funniest?', 'Хто найсмішніший?'], ['Tina is the bravest.', 'Тіна – найхоробріша.']],
+  sizeColor: [['She has long dark hair.', 'У неї довге темне волосся.'], ['He has small blue eyes.', 'У нього маленькі блакитні очі.']],
+  presCont: [['I’m going to the library.', 'Я йду до бібліотеки.'], ['Where are you going?', 'Куди ти йдеш?'], ['They’re going to the station.', 'Вони йдуть на вокзал.']],
+  presContNeg: [['I’m not going to the museum.', 'Я не йду до музею.'], ['She isn’t going to college.', 'Вона не йде до коледжу.'], ['We aren’t going to the park.', 'Ми не йдемо до парку.']],
+  ing: [['Are you catching a train?', 'Ти сідаєш на потяг?'], ['Is he taking photos?', 'Він фотографує?'], ['We are eating out.', 'Ми їмо в кафе.']],
+  presSimpleQ: [['Where does he work?', 'Де він працює?'], ['When does she work?', 'Коли вона працює?'], ['He works at the hospital.', 'Він працює в лікарні.']],
+  presSimpleNeg: [['She doesn’t work at night.', 'Вона не працює вночі.'], ['I don’t go to work.', 'Я не ходжу на роботу.'], ['He doesn’t wear a hat.', 'Він не носить капелюха.']],
+  wantTo: [['I want to be a vet.', 'Я хочу бути ветеринаром.'], ['Because I want to help people.', 'Тому що я хочу допомагати людям.']],
+  thereWas: [['There was a big waterfall.', 'Там був великий водоспад.'], ['There were some rocks.', 'Там було кілька скель.'], ['There weren’t any cars.', 'Там не було жодних машин.']],
+  wasWere: [['It was sunny and hot.', 'Було сонячно й спекотно.'], ['We were very happy.', 'Ми були дуже щасливі.'], ['The path wasn’t long.', 'Стежка була недовга.']],
+  could: [['I could swim when I was five.', 'Я вмів плавати, коли мені було п’ять.'], ['We couldn’t climb the rocks.', 'Ми не змогли залізти на скелі.']],
+  howOften: [['How often do you exercise?', 'Як часто ти тренуєшся?'], ['I exercise three times a week.', 'Я тренуюся тричі на тиждень.'], ['She eats fruit every day.', 'Вона їсть фрукти щодня.']],
+  freq: [['I always wash my hands.', 'Я завжди мию руки.'], ['He often plays video games.', 'Він часто грає у відеоігри.'], ['We never go fishing.', 'Ми ніколи не рибалимо.']],
+  count: [['There are some eggs.', 'Є кілька яєць.'], ['There’s some flour.', 'Є трохи борошна.']],
+  any: [['Is there any sugar?', 'Є цукор?'], ['There aren’t any onions.', 'Цибулі немає.'], ['Are there any tomatoes?', 'Є помідори?']],
+  adv: [['Catch the pancake carefully.', 'Обережно злови млинець.'], ['Pour the milk slowly.', 'Повільно налий молоко.'], ['She cooks well.', 'Вона добре готує.']],
+  pastEd: [['I cleaned my room.', 'Я прибрав у кімнаті.'], ['Mom cooked the dinner.', 'Мама приготувала вечерю.'], ['We watched a movie.', 'Ми подивилися фільм.']],
+  pastNeg: [['He didn’t wash the car.', 'Він не помив машину.'], ['I didn’t play basketball.', 'Я не грав у баскетбол.']],
+  hadTo: [['Dad had to prepare food.', 'Татові треба було приготувати їжу.'], ['We had to dress up.', 'Нам треба було святково вбратися.']],
+  irr: [['They ate noodles.', 'Вони їли локшину.'], ['She wrote a letter.', 'Вона написала листа.'], ['We went to the museum.', 'Ми ходили до музею.']],
+  pastQ: [['Did they have streets?', 'У них були вулиці?'], ['Yes, they did.', 'Так.'], ['Did he wear a helmet?', 'Він носив шолом?']]
+};
+
+/* ===== English: Hero Files – власні комікси штабу (по одному на розділ) ===== */
+const HEN = { h0: 'Storm', h1: 'Nova', h4: 'Titan', h5: 'Spark', n: '' };
+const STORIES = {
+  u1: { t: 'The New Hero', ua: 'Новенька в штабі', l: [
+    ['n', 'There’s a new hero at HQ today.', 'Сьогодні в штабі новий герой.'],
+    ['h0', 'What does the new hero look like?', 'Як виглядає новий герой?'],
+    ['h1', 'She has long, curly hair and freckles.', 'У неї довге кучеряве волосся й ластовиння.'],
+    ['h4', 'Does she have glasses?', 'У неї є окуляри?'],
+    ['h1', 'No, she doesn’t. But she has a green mask.', 'Ні. Але в неї зелена маска.'],
+    ['n', 'The new hero comes in. Her name is Spark.', 'Заходить новенька. Її звати Спарк.'],
+    ['h5', 'Hi! I’m Spark. I’m the fastest hero in the city!', 'Привіт! Я Спарк. Я найшвидша героїня в місті!'],
+    ['h4', 'And I’m the strongest!', 'А я найсильніший!'],
+    ['h0', 'And I’m the funniest!', 'А я найсмішніший!'],
+    ['h1', 'We’re all different. We’re a great team!', 'Ми всі різні. Ми чудова команда!']],
+    q: [['What does Spark look like?', ['She has long, curly hair and freckles.', 'She has short, straight hair.', 'She has glasses.'], 0], ['Who is the fastest?', ['Spark', 'Titan', 'Storm'], 0], ['Who is the strongest?', ['Titan', 'Nova', 'Spark'], 0]] },
+  u2: { t: 'The City Chase', ua: 'Погоня містом', l: [
+    ['n', 'It’s Saturday in the city.', 'У місті субота.'],
+    ['h0', 'Nova, where are you going?', 'Ново, куди ти йдеш?'],
+    ['h1', 'I’m going to the library. I need a book about robots.', 'Я йду до бібліотеки. Мені потрібна книжка про роботів.'],
+    ['h4', 'Help! There’s a robot at the station!', 'Рятуйте! На вокзалі робот!'],
+    ['h0', 'Is it catching a train?', 'Він сідає на потяг?'],
+    ['h4', 'No, it isn’t. It’s eating the train tickets!', 'Ні. Він їсть квитки на потяг!'],
+    ['n', 'Storm and Nova are running to the station.', 'Шторм і Нова біжать на вокзал.'],
+    ['h1', 'Look! The robot is going to the mall now!', 'Дивіться! Тепер робот іде до торгового центру!'],
+    ['h0', 'Stop, robot! Are you hungry?', 'Стій, роботе! Ти голодний?'],
+    ['n', 'The robot isn’t angry. It’s hungry! Nova gives it a pizza from the restaurant.', 'Робот не сердитий. Він голодний! Нова дає йому піцу з ресторану.']],
+    q: [['Where is Nova going at first?', ['to the library', 'to the museum', 'to the station'], 0], ['What is the robot eating at the station?', ['train tickets', 'books', 'pizza'], 0], ['Why is the robot at the mall?', ['It’s hungry.', 'It’s angry.', 'It’s catching a train.'], 0]] },
+  u3: { t: 'Hero Jobs', ua: 'Професії героїв', l: [
+    ['n', 'Heroes have other jobs, too.', 'У героїв є й інші професії.'],
+    ['h4', 'In the day, I’m a coach. I work at the recreation center.', 'Удень я тренер. Я працюю в спортцентрі.'],
+    ['h1', 'I’m a scientist. I work in a lab. I don’t work at night.', 'Я науковиця. Я працюю в лабораторії. Я не працюю вночі.'],
+    ['h0', 'I’m a pilot. I fly planes. It’s an exciting job!', 'Я пілот. Я керую літаками. Це захоплива робота!'],
+    ['h0', 'Spark, what do you want to be?', 'Спарк, ким ти хочеш бути?'],
+    ['h5', 'I want to be a vet.', 'Я хочу бути ветеринаркою.'],
+    ['h0', 'Why?', 'Чому?'],
+    ['h5', 'Because I want to work with animals. Animals are heroes, too!', 'Бо я хочу працювати з тваринами. Тварини теж герої!']],
+    q: [['Where does Titan work?', ['at the recreation center', 'at the hospital', 'in a lab'], 0], ['What is Storm’s job?', ['He’s a pilot.', 'He’s a chef.', 'He’s a vet.'], 0], ['Why does Spark want to be a vet?', ['Because she wants to work with animals.', 'Because she wants to fly planes.', 'Because she wants to sell things.'], 0]] },
+  u4: { t: 'The Waterfall Mission', ua: 'Місія біля водоспаду', l: [
+    ['n', 'Last weekend, the heroes were in the forest.', 'Минулих вихідних герої були в лісі.'],
+    ['h1', 'The path was narrow and muddy.', 'Стежка була вузька й багниста.'],
+    ['h4', 'There was a huge waterfall, but there wasn’t a bridge.', 'Там був величезний водоспад, але не було мосту.'],
+    ['h0', 'There were some steep rocks. Could you climb them?', 'Там були круті скелі. Ви змогли на них вилізти?'],
+    ['h5', 'Yes, I could! I was very fast.', 'Так, я змогла! Я була дуже швидка.'],
+    ['h4', 'I couldn’t climb, but I could carry the picnic basket.', 'Я не зміг вилізти, зате зміг нести кошик для пікніка.'],
+    ['n', 'At the picnic area, they were hungry, but they were happy.', 'На місці для пікніка вони були голодні, але щасливі.']],
+    q: [['What was the path like?', ['narrow and muddy', 'wide and flat', 'steep and huge'], 0], ['Was there a bridge?', ['No, there wasn’t.', 'Yes, there was.'], 0], ['What could Titan do?', ['carry the picnic basket', 'climb the rocks', 'swim in the river'], 0]] },
+  u5: { t: 'Training Day', ua: 'День тренувань', l: [
+    ['n', 'Heroes need to stay healthy.', 'Героям треба бути здоровими.'],
+    ['h0', 'How often do you exercise, Titan?', 'Як часто ти тренуєшся, Титане?'],
+    ['h4', 'I exercise every day. I always drink water, too.', 'Я тренуюся щодня. А ще завжди п’ю воду.'],
+    ['h1', 'I go swimming twice a week. I sometimes do karate.', 'Я ходжу плавати двічі на тиждень. Іноді займаюся карате.'],
+    ['h0', 'I never go to bed early…', 'А я ніколи не лягаю рано…'],
+    ['h5', 'That’s why you’re always tired, Storm!', 'Ось чому ти завжди втомлений, Шторме!'],
+    ['h0', 'OK! Tonight I’m going to bed early. And I’m eating vegetables!', 'Гаразд! Сьогодні я ляжу рано. І їстиму овочі!']],
+    q: [['How often does Titan exercise?', ['every day', 'once a week', 'never'], 0], ['How often does Nova go swimming?', ['twice a week', 'every day', 'three times a week'], 0], ['Why is Storm always tired?', ['He never goes to bed early.', 'He exercises every day.', 'He drinks water.'], 0]] },
+  u6: { t: 'Pancake Emergency', ua: 'Млинцева тривога', l: [
+    ['n', 'It’s the Commander’s birthday. The heroes want to make pancakes.', 'У Командира день народження. Герої хочуть спекти млинці.'],
+    ['h1', 'Is there any flour?', 'Борошно є?'],
+    ['h4', 'Yes, there is. And there are some eggs.', 'Так. І є кілька яєць.'],
+    ['h0', 'Is there any milk?', 'А молоко є?'],
+    ['h5', 'No, there isn’t! I can fly to the store.', 'Ні! Я можу злітати в магазин.'],
+    ['n', 'Spark flies quickly and comes back with the milk.', 'Спарк швидко летить і повертається з молоком.'],
+    ['h1', 'First, measure the flour. Then, add the eggs. Next, pour the milk slowly.', 'Спершу відміряй борошно. Потім додай яйця. Далі повільно налий молоко.'],
+    ['h4', 'Finally, mix it carefully… and toss the pancake high!', 'Нарешті обережно перемішай… і підкинь млинець високо!'],
+    ['n', 'The pancake lands on Storm’s head! Everyone laughs.', 'Млинець падає Штормові на голову! Усі сміються.']],
+    q: [['What didn’t they have?', ['milk', 'flour', 'eggs'], 0], ['How does Spark fly to the store?', ['quickly', 'slowly', 'carefully'], 0], ['Where does the pancake land?', ['on Storm’s head', 'on the table', 'in the bowl'], 0]] },
+  u7: { t: 'The Messy HQ', ua: 'Безлад у штабі', l: [
+    ['n', 'Yesterday, the HQ was very messy.', 'Учора в штабі був страшенний безлад.'],
+    ['h0', 'Who cleaned the kitchen?', 'Хто прибрав на кухні?'],
+    ['h4', 'I washed the dishes and loaded the dishwasher.', 'Я помив посуд і завантажив посудомийку.'],
+    ['h1', 'I vacuumed the floor and watered the plants.', 'Я пропилососила підлогу й полила рослини.'],
+    ['h5', 'I didn’t clean my room… I played video games.', 'Я не прибрала в кімнаті… Я грала у відеоігри.'],
+    ['h0', 'Then you have to clear the table!', 'Тоді тобі треба прибрати зі столу!'],
+    ['h5', 'OK! And I decorated the HQ for the party, too.', 'Гаразд! А ще я прикрасила штаб до вечірки.'],
+    ['n', 'In the evening, everyone dressed up and danced.', 'Увечері всі святково вбралися й танцювали.']],
+    q: [['Who washed the dishes?', ['Titan', 'Spark', 'Storm'], 0], ['What did Spark do?', ['She played video games.', 'She washed the car.', 'She cooked the dinner.'], 0], ['What did everyone do in the evening?', ['They dressed up and danced.', 'They went to bed early.', 'They watched a movie.'], 0]] },
+  u8: { t: 'The Museum Mystery', ua: 'Таємниця музею', l: [
+    ['n', 'Last Friday, the heroes went to the museum.', 'Минулої п’ятниці герої пішли до музею.'],
+    ['h1', 'Look! This helmet is two thousand years old.', 'Дивіться! Цьому шолому дві тисячі років.'],
+    ['h0', 'Did Roman soldiers wear helmets like this?', 'Римські воїни носили такі шоломи?'],
+    ['h4', 'Yes, they did. They made them out of metal.', 'Так. Вони робили їх із металу.'],
+    ['h5', 'Did Romans have phones?', 'А в римлян були телефони?'],
+    ['h1', 'No, they didn’t! They wrote letters.', 'Ні! Вони писали листи.'],
+    ['n', 'Then the lights went off. When the lights came back on, the gold cup wasn’t there!', 'Раптом згасло світло. Коли воно знову ввімкнулося, золотої чашки не було!'],
+    ['h0', 'Who took it?', 'Хто її взяв?'],
+    ['n', 'Titan saw a cat under the table. It had the cup!', 'Титан побачив під столом кота. Чашка була в нього!']],
+    q: [['How old is the helmet?', ['two thousand years old', 'two hundred years old', 'twenty years old'], 0], ['Did Romans have phones?', ['No, they didn’t.', 'Yes, they did.'], 0], ['Who had the gold cup?', ['a cat', 'Storm', 'a Roman soldier'], 0]] }
+};
+
+/* ===== конструктори ігрових частин ===== */
+const CARDS = (sets, q) => ({ t: 'cards', sets: [].concat(sets), q: q || '<b>Арсенал слів.</b> Торкнись картки – побачиш переклад і приклад. 🔊 – послухай. «▶ Слухати й повторювати» – програма читає слова, а ти повторюєш уголос.' });
+const LISTEN = (sets, n, q) => ({ t: 'listen', sets: [].concat(sets), n: n || 6, q: q || '<b>Почуй і торкнись.</b> Програма скаже слово – обери правильну картинку.' });
+const SPELL = (sets, n, q) => ({ t: 'spell', sets: [].concat(sets), n: n || 4, q: q || '<b>Склади слово з літер.</b> Послухай і збери слово.' });
+const SAYW = (sets, q) => ({ t: 'say', sets: [].concat(sets), q: q || '<b>Голосова лабораторія.</b> Натисни 🎙 і скажи слово англійською. Програма перевірить вимову.' });
+const ROLE = (lines, q) => ({ t: 'say', lines, q: q || '<b>Рольова гра.</b> Програма говорить свою репліку, а ти – свою: натисни 🎙 і скажи вголос.' });
+const RULE = k => ({ t: 'rule', key: k, q: `<b>Граматична лабораторія:</b> ${RULES[k].t}` });
+const BUILD = k => ({ t: 'build', key: k, q: '<b>Конструктор речень.</b> Торкайся слів у правильному порядку, щоб скласти речення з перекладу.' });
+const READ = k => ({ t: 'read', key: k, q: `<b>Hero Files: ${STORIES[k].t}</b> (${STORIES[k].ua}). Натисни «▶ Читай мені» або торкайся реплік. Будь-яке слово можна торкнути – побачиш переклад.` });
+const UNIT_SETS = { S: ['months', 'ordinals'], '1': ['hair', 'people', 'clubs'], '2': ['places', 'cityDo', 'capital'], '3': ['jobs', 'workDo', 'jobAdj'], '4': ['country', 'adj4', 'visit'], '5': ['healthy', 'free', 'exAdj'], '6': ['food', 'cook', 'trad'], '7': ['chores', 'party', 'family'], '8': ['things', 'roman', 'materials'] };
+
+/* ===== підсилення завдань підручника: pre – перед завданням, post – після, drop – прибрати «аудіо»-заглушку ===== */
+const VSET = (set, extra) => ({ drop: true, pre: [CARDS(set)], post: [LISTEN(set)].concat(extra || []) });
+const SAYSET = set => ({ drop: true, pre: [LISTEN(set, 8, '<b>Listen and say.</b> Програма каже слово – торкнись картинки, а потім повтори вголос.')], post: [SAYW(set)] });
+const GRAM = k => ({ drop: true, pre: [RULE(k)], post: BUILDS[k] ? [BUILD(k)] : [] });
+const ENH = {
+  'e4-1': VSET('months'), 'e4-2': { post: [ROLE([['you', 'January, February, March']], 'Скажи вголос'), ROLE([['you', 'April, May, June'], ['you', 'July, August, September'], ['you', 'October, November, December']], '<b>Місяці речитативом.</b> Натисни 🎙 і промов кожну трійку місяців.')] },
+  'e4-3': { post: [LISTEN('months', 6, '<b>Тренування на слух.</b> Почуй місяць – торкнись правильного.')] },
+  'e4-4': { pre: [ROLE([['app', 'When’s your birthday?'], ['you', 'It’s in May.', 1]])] },
+  'e5-5': { post: [ROLE([['you', 'March fifteenth'], ['you', 'My birthday is in March.']], '<b>Скажи дату.</b> Натисни 🎙 і скажи вголос.')] },
+  'e5-6': VSET('ordinals'), 'e5-8': { post: [SPELL('ordinals', 4)] },
+  'e6-1': { post: [LISTEN('hair', 6, '<b>Розминка.</b> Почуй слово – торкнись картинки.')] },
+  'e6-2': VSET('hair'), 'e6-3': SAYSET('hair'),
+  'e6-4': { pre: [ROLE([['you', 'I have glasses.'], ['app', 'False!'], ['you', 'I don’t have freckles.'], ['app', 'True!']])] },
+  'e7-6': { pre: [BUILD('have')] },
+  'e7-7': { drop: true, pre: [ROLE([['app', 'I have freckles.'], ['you', 'Me too!'], ['app', 'I don’t have curly hair.'], ['you', 'Me neither!']])] },
+  'e8-2': GRAM('have'), 'e8-3': { post: [LISTEN('hair', 6, '<b>Тренування на слух.</b>')] },
+  'e8-4': { pre: [ROLE([['app', 'What does she look like?'], ['you', 'She has long, dark hair.', 1]])] },
+  'e9-5': GRAM('haveQ'),
+  'e10-1': VSET('people'), 'e10-2': SAYSET('people'), 'e10-3': { post: [SPELL('people', 4)] },
+  'e10-4': { pre: [ROLE([['app', 'You’re strong!'], ['you', 'Yes! Your turn.'], ['you', 'You’re funny!']])] },
+  'e11-5': GRAM('superl'), 'e11-6': { post: [BUILD('superl')] },
+  'e14-1': VSET('clubs'), 'e14-2': SAYSET('clubs'), 'e14-3': { post: [SPELL('clubs', 3)] },
+  'e14-5': { pre: [ROLE([['app', 'What do you do after school?'], ['you', 'I’m in a music club.', 1]])] },
+  'e15-9': { pre: [RULE('sizeColor')], post: [BUILD('sizeColor')] },
+  'e17-1': { post: [LISTEN(['hair', 'people', 'clubs'], 10, '<b>Великий тест на слух.</b> Усі слова розділу.'), SPELL(['hair', 'people'], 4)] },
+  'e18-2': VSET('places'), 'e18-3': SAYSET('places'),
+  'e18-4': { pre: [ROLE([['app', 'Where am I?'], ['you', 'You’re at the recreation center!']])] },
+  'e19-5': { post: [SPELL('places', 4)] },
+  'e19-7': { drop: true, pre: [ROLE([['you', 'Excuse me. How do I get to the library?'], ['app', 'Take the bus. There’s a bus stop at the station.'], ['you', 'Thank you!']])] },
+  'e20-2': GRAM('presCont'), 'e20-4': { pre: [ROLE([['app', 'Where are you going?'], ['you', 'I’m going to the museum.', 1]])] },
+  'e21-5': GRAM('presContNeg'),
+  'e22-1': VSET('cityDo'), 'e22-2': SAYSET('cityDo'), 'e22-3': { post: [SPELL('places', 3)] },
+  'e22-4': { pre: [ROLE([['you', 'I’d like to watch a movie. Is there a movie theater?'], ['app', 'Yes, there is. It’s next to the mall.']])] },
+  'e23-5': GRAM('ing'),
+  'e26-1': VSET('capital'), 'e26-2': { drop: true, pre: [LISTEN('capital', 6)], post: [SAYW('capital')] },
+  'e26-5': { pre: [ROLE([['app', 'What can you see in your capital city?'], ['you', 'There’s a big statue.', 1]])] },
+  'e27-9': { pre: [RULE('caps')] },
+  'e29-1': { post: [LISTEN(['places', 'cityDo', 'capital'], 10, '<b>Великий тест на слух.</b>'), SPELL(['places', 'capital'], 4)] },
+  'e32-2': VSET('jobs'), 'e32-3': SAYSET('jobs'),
+  'e33-7': { drop: true, pre: [ROLE([['app', 'What’s her job? Can you guess?'], ['you', 'I think she’s a vet!']])] },
+  'e34-2': GRAM('presSimpleQ'), 'e35-5': GRAM('presSimpleNeg'),
+  'e36-1': VSET('workDo'), 'e36-2': SAYSET('workDo'),
+  'e36-4': { pre: [ROLE([['app', 'What do you want to do?'], ['you', 'I want to work with animals.', 1]])] },
+  'e37-5': GRAM('wantTo'),
+  'e40-1': VSET('jobAdj'), 'e40-2': { drop: true, pre: [LISTEN('jobAdj', 6)], post: [SAYW('jobAdj')] },
+  'e40-5': { pre: [ROLE([['app', 'Do you want an exciting job?'], ['you', 'Yes, I do. I want to be a pilot.', 1]])] },
+  'e41-9': { pre: [RULE('aAn')] },
+  'e43-1': { post: [LISTEN(['jobs', 'workDo', 'jobAdj'], 10, '<b>Великий тест на слух.</b>'), SPELL('jobs', 4)] },
+  'e44-2': VSET('country'), 'e44-3': SAYSET('country'),
+  'e45-7': { drop: true, pre: [ROLE([['app', 'There’s a picnic area.'], ['you', 'Great! Is it nearby?'], ['app', 'It’s next to the waterfall.']])] },
+  'e46-2': GRAM('thereWas'), 'e47-5': GRAM('wasWere'),
+  'e48-1': VSET('adj4'), 'e48-2': SAYSET('adj4'), 'e48-3': { post: [SPELL('adj4', 4)] },
+  'e49-5': GRAM('could'),
+  'e52-1': VSET('visit'), 'e52-2': { drop: true, pre: [LISTEN('visit', 6)], post: [SAYW('visit')] },
+  'e52-5': { pre: [ROLE([['app', 'Are there any famous places in your country?'], ['you', 'Yes, there are. There are a lot of forests.', 1]])] },
+  'e53-9': { pre: [RULE('timePhr')] },
+  'e55-1': { post: [LISTEN(['country', 'adj4', 'visit'], 10, '<b>Великий тест на слух.</b>'), SPELL('country', 4)] },
+  'e58-2': VSET('healthy'), 'e58-3': SAYSET('healthy'),
+  'e59-7': { drop: true, pre: [ROLE([['app', 'I forget to drink water.'], ['you', 'I remember to drink water.'], ['app', 'Me too!']])] },
+  'e60-2': GRAM('howOften'), 'e60-4': { pre: [ROLE([['app', 'How often do you play outside?'], ['you', 'I play outside every day.', 1]])] },
+  'e61-5': { drop: true, pre: [RULE('howOften')] },
+  'e62-1': VSET('free'), 'e62-2': SAYSET('free'), 'e62-3': { post: [SPELL('free', 3)] },
+  'e63-5': GRAM('freq'),
+  'e66-1': VSET('exAdj'), 'e66-2': { drop: true, pre: [LISTEN('exAdj', 6)], post: [SAYW('exAdj')] },
+  'e66-5': { pre: [ROLE([['app', 'Which activities are popular at your school?'], ['you', 'Soccer is popular at my school.', 1]])] },
+  'e67-9': { pre: [RULE('too')] },
+  'e69-1': { post: [LISTEN(['healthy', 'free', 'exAdj'], 10, '<b>Великий тест на слух.</b>'), SPELL('healthy', 3)] },
+  'e70-2': VSET('food'), 'e70-3': SAYSET('food'),
+  'e71-7': { drop: true, pre: [ROLE([['app', 'We need flour. What else?'], ['you', 'We need milk and eggs.']])] },
+  'e72-2': GRAM('count'), 'e73-5': GRAM('any'),
+  'e74-1': VSET('cook'), 'e74-2': SAYSET('cook'), 'e74-3': { post: [SPELL('cook', 4)] },
+  'e75-5': GRAM('adv'),
+  'e78-1': VSET('trad'), 'e78-2': { drop: true, pre: [LISTEN('trad', 6)], post: [SAYW('trad')] },
+  'e78-5': { pre: [ROLE([['app', 'What’s a traditional dish from your country?'], ['you', 'I like borscht. There are beets in it.', 1]])] },
+  'e79-9': { pre: [RULE('order')] },
+  'e81-1': { post: [LISTEN(['food', 'cook', 'trad'], 10, '<b>Великий тест на слух.</b>'), SPELL('food', 4)] },
+  'e84-2': VSET('chores'), 'e84-3': SAYSET('chores'),
+  'e85-7': { drop: true, pre: [ROLE([['app', 'How do you help at home?'], ['you', 'I have to clean my room.', 1]])] },
+  'e86-2': GRAM('pastEd'), 'e87-5': GRAM('pastNeg'),
+  'e88-1': VSET('party'), 'e88-2': SAYSET('party'),
+  'e89-5': GRAM('hadTo'),
+  'e92-1': VSET('family'), 'e92-2': { drop: true, pre: [LISTEN('family', 6)], post: [SAYW('family')] },
+  'e92-5': { pre: [ROLE([['app', 'What family festival do you celebrate?'], ['you', 'We celebrate New Year.', 1]])] },
+  'e93-9': { pre: [RULE('pastForms')] },
+  'e95-1': { post: [LISTEN(['chores', 'party', 'family'], 10, '<b>Великий тест на слух.</b>'), SPELL('chores', 3)] },
+  'e96-2': VSET('things'), 'e96-3': SAYSET('things'),
+  'e97-6': { drop: true, pre: [ROLE([['you', 'three hundred years old'], ['you', 'two thousand years old'], ['you', 'fifty years old']], '<b>Скажи вік предмета.</b> Натисни 🎙 і промов.')] },
+  'e97-7': { drop: true, pre: [ROLE([['app', 'How old is this lamp?'], ['you', 'I think it’s three hundred years old.'], ['app', 'Yes, I agree.']])] },
+  'e98-2': GRAM('irr'), 'e99-5': { drop: true, pre: [RULE('pastNeg')] },
+  'e100-1': VSET('roman'), 'e100-2': SAYSET('roman'),
+  'e101-5': GRAM('pastQ'),
+  'e104-1': VSET('materials'), 'e104-2': { drop: true, pre: [LISTEN('materials', 6)], post: [SAYW('materials')] },
+  'e104-5': { pre: [ROLE([['app', 'Where can we learn about history?'], ['you', 'At the museum!'], ['app', 'What did you see there?'], ['you', 'I saw an old helmet.', 1]])] }
+};
+/* Hero Files – окремі завдання на сторінках історій */
+[['u1', 12], ['u2', 24], ['u3', 38], ['u4', 50], ['u5', 64], ['u6', 76], ['u7', 90], ['u8', 102]].forEach(([k, pg]) => {
+  const S0 = STORIES[k];
+  EA(pg, 'HF', 'Hero Files', `Hero Files: ${S0.t}`, `<b>Комікс штабу.</b> «${S0.ua}» – історія з нашими героями англійською. Слова й граматика – з цього розділу.`,
+    [READ(k)].concat(S0.q.map(([q, o, a]) => C(q, o, a))), { hf: 1 });
+});
+
+ENG.forEach(t => { const e = ENH[t.id]; if (!e) return; let ps = t.parts; if (e.drop) ps = ps.filter(x => !(x.t === 'self' && /^🎧/.test(x.q))); t.parts = (e.pre || []).concat(ps, e.post || []); });
+
 const UNITS = [{ k: 'S', n: 'Starter · A New Year', a: 4, b: 5 }, { k: '1', n: 'Unit 1 · Our Friends', a: 6, b: 17 }, { k: '2', n: 'Unit 2 · In the City', a: 18, b: 29 }, { k: 'R1', n: 'Let’s Read 1 · Appearance and Personality', a: 30, b: 31 }, { k: '3', n: 'Unit 3 · Our Busy World', a: 32, b: 43 }, { k: '4', n: 'Unit 4 · Let’s Explore!', a: 44, b: 55 }, { k: 'R2', n: 'Let’s Read 2 · Exploring Nature', a: 56, b: 57 }, { k: '5', n: 'Unit 5 · Healthy Living', a: 58, b: 69 }, { k: '6', n: 'Unit 6 · In the Kitchen', a: 70, b: 81 }, { k: 'R3', n: 'Let’s Read 3 · Amazing Food', a: 82, b: 83 }, { k: '7', n: 'Unit 7 · Family Life', a: 84, b: 95 }, { k: '8', n: 'Unit 8 · Our History', a: 96, b: 105 }];
 const unitOfPage = pg => UNITS.find(u => pg >= u.a && pg <= u.b);
 ENG.forEach(t => { const u = unitOfPage(t.p - 1000); t.unit = u.k; t.sec = 'E' + u.k; });
+ENG.forEach(t => { if (!ENH[t.id] && t.topic === 'Listening' && t.parts.every(x => x.t === 'self') && UNIT_SETS[t.unit]) t.parts.push(Object.assign(LISTEN(UNIT_SETS[t.unit], 6, '<b>Тренування на слух.</b> Аудіо з підручника тут немає – розігрій вуха на словах розділу.'), { bonus: true })); });
 TASKS.push(...ENG);
 const dp = p => p > 1000 ? p - 1000 : p;
 const secLabel = t => t.sec ? (UNITS.find(u => 'E' + u.k === t.sec) || {}).n : 'Сторінка ' + t.p;
@@ -1509,6 +2056,7 @@ const GENS = [
 ];
 /* ---- English: тренажери ---- */
 const EVOC = []; ENG.forEach(t => t.parts.forEach(p => { if (p.t === 'match' && p.r.every(x => /[а-яіїєґ]/i.test(x)) && p.l.every(x => /^[A-Za-z]/.test(x))) p.l.forEach((w, i) => { if (!EVOC.some(v => v[0] === w)) EVOC.push([w, p.r[i]]); }); }));
+Object.values(VOC).forEach(v => v.w.forEach(w => { if (!EVOC.some(x => x[0] === w[0])) EVOC.push([w[0], w[1]]); }));
 const EIRR = [['go', 'went'], ['have', 'had'], ['make', 'made'], ['eat', 'ate'], ['drink', 'drank'], ['see', 'saw'], ['write', 'wrote'], ['fly', 'flew'], ['build', 'built'], ['buy', 'bought'], ['wear', 'wore'], ['do', 'did'], ['come', 'came'], ['take', 'took'], ['swim', 'swam'], ['run', 'ran'], ['sing', 'sang'], ['get', 'got'], ['give', 'gave'], ['know', 'knew']];
 const EFORM = [
   ['найвищий ступінь', [['tall', 'tallest'], ['brave', 'bravest'], ['funny', 'funniest'], ['big', 'biggest'], ['good', 'best'], ['young', 'youngest'], ['fast', 'fastest'], ['strong', 'strongest'], ['happy', 'happiest'], ['small', 'smallest']], 'tall → the tallest; funny → the funniest; big → the biggest; good → the best.'],
@@ -1942,6 +2490,7 @@ const ENG_HELP = {
   'Writing': ['Письмове завдання. Пиши англійською повними реченнями: з великої літери й з крапкою в кінці. Подивись на зразок у підручнику.', 'Приклад речення: My friend has short dark hair. She is funny.'],
   'Song': ['Пісня до уроку. Увімкни аудіо, слухай і підспівуй. Слова пісні є в підручнику.'],
   'Project': ['Проєкт. Виконуй кроки з підручника по порядку, а потім розкажи про свою роботу англійською.'],
+  'Hero Files': ['Це комікс штабу англійською. Натисни «▶ Читай мені» – програма прочитає історію. Торкнись будь-якого слова – побачиш переклад. «УКР» показує переклад усіх реплік. Потім відповідай на питання.'],
   'Review': ['Повторення розділу. Згадай слова й граматику уроків 1–3. Якщо щось забув(ла) – переглянь ці уроки.'],
   'Grammar: have / look like': ['Щоб описати зовнішність, кажемо have / has. I, you, we, they → have. He, she, it → has. Заперечення: don’t have / doesn’t have. Питання: Do you have…? Does she have…?', 'Приклад. She has long hair. He doesn’t have glasses. – Does he have freckles? – Yes, he does.'],
   'Grammar: superlatives': ['Щоб сказати «найвищий», додаємо до прикметника -est і ставимо the: tall → the tallest. На -y: y → i: funny → the funniest. Деякі слова треба запам’ятати: good → the best.', 'Приклад. Who’s the fastest? – Ali is the fastest.'],
@@ -1970,7 +2519,7 @@ function speakEN(text) {
   catch (e) { toast('Вимова недоступна на цьому пристрої'); }
 }
 const TASK = Object.fromEntries(TASKS.map(t => [t.id, t]));
-const CHECKABLE = p => !['open', 'self', 'draw', 'memory'].includes(p.t) && p.a !== 'any';
+const CHECKABLE = p => !['open', 'self', 'draw', 'memory', 'rule', 'cards', 'read'].includes(p.t) && p.a !== 'any';
 const label = t => `${t.s === 'eng' ? 'англ. ' : ''}с. ${dp(t.p)}, № ${t.n}`;
 
 /* ===== сховище: localStorage + хмара артефакту ===== */
@@ -2025,7 +2574,7 @@ const ARMOR = [{ n: 'Mk I · Базовий костюм', c: 0 }, { n: 'Mk II �
 const GEAR = { cape: { n: 'Бойовий плащ', c: 100, d: 'Майорить за спиною' }, visor: { n: 'Тактичний візор', c: 120, d: 'Сканер замість очей' }, shield: { n: 'Енергощит', c: 160, d: 'Світний щит у руці' }, wings: { n: 'Реактивні крила', c: 250, d: 'Леза-крила з плечей' } };
 const CSUBJ = { ukr: 'Мова', math: 'Математика', vs: 'Всесвіт', eng: 'Англійська', other: 'Інше' };
 const GEN_CAP = 30;
-let CURTASK = null, VT0 = 0;
+let CURTASK = null, VT0 = 0, BLITZ_STOP = null;
 function mig(p) { if (!p) return p; if (p.cr == null) p.cr = p.xp || 0; p.kit = p.kit || {}; p.own = p.own || {}; p.own.g = p.own.g || {}; p.own.b = p.own.b || {}; p.own.b[0] = 1; if (p.place) p.own.b[p.place] = 1; if (p.asg === undefined) p.asg = null; return p; }
 const P = () => mig(DB.profiles[CUR]);
 const levelOf = xp => 1 + Math.floor(xp / 150);
@@ -2244,6 +2793,211 @@ W.draw = (p, body, sv, t) => {
   return { get: () => true, mark: () => { }, clear: () => { }, used: () => used };
 };
 
+/* ===== English: ігровий рушій ===== */
+const vw = sets => [].concat(sets).flatMap(k => VOC[k].w.map(w => ({ en: w[0], ua: w[1], pr: w[2], em: w[3], ex: w[4], exu: w[5], set: k })));
+const GAME_T = ['cards', 'listen', 'spell', 'build', 'say', 'rule', 'read'];
+const COMMON = { there: 'там', is: 'є', a: 'артикль (один)', an: 'артикль (один)', the: 'артикль (цей)', new: 'новий', hero: 'герой', heroes: 'герої', today: 'сьогодні', what: 'що', does: 'допоміжне дієслово', look: 'виглядати, дивитися', like: 'як; подобатися', she: 'вона', he: 'він', it: 'воно', they: 'вони', we: 'ми', i: 'я', you: 'ти, ви', has: 'має', have: 'мати', and: 'і', but: 'але', green: 'зелений', mask: 'маска', comes: 'приходить', in: 'в', her: 'її', his: 'його', name: 'ім’я', hi: 'привіт', city: 'місто', all: 'всі', different: 'різні', great: 'чудовий', team: 'команда', saturday: 'субота', where: 'де, куди', are: 'є (для we/you/they)', going: 'іде', to: 'до', need: 'потребувати', book: 'книжка', about: 'про', robots: 'роботи', robot: 'робот', help: 'допомога; допомагати', at: 'біля, в', eating: 'їсть', tickets: 'квитки', running: 'біжать', now: 'зараз', stop: 'стоп', hungry: 'голодний', angry: 'сердитий', gives: 'дає', pizza: 'піца', from: 'з', other: 'інші', jobs: 'професії', day: 'день', work: 'працювати', lab: 'лабораторія', night: 'ніч', fly: 'літати, керувати літаком', planes: 'літаки', want: 'хотіти', be: 'бути', why: 'чому', because: 'тому що', animals: 'тварини', too: 'теж', last: 'минулий', weekend: 'вихідні', were: 'були', was: 'був', some: 'кілька', could: 'міг', climb: 'лізти', them: 'їх', yes: 'так', no: 'ні', very: 'дуже', carry: 'нести', basket: 'кошик', happy: 'щасливий', stay: 'залишатися', healthy: 'здоровий', how: 'як', often: 'часто', every: 'кожен', always: 'завжди', week: 'тиждень', twice: 'двічі', sometimes: 'іноді', never: 'ніколи', tired: 'втомлений', tonight: 'сьогодні ввечері', vegetables: 'овочі', birthday: 'день народження', make: 'робити', pancakes: 'млинці', pancake: 'млинець', any: 'якийсь (у питаннях)', eggs: 'яйця', store: 'магазин', quickly: 'швидко', back: 'назад', with: 'з', first: 'спершу', then: 'потім', next: 'далі', slowly: 'повільно', finally: 'нарешті', carefully: 'обережно', toss: 'підкинути', lands: 'падає, приземляється', on: 'на', head: 'голова', everyone: 'усі', laughs: 'сміється', yesterday: 'учора', messy: 'неприбраний', who: 'хто', cleaned: 'прибрав', kitchen: 'кухня', washed: 'помив', loaded: 'завантажив', vacuumed: 'пропилососив', watered: 'полив', played: 'грав', decorated: 'прикрасив', party: 'вечірка, свято', evening: 'вечір', danced: 'танцювали', dressed: 'вбралися', friday: 'п’ятниця', went: 'пішли', this: 'цей', years: 'роки', old: 'старий; віку', thousand: 'тисяча', did: 'допоміжне дієслово минулого часу', roman: 'римський', romans: 'римляни', soldiers: 'воїни', made: 'зробили', out: 'з', of: 'з', metal: 'метал', phones: 'телефони', wrote: 'писали', letters: 'листи', lights: 'світло', off: 'вимкнено', when: 'коли', came: 'прийшли', gold: 'золотий', took: 'взяв', saw: 'побачив', cat: 'кіт', under: 'під', table: 'стіл', had: 'мав', commander: 'командир', can: 'можу', mall: 'торговий центр' };
+let AC = null;
+function sfx(kind) {
+  try { AC = AC || new (window.AudioContext || window.webkitAudioContext)(); const seq = { ok: [[660, .08], [990, .14]], bad: [[180, .2]], tap: [[540, .04]], win: [[523, .1], [659, .1], [784, .1], [1047, .25]], tick: [[880, .03]] }[kind] || []; let t = AC.currentTime;
+    seq.forEach(([f, d]) => { const o = AC.createOscillator(), g = AC.createGain(); o.type = kind === 'bad' ? 'sawtooth' : 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(kind === 'bad' ? .05 : .09, t); g.gain.exponentialRampToValueAtTime(.001, t + d); o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t + d + .02); t += d; }); } catch (e) { }
+}
+function sayE(text, o = {}) {
+  const done = o.onend ? (() => { let f = 0; return () => { if (!f) { f = 1; o.onend(); } }; })() : null;
+  if (!('speechSynthesis' in window)) { if (done) setTimeout(done, 400); return; }
+  try { const ss = speechSynthesis; if (!o.queue) ss.cancel(); const u = new SpeechSynthesisUtterance(text), vs = ss.getVoices().filter(v => /^en/i.test(v.lang));
+    u.voice = (o.alt ? vs.find(v => /^en[-_]US/i.test(v.lang)) : null) || vs.find(v => /^en[-_]GB/i.test(v.lang)) || vs[0] || null; u.lang = u.voice ? u.voice.lang : 'en-GB'; u.rate = o.rate || .85; u.pitch = o.pitch || 1;
+    if (done) { u.onend = done; u.onerror = done; setTimeout(done, 2500 + text.length * 110); } ss.speak(u); } catch (e) { if (done) setTimeout(done, 400); }
+}
+const keepOn = body => setTimeout(() => $$('.keep', body).forEach(b => b.disabled = false), 0);
+function gameDone(body, p) {
+  if (p.onEnd) p.onEnd();
+  const part = body.closest('.part'); if (!part) return;
+  const b = [...part.querySelectorAll('.pact .btn')].find(x => !x.classList.contains('ghost')); if (b) b.click();
+  setTimeout(() => $$('.keep', part).forEach(x => x.disabled = false), 60);
+}
+const hideMain = body => setTimeout(() => { const part = body.closest('.part'); if (part) [...part.querySelectorAll('.pact .btn')].filter(x => !x.classList.contains('ghost')).forEach(x => x.style.display = 'none'); }, 0);
+
+/* --- картки слів --- */
+W.cards = (p, body, sv) => {
+  const ws = vw(p.sets), seen = new Set(); let fin = !!(sv && sv.ok), playing = false;
+  const g = el(`<div class="wcards"><div class="wtop"><button type="button" class="btn keep wplay">▶ Слухати й повторювати</button><span class="wprog"></span></div><div class="wgrid"></div></div>`); body.append(g);
+  const prog = () => { $('.wprog', g).textContent = fin ? '✓ Арсенал вивчено' : `Вивчено ${seen.size} з ${ws.length}`; if (!fin && seen.size >= ws.length) { fin = true; prog(); sfx('win'); gameDone(body, p); } };
+  ws.forEach((w, i) => {
+    const c = el(`<div class="wcard"><div class="wf"><span class="we">${w.em}</span><b>${esc(w.en)}</b><small>🗣 ${esc(w.pr)}</small></div><div class="wb"><b>${esc(w.ua)}</b><p>${esc(w.ex)}</p><small>${esc(w.exu)}</small></div><button type="button" class="wsp keep" aria-label="Послухати">🔊</button></div>`);
+    c.onclick = e => { if (e.target.closest('.wsp')) sayE(w.en, { rate: .75 }); else { c.classList.toggle('flip'); if (c.classList.contains('flip')) sayE(w.ex, { rate: .8 }); else sayE(w.en); } seen.add(i); c.classList.add('seen'); sfx('tap'); prog(); };
+    $('.wgrid', g).append(c);
+  });
+  $('.wplay', g).onclick = () => {
+    const btn = $('.wplay', g); if (playing) { playing = false; speechSynthesis.cancel(); btn.textContent = '▶ Слухати й повторювати'; return; }
+    playing = true; btn.textContent = '⏸ Зупинити'; const cs = $$('.wcard', g); let k = 0;
+    const nx = () => { cs.forEach(x => x.classList.remove('cur')); if (!playing || k >= ws.length) { playing = false; btn.textContent = '▶ Слухати й повторювати'; return; }
+      const c = cs[k]; c.classList.add('cur', 'seen'); c.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); seen.add(k); prog(); sayE(ws[k].en, { rate: .8, onend: () => setTimeout(() => { k++; nx(); }, 1800) }); };
+    nx();
+  };
+  hideMain(body); keepOn(body); prog();
+  return { get: () => fin ? true : null, mark() { }, clear() { } };
+};
+
+/* --- почуй і торкнись --- */
+W.listen = (p, body, sv) => {
+  const pool = vw(p.sets), n = Math.min(p.n || 6, pool.length); let picks = [], k = 0, err = 0, fin = !!(sv && sv.ok), lock = false;
+  const g = el(`<div class="wgame"><div class="wtop"><button type="button" class="btn keep wgo">${fin ? '▶ Зіграти ще' : '▶ Почати'}</button><span class="wprog">${fin ? '✓ Пройдено' : n + ' раундів'}</span></div><div class="warena" hidden><div class="wstars"></div><button type="button" class="wbig keep" aria-label="Послухати ще">🔊</button><small class="note">Не розчув(ла)? Натисни 🔊 – скажу повільніше.</small><div class="wopts"></div></div></div>`); body.append(g);
+  const round = () => {
+    if (k >= n) { $('.warena', g).hidden = true; const st = err === 0 ? 3 : err < 3 ? 2 : 1; $('.wprog', g).innerHTML = `🏆 ${'⭐'.repeat(st)} Помилок: ${err}`; sfx('win'); const go = $('.wgo', g); go.hidden = false; go.textContent = '▶ Зіграти ще'; if (!fin) { fin = true; gameDone(body, p); } return; }
+    const t = picks[k], opts = shuffle([t, ...shuffle(pool.filter(w => w.en !== t.en && w.ua !== t.ua)).slice(0, 3)]); lock = false;
+    $('.wprog', g).textContent = `Раунд ${k + 1} з ${n}`; $('.wstars', g).innerHTML = picks.map((_, i) => `<i class="${i < k ? 'on' : i === k ? 'now' : ''}"></i>`).join('');
+    const o = $('.wopts', g); o.innerHTML = '';
+    opts.forEach(w => { const b = el(`<button type="button" class="wopt keep"><span>${w.em}</span><b>${esc(w.ua)}</b></button>`);
+      b.onclick = () => { if (lock) return; if (w.en === t.en) { lock = true; b.classList.add('ok'); sfx('ok'); b.innerHTML += `<em>${esc(t.en)}</em>`; setTimeout(() => { k++; round(); }, 900); } else { err++; b.classList.add('no'); sfx('bad'); setTimeout(() => b.classList.remove('no'), 450); setTimeout(() => sayE(t.en, { rate: .7 }), 300); } };
+      o.append(b); });
+    setTimeout(() => sayE(t.en), 250); $('.wbig', g).onclick = () => sayE(t.en, { rate: .65 });
+  };
+  $('.wgo', g).onclick = () => { picks = shuffle(pool).slice(0, n); k = 0; err = 0; $('.wgo', g).hidden = true; $('.warena', g).hidden = false; round(); };
+  hideMain(body); keepOn(body);
+  return { get: () => fin ? true : null, mark() { }, clear() { } };
+};
+
+/* --- склади слово з літер --- */
+W.spell = (p, body, sv) => {
+  const pool = vw(p.sets).filter(w => /^[a-z ]+$/i.test(w.en) && w.en.replace(/ /g, '').length <= 13), n = Math.min(p.n || 4, pool.length);
+  let picks = [], k = 0, err = 0, fin = !!(sv && sv.ok), word = '', slots = [], tiles = [];
+  const g = el(`<div class="wgame"><div class="wtop"><button type="button" class="btn keep wgo">${fin ? '▶ Зіграти ще' : '▶ Почати'}</button><span class="wprog">${fin ? '✓ Пройдено' : n + ' слова'}</span></div><div class="warena" hidden><div class="wclue"></div><div class="wslots"></div><div class="wtiles"></div><div class="row wrap"><button type="button" class="btn ghost keep wback">⌫ Стерти</button><button type="button" class="btn ghost keep whint">💡 Підказка</button><button type="button" class="btn ghost keep wsay">🔊 Ще раз</button></div></div></div>`); body.append(g);
+  const draw = () => {
+    $('.wslots', g).innerHTML = slots.map((s, i) => word[i] === ' ' ? '<span class="wgap"></span>' : `<button type="button" class="wslot keep ${s.st || ''}" data-i="${i}">${s.t != null ? tiles[s.t].ch : ''}</button>`).join('');
+    $('.wtiles', g).innerHTML = tiles.map((t, i) => `<button type="button" class="wtile keep" data-t="${i}" ${t.used ? 'hidden' : ''}>${t.ch}</button>`).join('');
+    $$('.wslot', g).forEach(b => b.onclick = () => { const s = slots[+b.dataset.i]; if (s.t != null && s.st !== 'ok') { tiles[s.t].used = false; s.t = null; s.st = ''; sfx('tap'); draw(); } });
+    $$('.wtile', g).forEach(b => b.onclick = () => { const i = slots.findIndex((s, j) => word[j] !== ' ' && s.t == null); if (i < 0) return; slots[i].t = +b.dataset.t; tiles[+b.dataset.t].used = true; sfx('tap'); draw(); check(); });
+  };
+  const check = () => {
+    if (slots.some((s, j) => word[j] !== ' ' && s.t == null)) return;
+    const bad = slots.map((s, j) => word[j] !== ' ' && tiles[s.t].ch !== word[j] ? j : -1).filter(j => j >= 0);
+    if (!bad.length) { slots.forEach(s => s.st = 'ok'); draw(); sfx('ok'); sayE(word); setTimeout(() => { k++; next(); }, 1100); return; }
+    err++; sfx('bad'); bad.forEach(j => slots[j].st = 'no'); draw(); setTimeout(() => { bad.forEach(j => { tiles[slots[j].t].used = false; slots[j].t = null; slots[j].st = ''; }); draw(); }, 700);
+  };
+  const next = () => {
+    if (k >= n) { $('.warena', g).hidden = true; $('.wprog', g).innerHTML = `🏆 ${'⭐'.repeat(err === 0 ? 3 : err < 3 ? 2 : 1)} Помилок: ${err}`; sfx('win'); const go = $('.wgo', g); go.hidden = false; go.textContent = '▶ Зіграти ще'; if (!fin) { fin = true; gameDone(body, p); } return; }
+    const w = picks[k]; word = w.en.toLowerCase(); slots = [...word].map(() => ({ t: null, st: '' }));
+    tiles = shuffle([...word.replace(/ /g, '')]).map(ch => ({ ch, used: false }));
+    $('.wclue', g).innerHTML = `<span class="we">${w.em}</span><b>${esc(w.ua)}</b><small>Слово ${k + 1} з ${n}</small>`; $('.wprog', g).textContent = `Слово ${k + 1} з ${n}`;
+    draw(); setTimeout(() => sayE(w.en), 250);
+  };
+  $('.wback', g).onclick = () => { const i = slots.map((s, j) => s.t != null && s.st !== 'ok' ? j : -1).filter(j => j >= 0).pop(); if (i == null) return; tiles[slots[i].t].used = false; slots[i].t = null; draw(); };
+  $('.whint', g).onclick = () => { const i = slots.findIndex((s, j) => word[j] !== ' ' && (s.t == null || tiles[s.t].ch !== word[j])); if (i < 0) return; if (slots[i].t != null) { tiles[slots[i].t].used = false; slots[i].t = null; }
+    const ti = tiles.findIndex(t => !t.used && t.ch === word[i]); if (ti < 0) { const j = slots.findIndex((s, jj) => jj !== i && s.t != null && tiles[s.t].ch === word[i] && word[jj] !== word[i]); if (j >= 0) { slots[i].t = slots[j].t; slots[j].t = null; } } else { slots[i].t = ti; tiles[ti].used = true; } slots[i].st = 'ok'; draw(); check(); };
+  $('.wsay', g).onclick = () => sayE(word, { rate: .65 });
+  $('.wgo', g).onclick = () => { picks = shuffle(pool).slice(0, n); k = 0; err = 0; $('.wgo', g).hidden = true; $('.warena', g).hidden = false; next(); };
+  hideMain(body); keepOn(body);
+  return { get: () => fin ? true : null, mark() { }, clear() { } };
+};
+
+/* --- конструктор речень --- */
+W.build = (p, body, sv) => {
+  const ss = BUILDS[p.key]; let k = 0, err = 0, fin = !!(sv && sv.ok), toks = [], ans = [];
+  const g = el(`<div class="wgame"><div class="wtop"><span class="wprog"></span></div><div class="wbuild"><div class="wua"></div><div class="wans"></div><div class="wtoks"></div><div class="row wrap"><button type="button" class="btn ghost keep wclr">↺ Почати речення знову</button><button type="button" class="btn ghost keep wsay">🔊 Послухати речення</button></div></div></div>`); body.append(g);
+  const target = () => ss[k][0];
+  const draw = () => {
+    $('.wans', g).innerHTML = ans.length ? ans.map((t, i) => `<button type="button" class="wtok in keep" data-a="${i}">${esc(toks[t])}</button>`).join('') : '<span class="note">Торкайся слів нижче…</span>';
+    $('.wtoks', g).innerHTML = toks.map((t, i) => ans.includes(i) ? '' : `<button type="button" class="wtok keep" data-t="${i}">${esc(t)}</button>`).join('');
+    $$('[data-a]', g).forEach(b => b.onclick = () => { ans.splice(+b.dataset.a); sfx('tap'); draw(); });
+    $$('[data-t]', g).forEach(b => b.onclick = () => { ans.push(+b.dataset.t); sfx('tap'); draw(); if (ans.length === toks.length) check(); });
+  };
+  const check = () => {
+    const got = ans.map(i => toks[i]).join(' ');
+    if (got === target()) { sfx('ok'); $('.wans', g).classList.add('ok'); sayE(target()); setTimeout(() => { $('.wans', g).classList.remove('ok'); k++; next(); }, 1300); return; }
+    err++; sfx('bad'); const tw = target().split(' '); const firstBad = ans.findIndex((i, j) => toks[i] !== tw[j]); $('.wans', g).classList.add('no');
+    setTimeout(() => { $('.wans', g).classList.remove('no'); ans = ans.slice(0, Math.max(0, firstBad)); draw(); }, 700);
+  };
+  const next = () => {
+    if (k >= ss.length) { $('.wbuild', g).hidden = true; $('.wprog', g).innerHTML = `🏆 ${'⭐'.repeat(err === 0 ? 3 : err < 3 ? 2 : 1)} Усі речення складено! Помилок: ${err}`; sfx('win'); if (!fin) { fin = true; gameDone(body, p); } return; }
+    const tw = target().split(' '); let sh; do { sh = shuffleIdx(tw.length); } while (tw.length > 1 && sh.every((v, i) => v === i)); toks = sh.map(i => tw[i]); ans = [];
+    $('.wua', g).innerHTML = `<small>Склади англійською (${k + 1} з ${ss.length}):</small><b>${esc(ss[k][1])}</b>`; $('.wprog', g).textContent = `Речення ${k + 1} з ${ss.length}`; draw();
+  };
+  $('.wclr', g).onclick = () => { ans = []; draw(); };
+  $('.wsay', g).onclick = () => sayE(target(), { rate: .75 });
+  if (fin) { $('.wprog', g).textContent = '✓ Пройдено – можна повторити'; }
+  next(); hideMain(body); keepOn(body);
+  return { get: () => fin ? true : null, mark() { }, clear() { } };
+};
+
+/* --- голосова лабораторія й рольова гра --- */
+const SRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+const nwords = s => String(s).toLowerCase().replace(/[’ʼ`]/g, "'").replace(/[^a-z' ]/g, ' ').split(/\s+/).filter(Boolean);
+function lev(a, b) { const m = a.length, n = b.length, d = Array.from({ length: m + 1 }, (_, i) => [i]); for (let j = 1; j <= n; j++) d[0][j] = j; for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); return d[m][n]; }
+function sayScore(target, alts) { const tw = nwords(target); let best = 0; alts.forEach(a => { const aw = nwords(a); const m = tw.filter(w => aw.includes(w) || (w.length > 3 && aw.some(x => lev(x, w) <= 1))).length; best = Math.max(best, m / tw.length); }); return best; }
+W.say = (p, body, sv) => {
+  const lines = p.lines ? p.lines.map(l => ({ who: l[0], en: l[1], free: !!l[2] })) : vw(p.sets).map(w => ({ who: 'you', en: w.en, em: w.em, ua: w.ua, pr: w.pr }));
+  const dialog = !!p.lines; let fin = !!(sv && sv.ok), cur = 0; const okd = new Set();
+  const g = el(`<div class="wsay ${dialog ? 'dlg' : ''}"><div class="wtop">${dialog ? `<button type="button" class="btn keep wgo">▶ ${fin ? 'Ще раз' : 'Почати'}</button>` : ''}<span class="wprog"></span></div>${SRec ? '' : '<p class="note">🎙 Цей браузер не вміє слухати мовлення. Скажи фразу вголос і натисни «✓ Сказав(ла)».</p>'}<div class="wlines"></div></div>`); body.append(g);
+  const youN = lines.filter(l => l.who === 'you').length;
+  const prog = () => { $('.wprog', g).textContent = fin ? '✓ Пройдено' : `Сказано ${okd.size} з ${youN}`; if (!fin && okd.size >= youN) { fin = true; prog(); sfx('win'); gameDone(body, p); } };
+  lines.forEach((l, i) => {
+    const r = el(`<div class="wline ${l.who}" data-i="${i}">${l.who === 'app' ? '<span class="wav">🤖</span>' : ''}<div class="wbub">${l.em ? `<span class="we">${l.em}</span>` : ''}<b>${esc(l.en)}</b>${l.free ? '<small>Можна сказати своє – про себе.</small>' : l.ua ? `<small>${esc(l.ua)} · 🗣 ${esc(l.pr)}</small>` : ''}<div class="wres"></div></div><div class="wbtns"><button type="button" class="wsp keep" aria-label="Послухати">🔊</button>${l.who === 'you' ? `<button type="button" class="wmic keep">${SRec ? '🎙' : '✓ Сказав(ла)'}</button>` : ''}</div></div>`);
+    $('.wsp', r).onclick = () => sayE(l.en, { rate: .75, alt: l.who === 'app' });
+    if (l.who === 'you') { let fails = 0; const mic = $('.wmic', r), res = $('.wres', r);
+      const pass = msg => { okd.add(i); r.classList.add('ok'); res.innerHTML = msg; sfx('ok'); prog(); if (dialog) { cur = i + 1; playApp(); } };
+      mic.onclick = () => {
+        if (!SRec) return pass('✓ Молодець!');
+        if (window.ACTREC) { try { window.ACTREC.abort(); } catch (e) { } }
+        let rec, got = false; try { rec = new SRec(); } catch (e) { return pass('✓ Зараховано'); } window.ACTREC = rec;
+        rec.lang = 'en-US'; rec.interimResults = false; rec.maxAlternatives = 5; mic.classList.add('rec'); mic.textContent = '● Слухаю…'; res.textContent = 'Говори зараз…';
+        const stopT = setTimeout(() => { try { rec.stop(); } catch (e) { } }, 7000);
+        rec.onresult = e => { got = true; const alts = [...e.results[0]].map(a => a.transcript), sc = sayScore(l.en, alts), heard = alts[0] || '';
+          if (sc >= .75 || (l.free && nwords(heard).length >= 2)) pass(`🎉 ${sc >= .95 ? 'Ідеальна вимова!' : 'Чудово!'} <i>«${esc(heard)}»</i>`);
+          else { fails++; sfx('bad'); res.innerHTML = `Почуто: <i>«${esc(heard || '…')}»</i>. Послухай 🔊 і спробуй ще раз.${fails >= 2 ? ' <button type="button" class="wok keep">✓ Зарахувати – я сказав(ла)</button>' : ''}`; const ok = $('.wok', res); if (ok) ok.onclick = () => pass('✓ Зараховано'); } };
+        rec.onerror = e => { got = true; clearTimeout(stopT); mic.classList.remove('rec'); mic.textContent = '🎙'; if (e.error === 'not-allowed' || e.error === 'service-not-allowed') { res.innerHTML = 'Мікрофон вимкнено. Скажи вголос і натисни: <button type="button" class="wok keep">✓ Сказав(ла)</button>'; } else if (e.error === 'network') { res.innerHTML = 'Для перевірки вимови потрібен інтернет. Скажи вголос: <button type="button" class="wok keep">✓ Сказав(ла)</button>'; } else { res.innerHTML = 'Не почув. Натисни 🎙 і говори голосніше. <button type="button" class="wok keep">✓ Сказав(ла)</button>'; } const ok = $('.wok', res); if (ok) ok.onclick = () => pass('✓ Зараховано'); };
+        rec.onend = () => { clearTimeout(stopT); mic.classList.remove('rec'); mic.textContent = '🎙'; if (window.ACTREC === rec) window.ACTREC = null; if (!got && !okd.has(i)) { res.innerHTML = 'Не почув тебе. Натисни 🎙 і скажи голосніше – або <button type="button" class="wok keep">✓ Я сказав(ла) вголос</button>'; $('.wok', res).onclick = () => pass('✓ Зараховано'); } };
+        try { rec.start(); } catch (e) { pass('✓ Зараховано'); }
+      };
+    }
+    $('.wlines', g).append(r);
+  });
+  const rows = $$('.wline', g);
+  const playApp = () => { rows.forEach((x, j) => x.classList.toggle('cur', j === cur)); const l = lines[cur]; if (!l) return; if (l.who === 'app') sayE(l.en, { alt: true, onend: () => { cur++; playApp(); } }); else rows[cur].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); };
+  if (dialog) $('.wgo', g).onclick = () => { cur = 0; playApp(); };
+  hideMain(body); keepOn(body); prog();
+  return { get: () => fin ? true : null, mark() { }, clear() { } };
+};
+
+/* --- граматична лабораторія --- */
+W.rule = (p, body) => {
+  const R = RULES[p.key], g = el(`<div class="wrule">${R.h}<div class="wex">${R.ex.map(([en, ua]) => `<div class="wexr"><button type="button" class="wsp keep" aria-label="Послухати">🔊</button><div><b>${esc(en)}</b><small>${esc(ua)}</small></div></div>`).join('')}</div></div>`); body.append(g);
+  $$('.wexr', g).forEach((r, i) => $('.wsp', r).onclick = () => sayE(R.ex[i][0], { rate: .8 }));
+  keepOn(body); return { get: () => true, mark() { }, clear() { } };
+};
+
+/* --- Hero Files: комікс із читанням уголос --- */
+W.read = (p, body, sv) => {
+  const S0 = STORIES[p.key]; let fin = !!(sv && sv.ok), playing = false; const heard = new Set();
+  const gl = w => { const k = w.toLowerCase().replace(/[’']s$/, '').replace(/[^a-z]/g, ''); const v = vw(Object.keys(VOC)).find(x => x.en.toLowerCase() === k || x.en.toLowerCase().split(' ').includes(k) && x.en.split(' ').length === 1); return v ? v.ua : COMMON[k] || COMMON[w.toLowerCase().replace(/[^a-z]/g, '')] || ''; };
+  const g = el(`<div class="wread"><div class="wtop"><button type="button" class="btn keep wplay">▶ Читай мені</button><button type="button" class="btn ghost keep wua">УКР</button><span class="wprog"></span></div><div class="wcomic"></div><div class="wtip" hidden></div></div>`); body.append(g);
+  const prog = () => { $('.wprog', g).textContent = fin ? '✓ Прочитано' : `Прочитано ${heard.size} з ${S0.l.length}`; if (!fin && heard.size >= S0.l.length) { fin = true; prog(); sfx('win'); gameDone(body, p); } };
+  S0.l.forEach(([who, en, ua], i) => {
+    const words = en.split(' ').map(w => `<span class="ww">${esc(w)}</span>`).join(' ');
+    const r = el(`<div class="wpanel ${who === 'n' ? 'nar' : ''}">${who === 'n' ? '' : `<div class="wpav">${avHTML(who)}<small>${HEN[who]}</small></div>`}<div class="wpb"><p class="wen">${words}</p><p class="wuat" hidden>${esc(ua)}</p></div></div>`);
+    r.onclick = e => { const ww = e.target.closest('.ww'); if (ww) { const tr = gl(ww.textContent); const tip = $('.wtip', g); tip.hidden = false; tip.innerHTML = `<b>${esc(ww.textContent.replace(/[.,!?…]/g, ''))}</b> – ${esc(tr || 'див. переклад репліки')}<small>${esc(ua)}</small>`; sayE(ww.textContent.replace(/[.,!?…]/g, ''), { rate: .7 }); } else sayE(en, { alt: who !== 'n' && ['h1', 'h5'].includes(who), rate: .85 }); heard.add(i); r.classList.add('seen'); prog(); };
+    $('.wcomic', g).append(r);
+  });
+  const ps = $$('.wpanel', g);
+  $('.wplay', g).onclick = () => { const b = $('.wplay', g); if (playing) { playing = false; speechSynthesis.cancel(); b.textContent = '▶ Читай мені'; ps.forEach(x => x.classList.remove('cur')); return; } playing = true; b.textContent = '⏸ Пауза'; let k = 0;
+    const nx = () => { ps.forEach(x => x.classList.remove('cur')); if (!playing || k >= S0.l.length) { playing = false; b.textContent = '▶ Читай мені'; return; } const [who, en] = S0.l[k]; ps[k].classList.add('cur', 'seen'); ps[k].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); heard.add(k); prog(); sayE(en, { alt: ['h1', 'h5'].includes(who), rate: .85, onend: () => setTimeout(() => { k++; nx(); }, 500) }); }; nx(); };
+  $('.wua', g).onclick = () => { const b = $('.wua', g); b.classList.toggle('on'); $$('.wuat', g).forEach(x => x.hidden = !b.classList.contains('on')); };
+  hideMain(body); keepOn(body); prog();
+  return { get: () => fin ? true : null, mark() { }, clear() { } };
+};
+
+/* --- 60-секундний бліц --- */
+function runBlitz(box, sets, onEnd) {
+  const pool = vw(sets); let score = 0, combo = 0, left = 60, tm, t, lock = false;
+  box.innerHTML = `<div class="wblitz"><div class="wbh"><b class="wtime">60</b><span>сек</span><b class="wsc">0</b><span>очок</span><b class="wcb"></b></div><button type="button" class="wbig">🔊</button><div class="wopts"></div></div>`;
+  const round = () => { t = pool[rnd(0, pool.length - 1)]; const opts = shuffle([t, ...shuffle(pool.filter(w => w.en !== t.en && w.ua !== t.ua)).slice(0, 3)]); lock = false; const o = $('.wopts', box); o.innerHTML = '';
+    opts.forEach(w => { const b = el(`<button type="button" class="wopt"><span>${w.em}</span><b>${esc(w.ua)}</b></button>`); b.onclick = () => { if (lock || left <= 0) return; if (w.en === t.en) { lock = true; combo++; score += combo >= 5 ? 2 : 1; b.classList.add('ok'); sfx('ok'); setTimeout(round, 350); } else { combo = 0; b.classList.add('no'); sfx('bad'); setTimeout(() => b.classList.remove('no'), 400); } $('.wsc', box).textContent = score; $('.wcb', box).textContent = combo >= 3 ? `🔥×${combo}` : ''; }; o.append(b); });
+    sayE(t.en, { rate: .9 }); };
+  $('.wbig', box).onclick = () => sayE(t.en, { rate: .65 });
+  tm = setInterval(() => { left--; $('.wtime', box).textContent = left; if (left <= 10) sfx('tick'); if (left <= 0) { clearInterval(tm); speechSynthesis.cancel(); sfx('win'); onEnd(score); } }, 1000);
+  round(); return () => clearInterval(tm);
+}
+
 function checkPart(p, v, w) {
   switch (p.t) {
     case 'text': case 'num': case 'steps': return checkText(p, v);
@@ -2267,9 +3021,9 @@ function buildPart(p, i, ctx) {
   const box = el(`<section class="part ${done ? 'done' : ''} ${p.bonus ? 'bonus' : ''}"><div class="ph"><span class="pn">${done ? '✓' : i + 1}</span><div class="pq">${p.bonus ? '<span class="tag">бонус до зошита</span> ' : ''}${p.audit ? '<span class="tag aud">аудит</span> ' : ''}${p.q}</div></div><div class="pbody"></div><div class="fb" hidden></div><div class="pact"></div></section>`);
   const body = $('.pbody', box), fb = $('.fb', box), act = $('.pact', box);
   const w = W[p.t](p, body, sv, ctx.t); let att = sv ? sv.att || 0 : 0, hintN = 0, hintsUsed = 0;
-  if (ctx.t && ctx.t.s === 'eng' && 'speechSynthesis' in window) { const strs = engStrings(p); if (strs.length) { const sb = el('<button type="button" class="btn ghost">🔊 Вимова</button>'); sb.onclick = () => speakEN(strs.join('. ')); act.append(sb); } }
+  if (ctx.t && ctx.t.s === 'eng' && !GAME_T.includes(p.t) && 'speechSynthesis' in window) { const strs = engStrings(p); if (strs.length) { const sb = el('<button type="button" class="btn ghost">🔊 Вимова</button>'); sb.onclick = () => speakEN(strs.join('. ')); act.append(sb); } }
   if (done) { $$('input,textarea,button', body).forEach(x => x.disabled = true); if (p.t === 'open') act.append(el(`<span class="note">${sv.status === 'ok' ? '✅ Дорослий перевірив і зарахував' : sv.status === 'back' ? '↩ Дорослий просить доопрацювати: ' + esc(sv.comment || '') : '📨 Відповідь збережено – її перегляне дорослий'}</span>`)); if (p.t === 'open' && sv.status === 'back') { $$('textarea', body).forEach(x => x.disabled = false); } else return box; }
-  const lab = { open: 'Зберегти відповідь', self: p.label || 'Зроблено', draw: 'Готово', memory: 'Показати малюнок' }[p.t] || 'Перевірити';
+  const lab = { open: 'Зберегти відповідь', self: p.label || 'Зроблено', draw: 'Готово', memory: 'Показати малюнок', rule: 'Зрозуміло ✓' }[p.t] || 'Перевірити';
   const btn = el(`<button type="button" class="btn">${lab}</button>`); act.append(btn);
   const say = (cls, html) => { fb.hidden = false; fb.className = 'fb ' + cls; fb.innerHTML = html; };
   const hints = p.hints || [];
@@ -2307,6 +3061,8 @@ function keyOf(p) {
     case 'gaps': return p.words.map(w => w[0] + [].concat(w[1])[0].toUpperCase() + w[2]).join(', ');
     case 'cross': return p.words.map(w => `${w.n}. ${w.a}`).join(', ');
     case 'sol': return 'очікувані кроки: ' + p.steps.map(s => `${fmt(s.a)} – ${s.l}`).join('; ') + '. Приймається й коротший правильний шлях.';
+    case 'cards': case 'listen': case 'spell': case 'build': case 'say': case 'read': return '(гра – зараховується, коли дитина пройде її до кінця)';
+    case 'rule': return '(правило – прочитати)';
     default: return '(перевіряє дорослий)';
   }
 }
@@ -2426,12 +3182,13 @@ function adAssign(ab, p) {
 const app = () => $('#app');
 function go(h) { if (location.hash === '#' + h) route(); else location.hash = h; }
 function route() {
-  const h = (location.hash || '#home').slice(1); window.scrollTo(0, 0); CURTASK = null;
+  const h = (location.hash || '#home').slice(1); window.scrollTo(0, 0); CURTASK = null; if (typeof BLITZ_STOP === 'function') { BLITZ_STOP(); BLITZ_STOP = null; } if ('speechSynthesis' in window) speechSynthesis.cancel();
   if (h === 'adult') return header(true), viewAdult();
   if (!CUR || !P() || h === 'who') return header(true), viewWho();
   header();
   if (lockedFor(h)) return viewLocked();
   if (h === 'arsenal') return viewArsenal();
+  if (h.startsWith('eu-')) return viewEU(h.slice(3));
   if (h.startsWith('t-') && TASK[h.slice(2)]) return viewTask(h.slice(2), false);
   if (h.startsWith('r-') && TASK[h.slice(2)]) return viewTask(h.slice(2), true);
   if (h.startsWith('s-') && SUBJ[h.slice(2)]) return viewSubject(h.slice(2));
@@ -2487,10 +3244,33 @@ function viewSubject(k) {
 
 function engChip(p, t) { return `<a class="tchip ${taskState(p, t.id)} ${activeMission(p) ? (isMust(p, t.id) ? 'must' : 'locked') : ''}" href="#t-${t.id}"><em>№ ${t.n}</em>${esc(t.title)}${lockTag(p, t.id)}</a>`; }
 function viewEng() {
-  const p = P(), ts = TASKS.filter(t => t.s === 'eng');
-  app().innerHTML = `<a class="back" href="#home">← На головну</a><div class="hero s-eng"><h1>Англійська мова</h1><p>Student’s Book, с. 4–105: ${UNITS.length} розділів. Аудіо й відео – з комплекту до підручника; кнопка «🔊 Вимова» читає англійські слова голосом пристрою.</p></div>` +
-    UNITS.map(u => { const ut = ts.filter(t => t.unit === u.k), dn = ut.filter(t => taskState(p, t.id) === 'done').length, pages = [...new Set(ut.map(t => t.p))];
-      return `<details class="card pg s-eng" ${ut.some(t => taskState(p, t.id) !== 'done') && dn ? 'open' : ''} ${activeMission(p) && ut.some(t => isMust(p, t.id)) ? 'open' : ''}><summary class="pgh"><b>${esc(u.n)}</b><span>${dn === ut.length ? 'розділ пройдено' : `${dn} з ${ut.length}`}</span></summary>${pages.map(pg => `<div class="apage"><div class="aph"><b>с. ${dp(pg)}</b></div><div class="tl">${ut.filter(t => t.p === pg).map(t => engChip(p, t)).join('')}</div></div>`).join('')}</details>`; }).join('');
+  const p = P(), eb = p.eblitz || {};
+  app().innerHTML = `<a class="back" href="#home">← На головну</a>
+  <div class="ehero"><small>English Ops</small><h1>Англійська: операції штабу</h1><p>12 операцій за Student’s Book. Озвучені слова, ігри на слух, голосова лабораторія й комікси штабу. Завдання з підручника – всередині кожної операції.</p></div>
+  <div class="eops">${UNITS.map(u => { const [a, b] = unitStats(p, u), pc = Math.round(a / b * 100); return `<a class="eop ${a === b ? 'done' : ''}" href="#eu-${u.k}"><span class="eic">${UNIT_ICON[u.k]}</span><b>${esc(u.n)}</b><span class="ebar"><i style="width:${pc}%"></i></span><small>${a} з ${b} завдань${eb[u.k] ? ` · бліц: ${eb[u.k]}` : ''}</small></a>`; }).join('')}</div>`;
+}
+const UNIT_ICON = { S: '🎆', '1': '🦸', '2': '🏙️', R1: '📖', '3': '🧑‍🚀', '4': '🌲', R2: '🐦', '5': '💪', '6': '🍳', R3: '🍕', '7': '🏠', '8': '🏛️' };
+const UNIT_RULES = { '1': ['have', 'haveQ', 'superl', 'sizeColor'], '2': ['presCont', 'presContNeg', 'ing', 'caps'], '3': ['presSimpleQ', 'presSimpleNeg', 'wantTo', 'aAn'], '4': ['thereWas', 'wasWere', 'could', 'timePhr'], '5': ['howOften', 'freq', 'too'], '6': ['count', 'any', 'adv', 'order'], '7': ['pastEd', 'pastNeg', 'hadTo', 'pastForms'], '8': ['irr', 'pastQ'] };
+function unitStats(p, u) { const ut = TASKS.filter(t => t.s === 'eng' && t.unit === u.k); return [ut.filter(t => taskState(p, t.id) === 'done').length, ut.length]; }
+function viewEU(k) {
+  const p = P(), u = UNITS.find(x => x.k === k); if (!u) return viewEng();
+  const ut = TASKS.filter(t => t.s === 'eng' && t.unit === k), sets = UNIT_SETS[k] || [], rules = UNIT_RULES[k] || [], hf = ut.find(t => t.hf), m = activeMission(p), [a, b] = unitStats(p, u);
+  app().innerHTML = `<a class="back" href="#s-eng">← Усі операції</a>
+  <div class="ehero"><small>Операція · підручник с. ${u.a}–${u.b}</small><h1>${UNIT_ICON[k]} ${esc(u.n)}</h1><span class="ebar"><i style="width:${a / b * 100}%"></i></span><p>${a} з ${b} завдань виконано</p></div>
+  ${m ? '<div class="card"><b>🔒 Ігри відкриються після наказу штабу.</b><p class="note">Завдання з наказу – нижче, вони позначені «наказ».</p></div>' : `
+  ${hf ? `<a class="card ehf" href="#t-${hf.id}"><span>📁</span><div><b>${esc(hf.title)}</b><small>Комікс штабу з озвученням і перекладом кожного слова</small></div></a>` : ''}
+  ${sets.length ? `<h2>Арсенал слів</h2><div class="esets">${sets.map(s => `<div class="eset card"><div class="esh"><span>${VOC[s].w.slice(0, 4).map(w => w[3]).join(' ')}</span><b>${esc(VOC[s].n)}</b><small>${VOC[s].w.length} слів</small></div><div class="egs">${[['cards', '🃏 Картки'], ['listen', '👂 Почуй'], ['spell', '🔤 Склади'], ['say', '🎙 Скажи']].map(([g, n]) => `<button type="button" class="opt sm" data-g="${g}" data-s="${s}">${n}</button>`).join('')}</div></div>`).join('')}</div>
+  <div class="card eblz"><div><b>⚡ Бліц 60 секунд</b><small>Усі слова операції на швидкість. 5 правильних поспіль – подвійні очки! Рекорд: ${(p.eblitz || {})[k] || 0}</small></div><button type="button" class="btn" id="eblz">Старт!</button></div>` : ''}
+  ${rules.length ? `<h2>Граматичні лабораторії</h2><div class="egs">${rules.map(r => `<button type="button" class="opt sm" data-r="${r}">🧪 ${esc(RULES[r].t)}</button>`).join('')}</div>` : ''}
+  <div id="egame"></div>`}
+  <h2>Завдання з підручника</h2>${[...new Set(ut.map(t => t.p))].map(pg => `<div class="apage"><div class="aph"><b>с. ${dp(pg)}</b></div><div class="tl">${ut.filter(t => t.p === pg).map(t => engChip(p, t)).join('')}</div></div>`).join('')}`;
+  const stage = $('#egame'); if (!stage) return;
+  const launch = title => { if (BLITZ_STOP) { BLITZ_STOP(); BLITZ_STOP = null; } stage.innerHTML = `<div class="card egstage"><div class="egh"><b>${esc(title)}</b><button type="button" class="x2" aria-label="Закрити">✕</button></div><div class="egb"></div></div>`; $('.x2', stage).onclick = () => { if (BLITZ_STOP) { BLITZ_STOP(); BLITZ_STOP = null; } if ('speechSynthesis' in window) speechSynthesis.cancel(); stage.innerHTML = ''; }; setTimeout(() => stage.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50); return $('.egb', stage); };
+  const reward = (key, n) => { const d = day(p); d.eg = d.eg || {}; if (d.eg[key]) { toast('Тренування зараховано. Нагорода за цю гру сьогодні вже була.'); return; } d.eg[key] = 1; addXP(n, null, 'gen'); save(CUR); header(); toast(`+${n} XP за тренування`); };
+  $$('[data-g]').forEach(b => b.onclick = () => { const s = b.dataset.s, g = b.dataset.g, pp = { cards: CARDS, listen: LISTEN, spell: SPELL, say: SAYW }[g](s); if (g === 'listen') pp.n = 8; if (g === 'spell') pp.n = 5; pp.onEnd = () => reward(s + ':' + g, g === 'cards' ? 3 : 5); W[g === 'say' ? 'say' : g](pp, launch(`${VOC[s].n} · ${b.textContent}`), null, { s: 'eng' }); });
+  $$('[data-r]').forEach(b => b.onclick = () => { const r = b.dataset.r, bd = launch(RULES[r].t); W.rule(RULE(r), bd); if (BUILDS[r]) { const ex = el('<div class="egb2"></div>'); bd.append(ex); W.build(Object.assign(BUILD(r), { onEnd: () => reward('r:' + r, 5) }), ex, null, {}); } });
+  const blz = () => { const bd = launch('⚡ Бліц 60 секунд'); BLITZ_STOP = runBlitz(bd, sets, score => { BLITZ_STOP = null; p.eblitz = p.eblitz || {}; const best = p.eblitz[k] || 0; if (score > best) p.eblitz[k] = score; save(CUR); reward('blitz:' + k, Math.min(15, Math.max(2, Math.round(score / 2)))); bd.innerHTML = `<div class="wdone"><b>${score}</b><span>очок</span><p>${score > best ? '🏆 Новий рекорд операції!' : 'Рекорд: ' + best}</p><button type="button" class="btn" id="eagain">Ще раз</button></div>`; $('#eagain').onclick = blz; }); };
+  if ($('#eblz')) $('#eblz').onclick = blz;
 }
 
 /* ===== завдання ===== */
@@ -2503,7 +3283,7 @@ function viewTask(id, review) {
   app().innerHTML = `<a class="back" href="#s-${t.s}">← ${SUBJ[t.s].name}</a>
   <article class="task s-${t.s}"><header class="th"><div class="tmeta"><span class="pill">${SUBJ[t.s].ico} ${SUBJ[t.s].short}</span><span class="pill">${label(t)}</span>${t.hard ? '<span class="pill">складне</span>' : ''}${review ? '<span class="pill rv">реванш</span>' : ''}${t.paper ? '<span class="pill">потрібен паперовий зошит</span>' : ''}</div><h1>${esc(t.title)}</h1><p class="ttext">${t.text}</p>
   <div class="tbtns">${HELP[t.id] ? '<button class="btn ghost" id="bsimple">Простими словами</button>' : ''}${HELP[t.id] && HELP[t.id][1] ? '<button class="btn ghost" id="bex">Схожий приклад</button>' : ''}${DOSSIER[t.id] ? '<button class="btn dos" id="bdos">Досьє</button>' : ''}${t.s === 'eng' && 'speechSynthesis' in window && engRuns(t.text).length ? '<button class="btn ghost" id="bsay">🔊 Інструкція</button>' : ''}${t.qr ? `<a class="btn ghost" href="${t.qr}" target="_blank" rel="noopener">🔗 Відкрити QR-посилання</a>` : ''}</div><div class="helpbox" id="helpbox" hidden></div><div id="dosbox" hidden></div></header>
-  <div class="book ${t.needBook || t.paper ? 'need' : ''}">${t.s === 'eng' ? (t.needBook ? 'Відкрий підручник англійської' : 'У підручнику') : t.needBook || t.paper ? 'Відкрий паперовий зошит' : 'У зошиті'}: <b>с. ${dp(t.p)}, № ${t.n}</b>${t.needBook ? ' – текст або малюнок до завдання там' : ''}</div>${t.extra || ''}<div class="parts"></div>
+  <div class="book ${t.needBook || t.paper ? 'need' : ''}">${t.hf ? 'Комікс штабу – у підручнику його немає, усе тут' + '<b hidden>' : t.s === 'eng' ? (t.needBook ? 'Відкрий підручник англійської' : 'У підручнику') : t.needBook || t.paper ? 'Відкрий паперовий зошит' : 'У зошиті'}: <b>с. ${dp(t.p)}, № ${t.n}</b>${t.needBook ? ' – текст або малюнок до завдання там' : ''}</div>${t.extra || ''}<div class="parts"></div>
   <footer class="tnav">${prev ? `<a class="btn ghost" href="#t-${prev.id}">← № ${prev.n}</a>` : '<span></span>'}<span class="dots"></span>${next ? `<a class="btn ghost" href="#t-${next.id}">№ ${next.n} →</a>` : '<span></span>'}</footer></article>`;
   const hb = (k, ttl) => { const b = $('#helpbox'); const same = b.dataset.k === String(k) && !b.hidden; b.hidden = same; b.dataset.k = k; b.innerHTML = `<b>${ttl}</b><p>${esc(HELP[t.id][k]).replace(/\n/g, '<br>')}</p>`; if (!same && !review) { st.help = (st.help || 0) + 1; save(CUR); } };
   if ($('#bsimple')) $('#bsimple').onclick = () => hb(0, 'Простими словами'); if ($('#bex')) $('#bex').onclick = () => hb(1, 'Схожий приклад (не з цього завдання)');
